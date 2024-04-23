@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS ZEPHYRUS G16\\Documents\\Inscripcion_Colegio\\Inscripcion_Colegio\\",
+  "WorkspaceRootPath": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|c:\\users\\asus zephyrus g16\\documents\\inscripcion_colegio\\inscripcion_colegio\\inscripcioncol\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\inscripcion_colegio\\inscripcioncol\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,15 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ASUS ZEPHYRUS G16\\Documents\\Inscripcion_Colegio\\Inscripcion_Colegio\\InscripcionCol\\Form1.cs",
+              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\Inscripcion_Colegio\\InscripcionCol\\Form1.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS ZEPHYRUS G16\\Documents\\Inscripcion_Colegio\\Inscripcion_Colegio\\InscripcionCol\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\Inscripcion_Colegio\\InscripcionCol\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "InscripcionCol\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T02:06:27.609Z",
