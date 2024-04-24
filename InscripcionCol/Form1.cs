@@ -91,5 +91,11 @@ namespace InscripcionCol
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            Form menu = new frmmenu();
+            menu.Show();
+        }
     }
 }

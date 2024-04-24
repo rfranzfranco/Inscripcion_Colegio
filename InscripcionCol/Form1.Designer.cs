@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,11 +50,22 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 330);
             this.panel1.TabIndex = 5;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 253);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // txtusuario
             // 
@@ -63,7 +74,7 @@
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtusuario.Location = new System.Drawing.Point(330, 81);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(358, 20);
             this.txtusuario.TabIndex = 1;
@@ -78,7 +89,7 @@
             this.txtcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtcontraseña.Location = new System.Drawing.Point(330, 133);
-            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(358, 20);
             this.txtcontraseña.TabIndex = 2;
@@ -90,7 +101,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.Location = new System.Drawing.Point(330, 102);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(358, 1);
             this.panel2.TabIndex = 7;
@@ -100,7 +111,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Location = new System.Drawing.Point(330, 154);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(358, 1);
             this.panel3.TabIndex = 8;
@@ -128,12 +139,13 @@
             this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.LightGray;
             this.btnlogin.Location = new System.Drawing.Point(330, 207);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(358, 40);
-            this.btnlogin.TabIndex = 10;
+            this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "ACCEDER";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // linkLabel1
             // 
@@ -148,17 +160,6 @@
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Ha olvidado la contraseña?";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 253);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // btncerrar
             // 

@@ -8,3 +8,6 @@ D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Co
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.CoreCompileInputs.cache
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.exe
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.pdb
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmmenu.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmusuario.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmestudiante.resources
