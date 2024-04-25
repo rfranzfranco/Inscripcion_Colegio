@@ -11,3 +11,9 @@ D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Co
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmmenu.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmusuario.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmestudiante.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmRegistrarEst.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmcarga.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\bin\Debug\CircularProgressBar.dll
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\bin\Debug\WinFormAnimation.dll
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\bin\Debug\CircularProgressBar.xml
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\Inscripcion_Colegio\InscripcionCol\obj\Debug\Inscripc.19A86D5E.Up2Date

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace InscripcionCol
 {
-    public partial class frmestudiante : Form
+    public partial class frmRegistrarEst : Form
     {
-        public frmestudiante()
+        public frmRegistrarEst()
         {
             InitializeComponent();
-        }
-
-        private void btnestudiante_Click(object sender, EventArgs e)
-        {
-            frmRegistrarEst Registrar = new frmRegistrarEst();
-            Registrar.Show();
         }
     }
 }

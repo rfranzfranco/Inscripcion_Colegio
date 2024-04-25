@@ -316,7 +316,7 @@
             this.Controls.Add(this.gbDatosUsuario);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Name = "frmusuario";
-            this.Text = "frmusuario";
+            this.Text = "Gestion de usuarios";
             this.gbDatosUsuario.ResumeLayout(false);
             this.gbDatosUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();

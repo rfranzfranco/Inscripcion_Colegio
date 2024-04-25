@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -52,11 +58,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcarga.Designer.cs">
+      <DependentUpon>frmcarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmestudiante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmestudiante.Designer.cs">
       <DependentUpon>frmestudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarEst.Designer.cs">
+      <DependentUpon>frmRegistrarEst.cs</DependentUpon>
     </Compile>
     <Compile Include="frmusuario.cs">
       <SubType>Form</SubType>
@@ -75,8 +93,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmcarga.resx">
+      <DependentUpon>frmcarga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmestudiante.resx">
       <DependentUpon>frmestudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarEst.resx">
+      <DependentUpon>frmRegistrarEst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmusuario.resx">
       <DependentUpon>frmusuario.cs</DependentUpon>
@@ -94,6 +118,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -44,12 +44,13 @@
             this.btnestudiante.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnestudiante.ForeColor = System.Drawing.Color.LightGray;
             this.btnestudiante.Location = new System.Drawing.Point(13, 45);
-            this.btnestudiante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnestudiante.Margin = new System.Windows.Forms.Padding(4);
             this.btnestudiante.Name = "btnestudiante";
             this.btnestudiante.Size = new System.Drawing.Size(288, 40);
             this.btnestudiante.TabIndex = 0;
             this.btnestudiante.Text = "AGREGAR ESTUDIANTE";
             this.btnestudiante.UseVisualStyleBackColor = false;
+            this.btnestudiante.Click += new System.EventHandler(this.btnestudiante_Click);
             // 
             // dgvEstudiante
             // 
@@ -106,6 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1099, 586);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscarEst);
@@ -114,9 +116,9 @@
             this.Controls.Add(this.dgvEstudiante);
             this.Controls.Add(this.btnestudiante);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmestudiante";
-            this.Text = "frmestudiante";
+            this.Text = "Gestion de estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

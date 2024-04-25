@@ -37,5 +37,16 @@ namespace InscripcionCol
             frmEstudiante.WindowState = FormWindowState.Maximized;
             frmEstudiante.Show();
         }
+
+        private void frmmenu_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(cerrarform);
+        }
+        private void cerrarform(object sender, EventArgs e)
+        {
+            frmInicioSesion iniciarnuevo= new frmInicioSesion();
+            this.Hide();
+            iniciarnuevo.ShowDialog();
+        }
     }
 }

@@ -94,7 +94,10 @@ namespace InscripcionCol
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Form menu = new frmmenu();
+            this.Hide();
+            frmcarga bienvenida=new frmcarga();
+            bienvenida.ShowDialog();
+            frmmenu menu = new frmmenu();
             menu.Show();
         }
     }
