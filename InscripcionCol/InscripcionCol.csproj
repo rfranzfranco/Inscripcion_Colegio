@@ -52,61 +52,91 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Vista\frmbeca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vista\frmbeca.Designer.cs">
+      <DependentUpon>frmbeca.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmcarga.cs">
+    <Compile Include="Vista\frmcomprobante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmcarga.Designer.cs">
+    <Compile Include="Vista\frmcomprobante.Designer.cs">
+      <DependentUpon>frmcomprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmcupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmcupo.Designer.cs">
+      <DependentUpon>frmcupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmdocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmdocente.Designer.cs">
+      <DependentUpon>frmdocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frminforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frminforme.Designer.cs">
+      <DependentUpon>frminforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frminiciarsesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frminiciarsesion.Designer.cs">
+      <DependentUpon>frminiciarsesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmcarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmcarga.Designer.cs">
       <DependentUpon>frmcarga.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmestudiante.cs">
+    <Compile Include="Vista\frmestudiante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmestudiante.Designer.cs">
+    <Compile Include="Vista\frmestudiante.Designer.cs">
       <DependentUpon>frmestudiante.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarEst.cs">
+    <Compile Include="Vista\frmRegistrarEst.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarEst.Designer.cs">
+    <Compile Include="Vista\frmRegistrarEst.Designer.cs">
       <DependentUpon>frmRegistrarEst.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmusuario.cs">
+    <Compile Include="Vista\frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmusuario.Designer.cs">
+    <Compile Include="Vista\frmusuario.Designer.cs">
       <DependentUpon>frmusuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="menuPrincipal.cs">
+    <Compile Include="Vista\frmmenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menuPrincipal.Designer.cs">
-      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    <Compile Include="Vista\frmmenuPrincipal.Designer.cs">
+      <DependentUpon>frmmenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frminiciarsesion.resx">
+      <DependentUpon>frminiciarsesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmcarga.resx">
+    <EmbeddedResource Include="Vista\frmcarga.resx">
       <DependentUpon>frmcarga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmestudiante.resx">
+    <EmbeddedResource Include="Vista\frmestudiante.resx">
       <DependentUpon>frmestudiante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarEst.resx">
+    <EmbeddedResource Include="Vista\frmRegistrarEst.resx">
       <DependentUpon>frmRegistrarEst.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmusuario.resx">
+    <EmbeddedResource Include="Vista\frmusuario.resx">
       <DependentUpon>frmusuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menuPrincipal.resx">
-      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmmenuPrincipal.resx">
+      <DependentUpon>frmmenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,9 +163,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Conntrolador\" />
+    <Folder Include="Modelo\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\intimidad.png" />
