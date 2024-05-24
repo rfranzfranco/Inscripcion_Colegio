@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RegistroColegioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBeca">
+          <Key>
+            <PropertyRef Name="id_beca" />
+          </Key>
+          <Property Name="id_beca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tipo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="monto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RegistroColegioDB.dbo.TBeca-Estudiante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="TBeca-Estudiante">
+          <Key>
+            <PropertyRef Name="id_beca" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_beca" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TComprobante">
+          <Key>
+            <PropertyRef Name="id_comp" />
+          </Key>
+          <Property Name="id_comp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lugar_dpto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_reg" Type="date" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="id_curso" Type="int" Nullable="false" />
+          <Property Name="id_tutor" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TContacto">
+          <Key>
+            <PropertyRef Name="id_contacto" />
+          </Key>
+          <Property Name="id_contacto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="telefono_fijo" Type="int" Nullable="false" />
+          <Property Name="celular" Type="int" Nullable="false" />
+          <Property Name="id_direccion" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TCurso">
+          <Key>
+            <PropertyRef Name="id_curso" />
+          </Key>
+          <Property Name="id_curso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="grado" Type="int" Nullable="false" />
+          <Property Name="paralelo" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="cupo_total" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RegistroColegioDB.dbo.TDir_Est' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="TDir_Est">
+          <Key>
+            <PropertyRef Name="id_direccion" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_direccion" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TDireccion">
+          <Key>
+            <PropertyRef Name="id_direccion" />
+          </Key>
+          <Property Name="id_direccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dpto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="provincia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="municipio" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="localidad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="zona" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="avenida" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nro_vivienda" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TDocente">
+          <Key>
+            <PropertyRef Name="id_docente" />
+          </Key>
+          <Property Name="id_docente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="especialidad" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="nivel_educativo" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="grado_acad" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="fec_contratacion" Type="date" Nullable="false" />
+          <Property Name="id_registro" Type="int" Nullable="false" />
+          <Property Name="id_curso" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TEstudiante">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_estudiante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ap_paterno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ap_materno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ci" Type="int" Nullable="false" />
+          <Property Name="complemento" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="expedido" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="codigo_rude" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="sexo" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="fec_nacimiento" Type="date" Nullable="false" />
+          <Property Name="grado_sec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TNacimiento">
+          <Key>
+            <PropertyRef Name="id_nacimiento" />
+          </Key>
+          <Property Name="id_nacimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pais" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="dpto" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="provincia" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="localidad" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TRegistro">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ci" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ap_paterno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ap_materno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="direccion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="celular" Type="int" Nullable="false" />
+          <Property Name="sexo" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="fecha_nac" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TTutor">
+          <Key>
+            <PropertyRef Name="id_tutor" />
+          </Key>
+          <Property Name="id_tutor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ci" Type="int" Nullable="false" />
+          <Property Name="complemento" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="expedido" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="ap_paterno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ap_materno" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RegistroColegioDB.dbo.TTutor_Est' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="TTutor_Est">
+          <Key>
+            <PropertyRef Name="id_tutor" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_tutor" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TUsuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usuario" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="contraseña" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="rol" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="id_registro" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TBeca-Estudiante_TBeca">
+          <End Role="TBeca" Type="Self.TBeca" Multiplicity="1" />
+          <End Role="TBeca-Estudiante" Type="Self.TBeca-Estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBeca">
+              <PropertyRef Name="id_beca" />
+            </Principal>
+            <Dependent Role="TBeca-Estudiante">
+              <PropertyRef Name="id_beca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBeca-Estudiante_TEstudiante">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TBeca-Estudiante" Type="Self.TBeca-Estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TBeca-Estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TComprobante_TCurso">
+          <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="id_curso" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TComprobante_TEstudiante1">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TComprobante_TTutor">
+          <End Role="TTutor" Type="Self.TTutor" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TTutor">
+              <PropertyRef Name="id_tutor" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_tutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TContacto_TDireccion">
+          <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="1" />
+          <End Role="TContacto" Type="Self.TContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TDireccion">
+              <PropertyRef Name="id_direccion" />
+            </Principal>
+            <Dependent Role="TContacto">
+              <PropertyRef Name="id_direccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDir_Est_TDireccion">
+          <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="1" />
+          <End Role="TDir_Est" Type="Self.TDir_Est" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TDireccion">
+              <PropertyRef Name="id_direccion" />
+            </Principal>
+            <Dependent Role="TDir_Est">
+              <PropertyRef Name="id_direccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDir_Est_TEstudiante">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TDir_Est" Type="Self.TDir_Est" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TDir_Est">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDocente_TCurso">
+          <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
+          <End Role="TDocente" Type="Self.TDocente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="id_curso" />
+            </Principal>
+            <Dependent Role="TDocente">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDocente_TRegistro">
+          <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
+          <End Role="TDocente" Type="Self.TDocente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRegistro">
+              <PropertyRef Name="id_registro" />
+            </Principal>
+            <Dependent Role="TDocente">
+              <PropertyRef Name="id_registro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TNacimiento_TEstudiante">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TNacimiento" Type="Self.TNacimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TNacimiento">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTutor_Est_TEstudiante">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TTutor_Est" Type="Self.TTutor_Est" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TTutor_Est">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TTutor_Est_TTutor">
+          <End Role="TTutor" Type="Self.TTutor" Multiplicity="1" />
+          <End Role="TTutor_Est" Type="Self.TTutor_Est" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TTutor">
+              <PropertyRef Name="id_tutor" />
+            </Principal>
+            <Dependent Role="TTutor_Est">
+              <PropertyRef Name="id_tutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUsuario_TRegistro">
+          <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
+          <End Role="TUsuario" Type="Self.TUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRegistro">
+              <PropertyRef Name="id_registro" />
+            </Principal>
+            <Dependent Role="TUsuario">
+              <PropertyRef Name="id_registro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RegistroColegioDBModelStoreContainer">
+          <EntitySet Name="TBeca" EntityType="Self.TBeca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TComprobante" EntityType="Self.TComprobante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TContacto" EntityType="Self.TContacto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TCurso" EntityType="Self.TCurso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TDireccion" EntityType="Self.TDireccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TDocente" EntityType="Self.TDocente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEstudiante" EntityType="Self.TEstudiante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TNacimiento" EntityType="Self.TNacimiento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRegistro" EntityType="Self.TRegistro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TTutor" EntityType="Self.TTutor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TUsuario" EntityType="Self.TUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBeca-Estudiante" EntityType="Self.TBeca-Estudiante" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TBeca-Estudiante].[id_beca] AS [id_beca], 
+[TBeca-Estudiante].[id_estudiante] AS [id_estudiante]
+FROM [dbo].[TBeca-Estudiante] AS [TBeca-Estudiante]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TDir_Est" EntityType="Self.TDir_Est" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TDir_Est].[id_direccion] AS [id_direccion], 
+[TDir_Est].[id_estudiante] AS [id_estudiante]
+FROM [dbo].[TDir_Est] AS [TDir_Est]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TTutor_Est" EntityType="Self.TTutor_Est" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TTutor_Est].[id_tutor] AS [id_tutor], 
+[TTutor_Est].[id_estudiante] AS [id_estudiante]
+FROM [dbo].[TTutor_Est] AS [TTutor_Est]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_TBeca-Estudiante_TBeca" Association="Self.FK_TBeca-Estudiante_TBeca">
+            <End Role="TBeca" EntitySet="TBeca" />
+            <End Role="TBeca-Estudiante" EntitySet="TBeca-Estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBeca-Estudiante_TEstudiante" Association="Self.FK_TBeca-Estudiante_TEstudiante">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TBeca-Estudiante" EntitySet="TBeca-Estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TComprobante_TCurso" Association="Self.FK_TComprobante_TCurso">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TComprobante_TEstudiante1" Association="Self.FK_TComprobante_TEstudiante1">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TComprobante_TTutor" Association="Self.FK_TComprobante_TTutor">
+            <End Role="TTutor" EntitySet="TTutor" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TContacto_TDireccion" Association="Self.FK_TContacto_TDireccion">
+            <End Role="TDireccion" EntitySet="TDireccion" />
+            <End Role="TContacto" EntitySet="TContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDir_Est_TDireccion" Association="Self.FK_TDir_Est_TDireccion">
+            <End Role="TDireccion" EntitySet="TDireccion" />
+            <End Role="TDir_Est" EntitySet="TDir_Est" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDir_Est_TEstudiante" Association="Self.FK_TDir_Est_TEstudiante">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TDir_Est" EntitySet="TDir_Est" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDocente_TCurso" Association="Self.FK_TDocente_TCurso">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TDocente" EntitySet="TDocente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDocente_TRegistro" Association="Self.FK_TDocente_TRegistro">
+            <End Role="TRegistro" EntitySet="TRegistro" />
+            <End Role="TDocente" EntitySet="TDocente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TNacimiento_TEstudiante" Association="Self.FK_TNacimiento_TEstudiante">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TNacimiento" EntitySet="TNacimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTutor_Est_TEstudiante" Association="Self.FK_TTutor_Est_TEstudiante">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TTutor_Est" EntitySet="TTutor_Est" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TTutor_Est_TTutor" Association="Self.FK_TTutor_Est_TTutor">
+            <End Role="TTutor" EntitySet="TTutor" />
+            <End Role="TTutor_Est" EntitySet="TTutor_Est" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUsuario_TRegistro" Association="Self.FK_TUsuario_TRegistro">
+            <End Role="TRegistro" EntitySet="TRegistro" />
+            <End Role="TUsuario" EntitySet="TUsuario" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RegistroColegioDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBeca">
+          <Key>
+            <PropertyRef Name="id_beca" />
+          </Key>
+          <Property Name="id_beca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="monto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TEstudiante" Relationship="Self.TBeca_Estudiante" FromRole="TBeca" ToRole="TEstudiante" />
+        </EntityType>
+        <EntityType Name="TComprobante">
+          <Key>
+            <PropertyRef Name="id_comp" />
+          </Key>
+          <Property Name="id_comp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lugar_dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="id_curso" Type="Int32" Nullable="false" />
+          <Property Name="id_tutor" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TCurso" Relationship="Self.FK_TComprobante_TCurso" FromRole="TComprobante" ToRole="TCurso" />
+          <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TComprobante_TEstudiante1" FromRole="TComprobante" ToRole="TEstudiante" />
+          <NavigationProperty Name="TTutor" Relationship="Self.FK_TComprobante_TTutor" FromRole="TComprobante" ToRole="TTutor" />
+        </EntityType>
+        <EntityType Name="TContacto">
+          <Key>
+            <PropertyRef Name="id_contacto" />
+          </Key>
+          <Property Name="id_contacto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="telefono_fijo" Type="Int32" Nullable="false" />
+          <Property Name="celular" Type="Int32" Nullable="false" />
+          <Property Name="id_direccion" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TDireccion" Relationship="Self.FK_TContacto_TDireccion" FromRole="TContacto" ToRole="TDireccion" />
+        </EntityType>
+        <EntityType Name="TCurso">
+          <Key>
+            <PropertyRef Name="id_curso" />
+          </Key>
+          <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="grado" Type="Int32" Nullable="false" />
+          <Property Name="paralelo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cupo_total" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TCurso" FromRole="TCurso" ToRole="TComprobante" />
+          <NavigationProperty Name="TDocente" Relationship="Self.FK_TDocente_TCurso" FromRole="TCurso" ToRole="TDocente" />
+        </EntityType>
+        <EntityType Name="TDireccion">
+          <Key>
+            <PropertyRef Name="id_direccion" />
+          </Key>
+          <Property Name="id_direccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="provincia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="municipio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="zona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="avenida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nro_vivienda" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TContacto" Relationship="Self.FK_TContacto_TDireccion" FromRole="TDireccion" ToRole="TContacto" />
+          <NavigationProperty Name="TEstudiante" Relationship="Self.TDir_Est" FromRole="TDireccion" ToRole="TEstudiante" />
+        </EntityType>
+        <EntityType Name="TDocente">
+          <Key>
+            <PropertyRef Name="id_docente" />
+          </Key>
+          <Property Name="id_docente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="especialidad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nivel_educativo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="grado_acad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fec_contratacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_registro" Type="Int32" Nullable="false" />
+          <Property Name="id_curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TCurso" Relationship="Self.FK_TDocente_TCurso" FromRole="TDocente" ToRole="TCurso" />
+          <NavigationProperty Name="TRegistro" Relationship="Self.FK_TDocente_TRegistro" FromRole="TDocente" ToRole="TRegistro" />
+        </EntityType>
+        <EntityType Name="TEstudiante">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ci" Type="Int32" Nullable="false" />
+          <Property Name="complemento" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="expedido" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="codigo_rude" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="grado_sec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TEstudiante1" FromRole="TEstudiante" ToRole="TComprobante" />
+          <NavigationProperty Name="TNacimiento" Relationship="Self.FK_TNacimiento_TEstudiante" FromRole="TEstudiante" ToRole="TNacimiento" />
+          <NavigationProperty Name="TBeca" Relationship="Self.TBeca_Estudiante" FromRole="TEstudiante" ToRole="TBeca" />
+          <NavigationProperty Name="TDireccion" Relationship="Self.TDir_Est" FromRole="TEstudiante" ToRole="TDireccion" />
+          <NavigationProperty Name="TTutor" Relationship="Self.TTutor_Est" FromRole="TEstudiante" ToRole="TTutor" />
+        </EntityType>
+        <EntityType Name="TNacimiento">
+          <Key>
+            <PropertyRef Name="id_nacimiento" />
+          </Key>
+          <Property Name="id_nacimiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pais" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dpto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="provincia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="localidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TNacimiento_TEstudiante" FromRole="TNacimiento" ToRole="TEstudiante" />
+        </EntityType>
+        <EntityType Name="TRegistro">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ci" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="celular" Type="Int32" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fecha_nac" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="TDocente" Relationship="Self.FK_TDocente_TRegistro" FromRole="TRegistro" ToRole="TDocente" />
+          <NavigationProperty Name="TUsuario" Relationship="Self.FK_TUsuario_TRegistro" FromRole="TRegistro" ToRole="TUsuario" />
+        </EntityType>
+        <EntityType Name="TTutor">
+          <Key>
+            <PropertyRef Name="id_tutor" />
+          </Key>
+          <Property Name="id_tutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ci" Type="Int32" Nullable="false" />
+          <Property Name="complemento" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="expedido" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TTutor" FromRole="TTutor" ToRole="TComprobante" />
+          <NavigationProperty Name="TEstudiante" Relationship="Self.TTutor_Est" FromRole="TTutor" ToRole="TEstudiante" />
+        </EntityType>
+        <EntityType Name="TUsuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="contraseña" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rol" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_registro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TRegistro" Relationship="Self.FK_TUsuario_TRegistro" FromRole="TUsuario" ToRole="TRegistro" />
+        </EntityType>
+        <Association Name="FK_TComprobante_TCurso">
+          <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="id_curso" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TComprobante_TEstudiante1">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TComprobante_TTutor">
+          <End Role="TTutor" Type="Self.TTutor" Multiplicity="1" />
+          <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TTutor">
+              <PropertyRef Name="id_tutor" />
+            </Principal>
+            <Dependent Role="TComprobante">
+              <PropertyRef Name="id_tutor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TContacto_TDireccion">
+          <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="1" />
+          <End Role="TContacto" Type="Self.TContacto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TDireccion">
+              <PropertyRef Name="id_direccion" />
+            </Principal>
+            <Dependent Role="TContacto">
+              <PropertyRef Name="id_direccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDocente_TCurso">
+          <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
+          <End Role="TDocente" Type="Self.TDocente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TCurso">
+              <PropertyRef Name="id_curso" />
+            </Principal>
+            <Dependent Role="TDocente">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TDocente_TRegistro">
+          <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
+          <End Role="TDocente" Type="Self.TDocente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRegistro">
+              <PropertyRef Name="id_registro" />
+            </Principal>
+            <Dependent Role="TDocente">
+              <PropertyRef Name="id_registro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TNacimiento_TEstudiante">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+          <End Role="TNacimiento" Type="Self.TNacimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEstudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="TNacimiento">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUsuario_TRegistro">
+          <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
+          <End Role="TUsuario" Type="Self.TUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRegistro">
+              <PropertyRef Name="id_registro" />
+            </Principal>
+            <Dependent Role="TUsuario">
+              <PropertyRef Name="id_registro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TBeca_Estudiante">
+          <End Role="TBeca" Type="Self.TBeca" Multiplicity="*" />
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
+        </Association>
+        <Association Name="TDir_Est">
+          <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="*" />
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
+        </Association>
+        <Association Name="TTutor_Est">
+          <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
+          <End Role="TTutor" Type="Self.TTutor" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="RegistroColegioDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBeca" EntityType="Self.TBeca" />
+          <EntitySet Name="TComprobante" EntityType="Self.TComprobante" />
+          <EntitySet Name="TContacto" EntityType="Self.TContacto" />
+          <EntitySet Name="TCurso" EntityType="Self.TCurso" />
+          <EntitySet Name="TDireccion" EntityType="Self.TDireccion" />
+          <EntitySet Name="TDocente" EntityType="Self.TDocente" />
+          <EntitySet Name="TEstudiante" EntityType="Self.TEstudiante" />
+          <EntitySet Name="TNacimiento" EntityType="Self.TNacimiento" />
+          <EntitySet Name="TRegistro" EntityType="Self.TRegistro" />
+          <EntitySet Name="TTutor" EntityType="Self.TTutor" />
+          <EntitySet Name="TUsuario" EntityType="Self.TUsuario" />
+          <AssociationSet Name="FK_TComprobante_TCurso" Association="Self.FK_TComprobante_TCurso">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TComprobante_TEstudiante1" Association="Self.FK_TComprobante_TEstudiante1">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TComprobante_TTutor" Association="Self.FK_TComprobante_TTutor">
+            <End Role="TTutor" EntitySet="TTutor" />
+            <End Role="TComprobante" EntitySet="TComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TContacto_TDireccion" Association="Self.FK_TContacto_TDireccion">
+            <End Role="TDireccion" EntitySet="TDireccion" />
+            <End Role="TContacto" EntitySet="TContacto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDocente_TCurso" Association="Self.FK_TDocente_TCurso">
+            <End Role="TCurso" EntitySet="TCurso" />
+            <End Role="TDocente" EntitySet="TDocente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TDocente_TRegistro" Association="Self.FK_TDocente_TRegistro">
+            <End Role="TRegistro" EntitySet="TRegistro" />
+            <End Role="TDocente" EntitySet="TDocente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TNacimiento_TEstudiante" Association="Self.FK_TNacimiento_TEstudiante">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TNacimiento" EntitySet="TNacimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUsuario_TRegistro" Association="Self.FK_TUsuario_TRegistro">
+            <End Role="TRegistro" EntitySet="TRegistro" />
+            <End Role="TUsuario" EntitySet="TUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="TBeca_Estudiante" Association="Self.TBeca_Estudiante">
+            <End Role="TBeca" EntitySet="TBeca" />
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+          </AssociationSet>
+          <AssociationSet Name="TDir_Est" Association="Self.TDir_Est">
+            <End Role="TDireccion" EntitySet="TDireccion" />
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+          </AssociationSet>
+          <AssociationSet Name="TTutor_Est" Association="Self.TTutor_Est">
+            <End Role="TEstudiante" EntitySet="TEstudiante" />
+            <End Role="TTutor" EntitySet="TTutor" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RegistroColegioDBModelStoreContainer" CdmEntityContainer="RegistroColegioDBEntities">
+          <EntitySetMapping Name="TBeca">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TBeca">
+              <MappingFragment StoreEntitySet="TBeca">
+                <ScalarProperty Name="id_beca" ColumnName="id_beca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TComprobante">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TComprobante">
+              <MappingFragment StoreEntitySet="TComprobante">
+                <ScalarProperty Name="id_comp" ColumnName="id_comp" />
+                <ScalarProperty Name="lugar_dpto" ColumnName="lugar_dpto" />
+                <ScalarProperty Name="fecha_reg" ColumnName="fecha_reg" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+                <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TContacto">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TContacto">
+              <MappingFragment StoreEntitySet="TContacto">
+                <ScalarProperty Name="id_contacto" ColumnName="id_contacto" />
+                <ScalarProperty Name="telefono_fijo" ColumnName="telefono_fijo" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TCurso">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TCurso">
+              <MappingFragment StoreEntitySet="TCurso">
+                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+                <ScalarProperty Name="grado" ColumnName="grado" />
+                <ScalarProperty Name="paralelo" ColumnName="paralelo" />
+                <ScalarProperty Name="cupo_total" ColumnName="cupo_total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TDireccion">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TDireccion">
+              <MappingFragment StoreEntitySet="TDireccion">
+                <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+                <ScalarProperty Name="dpto" ColumnName="dpto" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="municipio" ColumnName="municipio" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="zona" ColumnName="zona" />
+                <ScalarProperty Name="avenida" ColumnName="avenida" />
+                <ScalarProperty Name="nro_vivienda" ColumnName="nro_vivienda" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TDocente">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TDocente">
+              <MappingFragment StoreEntitySet="TDocente">
+                <ScalarProperty Name="id_docente" ColumnName="id_docente" />
+                <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+                <ScalarProperty Name="nivel_educativo" ColumnName="nivel_educativo" />
+                <ScalarProperty Name="grado_acad" ColumnName="grado_acad" />
+                <ScalarProperty Name="fec_contratacion" ColumnName="fec_contratacion" />
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEstudiante">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TEstudiante">
+              <MappingFragment StoreEntitySet="TEstudiante">
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+                <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="ci" ColumnName="ci" />
+                <ScalarProperty Name="complemento" ColumnName="complemento" />
+                <ScalarProperty Name="expedido" ColumnName="expedido" />
+                <ScalarProperty Name="codigo_rude" ColumnName="codigo_rude" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="fec_nacimiento" ColumnName="fec_nacimiento" />
+                <ScalarProperty Name="grado_sec" ColumnName="grado_sec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TNacimiento">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TNacimiento">
+              <MappingFragment StoreEntitySet="TNacimiento">
+                <ScalarProperty Name="id_nacimiento" ColumnName="id_nacimiento" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="dpto" ColumnName="dpto" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRegistro">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TRegistro">
+              <MappingFragment StoreEntitySet="TRegistro">
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="ci" ColumnName="ci" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+                <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="fecha_nac" ColumnName="fecha_nac" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TTutor">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TTutor">
+              <MappingFragment StoreEntitySet="TTutor">
+                <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+                <ScalarProperty Name="ci" ColumnName="ci" />
+                <ScalarProperty Name="complemento" ColumnName="complemento" />
+                <ScalarProperty Name="expedido" ColumnName="expedido" />
+                <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+                <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TUsuario">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.TUsuario">
+              <MappingFragment StoreEntitySet="TUsuario">
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="TBeca_Estudiante" TypeName="RegistroColegioDBModel.TBeca_Estudiante" StoreEntitySet="TBeca-Estudiante">
+            <EndProperty Name="TBeca">
+              <ScalarProperty Name="id_beca" ColumnName="id_beca" />
+            </EndProperty>
+            <EndProperty Name="TEstudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TDir_Est" TypeName="RegistroColegioDBModel.TDir_Est" StoreEntitySet="TDir_Est">
+            <EndProperty Name="TDireccion">
+              <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+            </EndProperty>
+            <EndProperty Name="TEstudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TTutor_Est" TypeName="RegistroColegioDBModel.TTutor_Est" StoreEntitySet="TTutor_Est">
+            <EndProperty Name="TEstudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+            <EndProperty Name="TTutor">
+              <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

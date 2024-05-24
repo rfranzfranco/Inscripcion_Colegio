@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e95d48087ca4973a9ae1b1f14d46868" Name="Diagram1">
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TBeca" Width="1.5" PointX="3.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TComprobante" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TContacto" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TCurso" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TDireccion" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TDocente" Width="1.5" PointX="13" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TEstudiante" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TNacimiento" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TRegistro" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TTutor" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.TUsuario" Width="1.5" PointX="13" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TComprobante_TCurso" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TComprobante_TEstudiante1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TComprobante_TTutor" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TContacto_TDireccion" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TDocente_TCurso" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TDocente_TRegistro" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TNacimiento_TEstudiante" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.FK_TUsuario_TRegistro" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.TBeca_Estudiante" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.TDir_Est" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroColegioDBModel.TTutor_Est" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

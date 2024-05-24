@@ -36,8 +36,15 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +59,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\ModeloBdD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloBdD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloBdD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloBdD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloBdD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TBeca.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TComprobante.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TContacto.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TCurso.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TDireccion.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TDocente.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TEstudiante.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TNacimiento.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TRegistro.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TTutor.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TUsuario.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmbeca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +203,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="Modelo\ModeloBdD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloBdD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\ModeloBdD.edmx.diagram">
+      <DependentUpon>ModeloBdD.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,8 +225,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conntrolador\" />
-    <Folder Include="Modelo\" />
+    <Folder Include="Controlador\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\intimidad.png" />
@@ -186,6 +247,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\estudiantes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\ModeloBdD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloBdD.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloBdD.edmx</DependentUpon>
+    </Content>
+    <Content Include="Modelo\ModeloBdD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloBdD.edmx</DependentUpon>
+      <LastGenOutput>ModeloBdD.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
