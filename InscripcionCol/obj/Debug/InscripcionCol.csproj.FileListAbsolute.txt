@@ -36,3 +36,5 @@ D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del 
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\Inscripc.19A86D5E.Up2Date
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.exe
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.pdb
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.dll
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.xml

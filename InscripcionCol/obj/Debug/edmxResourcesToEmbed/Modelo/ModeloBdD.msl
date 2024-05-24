@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RegistroColegioDBModelStoreContainer" CdmEntityContainer="RegistroColegioDBEntities">
+    <EntitySetMapping Name="TBeca">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TBeca">
+        <MappingFragment StoreEntitySet="TBeca">
+          <ScalarProperty Name="id_beca" ColumnName="id_beca" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TComprobante">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TComprobante">
+        <MappingFragment StoreEntitySet="TComprobante">
+          <ScalarProperty Name="id_comp" ColumnName="id_comp" />
+          <ScalarProperty Name="lugar_dpto" ColumnName="lugar_dpto" />
+          <ScalarProperty Name="fecha_reg" ColumnName="fecha_reg" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TContacto">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TContacto">
+        <MappingFragment StoreEntitySet="TContacto">
+          <ScalarProperty Name="id_contacto" ColumnName="id_contacto" />
+          <ScalarProperty Name="telefono_fijo" ColumnName="telefono_fijo" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCurso">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TCurso">
+        <MappingFragment StoreEntitySet="TCurso">
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="grado" ColumnName="grado" />
+          <ScalarProperty Name="paralelo" ColumnName="paralelo" />
+          <ScalarProperty Name="cupo_total" ColumnName="cupo_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDireccion">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TDireccion">
+        <MappingFragment StoreEntitySet="TDireccion">
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+          <ScalarProperty Name="dpto" ColumnName="dpto" />
+          <ScalarProperty Name="provincia" ColumnName="provincia" />
+          <ScalarProperty Name="municipio" ColumnName="municipio" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="zona" ColumnName="zona" />
+          <ScalarProperty Name="avenida" ColumnName="avenida" />
+          <ScalarProperty Name="nro_vivienda" ColumnName="nro_vivienda" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TDocente">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TDocente">
+        <MappingFragment StoreEntitySet="TDocente">
+          <ScalarProperty Name="id_docente" ColumnName="id_docente" />
+          <ScalarProperty Name="especialidad" ColumnName="especialidad" />
+          <ScalarProperty Name="nivel_educativo" ColumnName="nivel_educativo" />
+          <ScalarProperty Name="grado_acad" ColumnName="grado_acad" />
+          <ScalarProperty Name="fec_contratacion" ColumnName="fec_contratacion" />
+          <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEstudiante">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TEstudiante">
+        <MappingFragment StoreEntitySet="TEstudiante">
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="expedido" ColumnName="expedido" />
+          <ScalarProperty Name="codigo_rude" ColumnName="codigo_rude" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="fec_nacimiento" ColumnName="fec_nacimiento" />
+          <ScalarProperty Name="grado_sec" ColumnName="grado_sec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNacimiento">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TNacimiento">
+        <MappingFragment StoreEntitySet="TNacimiento">
+          <ScalarProperty Name="id_nacimiento" ColumnName="id_nacimiento" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="dpto" ColumnName="dpto" />
+          <ScalarProperty Name="provincia" ColumnName="provincia" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRegistro">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TRegistro">
+        <MappingFragment StoreEntitySet="TRegistro">
+          <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="fecha_nac" ColumnName="fecha_nac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTutor">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TTutor">
+        <MappingFragment StoreEntitySet="TTutor">
+          <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="expedido" ColumnName="expedido" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUsuario">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TUsuario">
+        <MappingFragment StoreEntitySet="TUsuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TBeca_Estudiante" TypeName="RegistroColegioDBModel.TBeca_Estudiante" StoreEntitySet="TBeca-Estudiante">
+      <EndProperty Name="TBeca">
+        <ScalarProperty Name="id_beca" ColumnName="id_beca" />
+      </EndProperty>
+      <EndProperty Name="TEstudiante">
+        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TDir_Est" TypeName="RegistroColegioDBModel.TDir_Est" StoreEntitySet="TDir_Est">
+      <EndProperty Name="TDireccion">
+        <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+      </EndProperty>
+      <EndProperty Name="TEstudiante">
+        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TTutor_Est" TypeName="RegistroColegioDBModel.TTutor_Est" StoreEntitySet="TTutor_Est">
+      <EndProperty Name="TEstudiante">
+        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+      </EndProperty>
+      <EndProperty Name="TTutor">
+        <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
