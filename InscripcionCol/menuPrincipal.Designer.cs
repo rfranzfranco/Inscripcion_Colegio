@@ -49,16 +49,17 @@
             this.reportesEInformesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1132, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1009, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // gestionarUsuarioToolStripMenuItem
             // 
             this.gestionarUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.gestionarUsuarioToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionarUsuarioToolStripMenuItem.Image = global::InscripcionCol.Properties.Resources.usuario;
             this.gestionarUsuarioToolStripMenuItem.Name = "gestionarUsuarioToolStripMenuItem";
-            this.gestionarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
+            this.gestionarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(208, 28);
             this.gestionarUsuarioToolStripMenuItem.Text = "Gestionar Usuario";
             this.gestionarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuarioToolStripMenuItem_Click);
             // 
@@ -68,9 +69,10 @@
             this.gestionarEstudiantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visualizarCuposToolStripMenuItem,
             this.visualizarCuposToolStripMenuItem1});
+            this.gestionarEstudiantesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionarEstudiantesToolStripMenuItem.Image = global::InscripcionCol.Properties.Resources.estudiante;
             this.gestionarEstudiantesToolStripMenuItem.Name = "gestionarEstudiantesToolStripMenuItem";
-            this.gestionarEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(253, 28);
+            this.gestionarEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
             this.gestionarEstudiantesToolStripMenuItem.Text = "Gestionar Estudiantes";
             this.gestionarEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.gestionarEstudiantesToolStripMenuItem_Click);
             // 
@@ -78,7 +80,7 @@
             // 
             this.visualizarCuposToolStripMenuItem.Image = global::InscripcionCol.Properties.Resources.estudiantes;
             this.visualizarCuposToolStripMenuItem.Name = "visualizarCuposToolStripMenuItem";
-            this.visualizarCuposToolStripMenuItem.Size = new System.Drawing.Size(283, 28);
+            this.visualizarCuposToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.visualizarCuposToolStripMenuItem.Text = "Registrar Estudiantes";
             this.visualizarCuposToolStripMenuItem.Click += new System.EventHandler(this.visualizarCuposToolStripMenuItem_Click);
             // 
@@ -86,31 +88,34 @@
             // 
             this.visualizarCuposToolStripMenuItem1.Image = global::InscripcionCol.Properties.Resources.vision;
             this.visualizarCuposToolStripMenuItem1.Name = "visualizarCuposToolStripMenuItem1";
-            this.visualizarCuposToolStripMenuItem1.Size = new System.Drawing.Size(283, 28);
+            this.visualizarCuposToolStripMenuItem1.Size = new System.Drawing.Size(282, 28);
             this.visualizarCuposToolStripMenuItem1.Text = "Visualizar Cupos";
             // 
             // gestionarBecasToolStripMenuItem
             // 
             this.gestionarBecasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.gestionarBecasToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestionarBecasToolStripMenuItem.Image = global::InscripcionCol.Properties.Resources.beca;
             this.gestionarBecasToolStripMenuItem.Name = "gestionarBecasToolStripMenuItem";
-            this.gestionarBecasToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.gestionarBecasToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
             this.gestionarBecasToolStripMenuItem.Text = "Gestionar Becas";
             // 
             // reportesEInformesToolStripMenuItem
             // 
+            this.reportesEInformesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesEInformesToolStripMenuItem.Image = global::InscripcionCol.Properties.Resources.grafico;
             this.reportesEInformesToolStripMenuItem.Name = "reportesEInformesToolStripMenuItem";
-            this.reportesEInformesToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
+            this.reportesEInformesToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
             this.reportesEInformesToolStripMenuItem.Text = "Reportes e Informes";
             // 
             // frmmenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1132, 559);
+            this.ClientSize = new System.Drawing.Size(1009, 495);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmmenu";
