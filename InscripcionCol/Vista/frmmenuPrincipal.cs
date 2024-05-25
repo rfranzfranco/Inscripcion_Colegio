@@ -44,9 +44,14 @@ namespace InscripcionCol
         }
         private void cerrarform(object sender, EventArgs e)
         {
-            frmInicioSesion iniciarnuevo= new frmInicioSesion();
-            this.Hide();
-            iniciarnuevo.ShowDialog();
+            salir();
+        }
+        void salir()
+        {
+            if (MessageBox.Show("Estas seguro de cerrar la aplicacion?", "Cerrar aplicacion", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InscripcionCol.Controlador;
 
 namespace InscripcionCol
 {
@@ -21,6 +22,16 @@ namespace InscripcionCol
         {
             frmRegistrarEst Registrar = new frmRegistrarEst();
             Registrar.Show();
+        }
+
+        EstudianteController estudiante = new EstudianteController();
+        void cargar()
+        {
+            dgvEstudiante.DataSource = estudiante.listar();
+        }
+        private void frmestudiante_Load(object sender, EventArgs e)
+        {
+            cargar();
         }
     }
 }
