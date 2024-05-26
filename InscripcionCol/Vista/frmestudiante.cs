@@ -27,7 +27,8 @@ namespace InscripcionCol
         EstudianteController estudiante = new EstudianteController();
         public void cargar()
         {
-            dgvEstudiante.DataSource = estudiante.listar();
+            dgvEstudiante.DataSource = estudiante.Listar();
+            dgvEstudiante.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
         private void frmestudiante_Load(object sender, EventArgs e)
         {

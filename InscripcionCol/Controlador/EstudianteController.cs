@@ -11,10 +11,37 @@ namespace InscripcionCol.Controlador
 {
     internal class EstudianteController
     {
-        private readonly RegistroColegioDBEntities _db=new RegistroColegioDBEntities();        
-        public List<TEstudiante> listar()
+        private readonly RegistroColegioDBEntities _db=new RegistroColegioDBEntities();
+        public List<EstudianteViewModel> Listar()
         {
-            return _db.TEstudiante.ToList();
+            var query = from est in _db.TEstudiante
+                        join tuest in _db.TTutor_Est on est.id_estudiante equals tuest.id_estudiante
+                        join tu in _db.TTutor on tuest.id_tutor equals tu.id_tutor
+                        join direst in _db.TDir_Est on est.id_estudiante equals direst.id_estudiante
+                        join dir in _db.TDireccion on direst.id_direccion equals dir.id_direccion
+                        join cont in _db.TContacto on dir.id_direccion equals cont.id_direccion
+                        join co in _db.TComprobante on est.id_estudiante equals co.id_estudiante
+                        join cu in _db.TCurso on co.id_curso equals cu.id_curso
+                        select new EstudianteViewModel
+                        {
+                            Ap_Paterno_Est = est.ap_paterno,
+                            Ap_Materno_Est = est.ap_materno,
+                            Nombre_Est = est.nombre,
+                            Ci_Est = est.ci,
+                            Codigo_Rude = est.codigo_rude,
+                            TCi = tu.ci,
+                            TAp_Paterno = tu.ap_paterno,
+                            TAp_Materno = tu.ap_materno,
+                            TNombre = tu.nombre,
+                            Telefono_Fijo = cont.telefono_fijo,
+                            Celular = cont.celular,
+                            Grado = cu.grado,
+                            Paralelo = cu.paralelo,
+                            Sexo=est.sexo,
+                            fecha_Nac=est.fec_nacimiento
+                        };
+
+            return query.ToList();
         }
         public async Task<bool> RegistrarEstudianteAsync(TEstudiante estudiante)
         {
