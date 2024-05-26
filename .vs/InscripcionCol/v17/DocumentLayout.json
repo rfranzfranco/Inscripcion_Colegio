@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\controlador\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "EstudianteViewModel.cs",
               "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteViewModel.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\EstudianteViewModel.cs",
@@ -59,46 +59,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "EstudianteController.cs",
               "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\EstudianteController.cs",
               "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
               "RelativeToolTip": "InscripcionCol\\Controlador\\EstudianteController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAADwvyEAAAAgAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAuwGMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T01:54:32.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmestudiante.cs",
               "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmestudiante.cs",
               "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmestudiante.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAswCkAAAAAAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwC8AAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T23:21:26.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmRegistrarEst.cs",
               "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmRegistrarEst.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAwwJwAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T22:26:57.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmestudiante.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmestudiante.cs",

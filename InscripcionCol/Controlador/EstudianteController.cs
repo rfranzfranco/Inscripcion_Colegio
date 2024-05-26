@@ -86,6 +86,17 @@ namespace InscripcionCol.Controlador
         {
             _db.TComprobante.Add(ocomprobante);
             return await _db.SaveChangesAsync() > 0;
-        }
+        }        
+        public List<EstudianteViewModel> Buscar(string param)
+        {
+            if(param.Trim().Equals(string.Empty))
+            {
+                return Listar();
+            }
+            else
+            {
+                return Listar().Where(estudiante => estudiante.Codigo_Rude.Contains(param)).ToList();
+            }
+        }        
     }
 }

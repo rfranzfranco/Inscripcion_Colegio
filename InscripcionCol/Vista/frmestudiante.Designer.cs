@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnCargaMasiva = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -73,9 +72,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(651, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 18);
+            this.label1.Size = new System.Drawing.Size(269, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Buscar estudiante por:";
+            this.label1.Text = "Buscar estudiante por: Codigo RUDE";
             // 
             // txtBuscarEst
             // 
@@ -95,6 +94,7 @@
             this.btnBuscarEst.TabIndex = 4;
             this.btnBuscarEst.Text = "BUSCAR";
             this.btnBuscarEst.UseVisualStyleBackColor = true;
+            this.btnBuscarEst.Click += new System.EventHandler(this.btnBuscarEst_Click);
             // 
             // label2
             // 
@@ -125,15 +125,6 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(651, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(516, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = " codigo RUDE | Apellido Paterno | Materno | Nombre | Año de escolaridad";
-            // 
             // btnCargaMasiva
             // 
             this.btnCargaMasiva.Location = new System.Drawing.Point(231, 48);
@@ -150,7 +141,6 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1312, 629);
             this.Controls.Add(this.btnCargaMasiva);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);
@@ -180,7 +170,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCargaMasiva;
     }
 }

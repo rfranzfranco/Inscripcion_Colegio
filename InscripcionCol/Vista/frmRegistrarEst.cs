@@ -22,8 +22,7 @@ namespace InscripcionCol
             InitializeComponent();
             _frmestudiante = frmEstudiante;
             
-        }      
-        
+        }    
 
         TEstudiante estudiante = new TEstudiante();
         TNacimiento nacimiento = new TNacimiento();
@@ -166,5 +165,10 @@ namespace InscripcionCol
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public TextBox txtci => txt_ci;
+        public TextBox txtrude=>txt_rude;
+        public TextBox txtapPaterno => txt_appaterno;
+        public TextBox txtnombre => txt_nombre;
+        public ComboBox txtgrado => cbx_escol;
     }
 }
