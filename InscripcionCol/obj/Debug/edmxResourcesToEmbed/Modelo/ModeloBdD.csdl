@@ -8,7 +8,17 @@
     <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="monto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TEstudiante" Relationship="Self.TBeca_Estudiante" FromRole="TBeca" ToRole="TEstudiante" />
+    <NavigationProperty Name="TBeca_Estudiante" Relationship="Self.FK_TBeca_Estudiante_TBeca" FromRole="TBeca" ToRole="TBeca_Estudiante" />
+  </EntityType>
+  <EntityType Name="TBeca_Estudiante">
+    <Key>
+      <PropertyRef Name="id_TBecEst" />
+    </Key>
+    <Property Name="id_beca" Type="Int32" Nullable="false" />
+    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+    <Property Name="id_TBecEst" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="TBeca" Relationship="Self.FK_TBeca_Estudiante_TBeca" FromRole="TBeca_Estudiante" ToRole="TBeca" />
+    <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TBeca_Estudiante_TEstudiante" FromRole="TBeca_Estudiante" ToRole="TEstudiante" />
   </EntityType>
   <EntityType Name="TComprobante">
     <Key>
@@ -16,7 +26,7 @@
     </Key>
     <Property Name="id_comp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="lugar_dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <Property Name="id_curso" Type="Int32" Nullable="false" />
     <Property Name="id_tutor" Type="Int32" Nullable="false" />
@@ -45,6 +55,16 @@
     <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TCurso" FromRole="TCurso" ToRole="TComprobante" />
     <NavigationProperty Name="TDocente" Relationship="Self.FK_TDocente_TCurso" FromRole="TCurso" ToRole="TDocente" />
   </EntityType>
+  <EntityType Name="TDir_Est">
+    <Key>
+      <PropertyRef Name="id_TDirEst" />
+    </Key>
+    <Property Name="id_direccion" Type="Int32" Nullable="false" />
+    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+    <Property Name="id_TDirEst" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="TDireccion" Relationship="Self.FK_TDir_Est_TDireccion" FromRole="TDir_Est" ToRole="TDireccion" />
+    <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TDir_Est_TEstudiante" FromRole="TDir_Est" ToRole="TEstudiante" />
+  </EntityType>
   <EntityType Name="TDireccion">
     <Key>
       <PropertyRef Name="id_direccion" />
@@ -57,9 +77,8 @@
     <Property Name="zona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="avenida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="nro_vivienda" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TContacto" Relationship="Self.FK_TContacto_TDireccion" FromRole="TDireccion" ToRole="TContacto" />
-    <NavigationProperty Name="TEstudiante" Relationship="Self.TDir_Est" FromRole="TDireccion" ToRole="TEstudiante" />
+    <NavigationProperty Name="TDir_Est" Relationship="Self.FK_TDir_Est_TDireccion" FromRole="TDireccion" ToRole="TDir_Est" />
   </EntityType>
   <EntityType Name="TDocente">
     <Key>
@@ -88,13 +107,13 @@
     <Property Name="expedido" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="codigo_rude" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="grado_sec" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TBeca_Estudiante" Relationship="Self.FK_TBeca_Estudiante_TEstudiante" FromRole="TEstudiante" ToRole="TBeca_Estudiante" />
     <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TEstudiante1" FromRole="TEstudiante" ToRole="TComprobante" />
+    <NavigationProperty Name="TDir_Est" Relationship="Self.FK_TDir_Est_TEstudiante" FromRole="TEstudiante" ToRole="TDir_Est" />
     <NavigationProperty Name="TNacimiento" Relationship="Self.FK_TNacimiento_TEstudiante" FromRole="TEstudiante" ToRole="TNacimiento" />
-    <NavigationProperty Name="TBeca" Relationship="Self.TBeca_Estudiante" FromRole="TEstudiante" ToRole="TBeca" />
-    <NavigationProperty Name="TDireccion" Relationship="Self.TDir_Est" FromRole="TEstudiante" ToRole="TDireccion" />
-    <NavigationProperty Name="TTutor" Relationship="Self.TTutor_Est" FromRole="TEstudiante" ToRole="TTutor" />
+    <NavigationProperty Name="TTutor_Est" Relationship="Self.FK_TTutor_Est_TEstudiante1" FromRole="TEstudiante" ToRole="TTutor_Est" />
   </EntityType>
   <EntityType Name="TNacimiento">
     <Key>
@@ -135,9 +154,18 @@
     <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TTutor" FromRole="TTutor" ToRole="TComprobante" />
-    <NavigationProperty Name="TEstudiante" Relationship="Self.TTutor_Est" FromRole="TTutor" ToRole="TEstudiante" />
+    <NavigationProperty Name="TTutor_Est" Relationship="Self.FK_TTutor_Est_TTutor1" FromRole="TTutor" ToRole="TTutor_Est" />
+  </EntityType>
+  <EntityType Name="TTutor_Est">
+    <Key>
+      <PropertyRef Name="id_TuEst" />
+    </Key>
+    <Property Name="id_tutor" Type="Int32" Nullable="false" />
+    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+    <Property Name="id_TuEst" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TTutor_Est_TEstudiante1" FromRole="TTutor_Est" ToRole="TEstudiante" />
+    <NavigationProperty Name="TTutor" Relationship="Self.FK_TTutor_Est_TTutor1" FromRole="TTutor_Est" ToRole="TTutor" />
   </EntityType>
   <EntityType Name="TUsuario">
     <Key>
@@ -150,6 +178,30 @@
     <Property Name="id_registro" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TRegistro" Relationship="Self.FK_TUsuario_TRegistro" FromRole="TUsuario" ToRole="TRegistro" />
   </EntityType>
+  <Association Name="FK_TBeca_Estudiante_TBeca">
+    <End Role="TBeca" Type="Self.TBeca" Multiplicity="1" />
+    <End Role="TBeca_Estudiante" Type="Self.TBeca_Estudiante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBeca">
+        <PropertyRef Name="id_beca" />
+      </Principal>
+      <Dependent Role="TBeca_Estudiante">
+        <PropertyRef Name="id_beca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBeca_Estudiante_TEstudiante">
+    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+    <End Role="TBeca_Estudiante" Type="Self.TBeca_Estudiante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="TBeca_Estudiante">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TComprobante_TCurso">
     <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
     <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
@@ -210,6 +262,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TDir_Est_TDireccion">
+    <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="1" />
+    <End Role="TDir_Est" Type="Self.TDir_Est" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TDireccion">
+        <PropertyRef Name="id_direccion" />
+      </Principal>
+      <Dependent Role="TDir_Est">
+        <PropertyRef Name="id_direccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TDir_Est_TEstudiante">
+    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+    <End Role="TDir_Est" Type="Self.TDir_Est" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="TDir_Est">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TDocente_TRegistro">
     <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
     <End Role="TDocente" Type="Self.TDocente" Multiplicity="*" />
@@ -234,6 +310,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TTutor_Est_TEstudiante1">
+    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
+    <End Role="TTutor_Est" Type="Self.TTutor_Est" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="TTutor_Est">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TUsuario_TRegistro">
     <End Role="TRegistro" Type="Self.TRegistro" Multiplicity="1" />
     <End Role="TUsuario" Type="Self.TUsuario" Multiplicity="*" />
@@ -246,30 +334,41 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="TBeca_Estudiante">
-    <End Role="TBeca" Type="Self.TBeca" Multiplicity="*" />
-    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
-  </Association>
-  <Association Name="TDir_Est">
-    <End Role="TDireccion" Type="Self.TDireccion" Multiplicity="*" />
-    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
-  </Association>
-  <Association Name="TTutor_Est">
-    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="*" />
-    <End Role="TTutor" Type="Self.TTutor" Multiplicity="*" />
+  <Association Name="FK_TTutor_Est_TTutor1">
+    <End Role="TTutor" Type="Self.TTutor" Multiplicity="1" />
+    <End Role="TTutor_Est" Type="Self.TTutor_Est" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TTutor">
+        <PropertyRef Name="id_tutor" />
+      </Principal>
+      <Dependent Role="TTutor_Est">
+        <PropertyRef Name="id_tutor" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <EntityContainer Name="RegistroColegioDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TBeca" EntityType="Self.TBeca" />
+    <EntitySet Name="TBeca_Estudiante" EntityType="Self.TBeca_Estudiante" />
     <EntitySet Name="TComprobante" EntityType="Self.TComprobante" />
     <EntitySet Name="TContacto" EntityType="Self.TContacto" />
     <EntitySet Name="TCurso" EntityType="Self.TCurso" />
+    <EntitySet Name="TDir_Est" EntityType="Self.TDir_Est" />
     <EntitySet Name="TDireccion" EntityType="Self.TDireccion" />
     <EntitySet Name="TDocente" EntityType="Self.TDocente" />
     <EntitySet Name="TEstudiante" EntityType="Self.TEstudiante" />
     <EntitySet Name="TNacimiento" EntityType="Self.TNacimiento" />
     <EntitySet Name="TRegistro" EntityType="Self.TRegistro" />
     <EntitySet Name="TTutor" EntityType="Self.TTutor" />
+    <EntitySet Name="TTutor_Est" EntityType="Self.TTutor_Est" />
     <EntitySet Name="TUsuario" EntityType="Self.TUsuario" />
+    <AssociationSet Name="FK_TBeca_Estudiante_TBeca" Association="Self.FK_TBeca_Estudiante_TBeca">
+      <End Role="TBeca" EntitySet="TBeca" />
+      <End Role="TBeca_Estudiante" EntitySet="TBeca_Estudiante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBeca_Estudiante_TEstudiante" Association="Self.FK_TBeca_Estudiante_TEstudiante">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TBeca_Estudiante" EntitySet="TBeca_Estudiante" />
+    </AssociationSet>
     <AssociationSet Name="FK_TComprobante_TCurso" Association="Self.FK_TComprobante_TCurso">
       <End Role="TCurso" EntitySet="TCurso" />
       <End Role="TComprobante" EntitySet="TComprobante" />
@@ -290,6 +389,14 @@
       <End Role="TCurso" EntitySet="TCurso" />
       <End Role="TDocente" EntitySet="TDocente" />
     </AssociationSet>
+    <AssociationSet Name="FK_TDir_Est_TDireccion" Association="Self.FK_TDir_Est_TDireccion">
+      <End Role="TDireccion" EntitySet="TDireccion" />
+      <End Role="TDir_Est" EntitySet="TDir_Est" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TDir_Est_TEstudiante" Association="Self.FK_TDir_Est_TEstudiante">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TDir_Est" EntitySet="TDir_Est" />
+    </AssociationSet>
     <AssociationSet Name="FK_TDocente_TRegistro" Association="Self.FK_TDocente_TRegistro">
       <End Role="TRegistro" EntitySet="TRegistro" />
       <End Role="TDocente" EntitySet="TDocente" />
@@ -298,21 +405,17 @@
       <End Role="TEstudiante" EntitySet="TEstudiante" />
       <End Role="TNacimiento" EntitySet="TNacimiento" />
     </AssociationSet>
+    <AssociationSet Name="FK_TTutor_Est_TEstudiante1" Association="Self.FK_TTutor_Est_TEstudiante1">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TTutor_Est" EntitySet="TTutor_Est" />
+    </AssociationSet>
     <AssociationSet Name="FK_TUsuario_TRegistro" Association="Self.FK_TUsuario_TRegistro">
       <End Role="TRegistro" EntitySet="TRegistro" />
       <End Role="TUsuario" EntitySet="TUsuario" />
     </AssociationSet>
-    <AssociationSet Name="TBeca_Estudiante" Association="Self.TBeca_Estudiante">
-      <End Role="TBeca" EntitySet="TBeca" />
-      <End Role="TEstudiante" EntitySet="TEstudiante" />
-    </AssociationSet>
-    <AssociationSet Name="TDir_Est" Association="Self.TDir_Est">
-      <End Role="TDireccion" EntitySet="TDireccion" />
-      <End Role="TEstudiante" EntitySet="TEstudiante" />
-    </AssociationSet>
-    <AssociationSet Name="TTutor_Est" Association="Self.TTutor_Est">
-      <End Role="TEstudiante" EntitySet="TEstudiante" />
+    <AssociationSet Name="FK_TTutor_Est_TTutor1" Association="Self.FK_TTutor_Est_TTutor1">
       <End Role="TTutor" EntitySet="TTutor" />
+      <End Role="TTutor_Est" EntitySet="TTutor_Est" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

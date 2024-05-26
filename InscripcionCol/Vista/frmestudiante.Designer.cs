@@ -62,6 +62,7 @@
             this.dgvEstudiante.Name = "dgvEstudiante";
             this.dgvEstudiante.Size = new System.Drawing.Size(1151, 509);
             this.dgvEstudiante.TabIndex = 1;
+            this.dgvEstudiante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellContentClick);
             // 
             // label1
             // 
@@ -119,6 +120,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmestudiante";
             this.Text = "Gestion de estudiantes";
+            this.Load += new System.EventHandler(this.frmestudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InscripcionCol.Controlador;
 
 namespace InscripcionCol
 {
@@ -16,11 +17,26 @@ namespace InscripcionCol
         {
             InitializeComponent();
         }
-
+        
         private void btnestudiante_Click(object sender, EventArgs e)
         {
-            frmRegistrarEst Registrar = new frmRegistrarEst();
+            frmRegistrarEst Registrar = new frmRegistrarEst(this);
             Registrar.Show();
+        }
+
+        EstudianteController estudiante = new EstudianteController();
+        public void cargar()
+        {
+            dgvEstudiante.DataSource = estudiante.listar();
+        }
+        private void frmestudiante_Load(object sender, EventArgs e)
+        {
+            cargar();
+        }
+
+        private void dgvEstudiante_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

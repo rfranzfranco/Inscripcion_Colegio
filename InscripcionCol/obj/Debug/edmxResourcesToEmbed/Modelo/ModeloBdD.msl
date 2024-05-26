@@ -11,6 +11,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TBeca_Estudiante">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TBeca_Estudiante">
+        <MappingFragment StoreEntitySet="TBeca-Estudiante">
+          <ScalarProperty Name="id_beca" ColumnName="id_beca" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+          <ScalarProperty Name="id_TBecEst" ColumnName="id_TBecEst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TComprobante">
       <EntityTypeMapping TypeName="RegistroColegioDBModel.TComprobante">
         <MappingFragment StoreEntitySet="TComprobante">
@@ -43,6 +52,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TDir_Est">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TDir_Est">
+        <MappingFragment StoreEntitySet="TDir_Est">
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+          <ScalarProperty Name="id_TDirEst" ColumnName="id_TDirEst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TDireccion">
       <EntityTypeMapping TypeName="RegistroColegioDBModel.TDireccion">
         <MappingFragment StoreEntitySet="TDireccion">
@@ -54,7 +72,6 @@
           <ScalarProperty Name="zona" ColumnName="zona" />
           <ScalarProperty Name="avenida" ColumnName="avenida" />
           <ScalarProperty Name="nro_vivienda" ColumnName="nro_vivienda" />
-          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -125,7 +142,15 @@
           <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
           <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTutor_Est">
+      <EntityTypeMapping TypeName="RegistroColegioDBModel.TTutor_Est">
+        <MappingFragment StoreEntitySet="TTutor_Est">
+          <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
           <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+          <ScalarProperty Name="id_TuEst" ColumnName="id_TuEst" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -140,29 +165,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="TBeca_Estudiante" TypeName="RegistroColegioDBModel.TBeca_Estudiante" StoreEntitySet="TBeca-Estudiante">
-      <EndProperty Name="TBeca">
-        <ScalarProperty Name="id_beca" ColumnName="id_beca" />
-      </EndProperty>
-      <EndProperty Name="TEstudiante">
-        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TDir_Est" TypeName="RegistroColegioDBModel.TDir_Est" StoreEntitySet="TDir_Est">
-      <EndProperty Name="TDireccion">
-        <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
-      </EndProperty>
-      <EndProperty Name="TEstudiante">
-        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TTutor_Est" TypeName="RegistroColegioDBModel.TTutor_Est" StoreEntitySet="TTutor_Est">
-      <EndProperty Name="TEstudiante">
-        <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
-      </EndProperty>
-      <EndProperty Name="TTutor">
-        <ScalarProperty Name="id_tutor" ColumnName="id_tutor" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
