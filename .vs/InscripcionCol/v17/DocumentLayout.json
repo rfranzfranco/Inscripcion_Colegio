@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\modelo\\modelobdd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\modelo\\modelobdd.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmusuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs",
-              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmusuario.cs",
-              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "InscripcionCol\\Vista\\frmusuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T05:50:22.767Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "ModeloBdD.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Modelo\\ModeloBdD.edmx",
+              "RelativeDocumentMoniker": "InscripcionCol\\Modelo\\ModeloBdD.edmx",
+              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Modelo\\ModeloBdD.edmx [Diagram1]",
+              "RelativeToolTip": "InscripcionCol\\Modelo\\ModeloBdD.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-05-28T23:35:05.968Z",
+              "EditorCaption": " [Diagram1]"
             }
           ]
         }

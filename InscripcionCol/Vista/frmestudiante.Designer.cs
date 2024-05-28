@@ -115,6 +115,7 @@
             this.btnSeleccionar.TabIndex = 6;
             this.btnSeleccionar.Text = "SELECCIONAR";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnEliminar
             // 
@@ -133,6 +134,7 @@
             this.btnComprobante.TabIndex = 9;
             this.btnComprobante.Text = "COMPROBANTE";
             this.btnComprobante.UseVisualStyleBackColor = true;
+            this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
             // 
             // frmestudiante
             // 
@@ -140,6 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1312, 629);
+            this.ControlBox = false;
             this.Controls.Add(this.btnComprobante);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSeleccionar);

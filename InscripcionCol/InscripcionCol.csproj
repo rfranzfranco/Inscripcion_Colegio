@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
     <Compile Include="Modelo\ModeloBdD.Context.cs">
@@ -200,6 +201,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Vista\frmbeca.resx">
       <DependentUpon>frmbeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmcomprobante.resx">
+      <DependentUpon>frmcomprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmcupo.resx">
       <DependentUpon>frmcupo.cs</DependentUpon>

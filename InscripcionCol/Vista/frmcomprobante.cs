@@ -16,5 +16,10 @@ namespace InscripcionCol.Vista
         {
             InitializeComponent();
         }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

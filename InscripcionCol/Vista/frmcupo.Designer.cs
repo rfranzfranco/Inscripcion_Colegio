@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbxbuscargrado = new System.Windows.Forms.TextBox();
             this.btnbuscarGrado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btncerrarcupo = new System.Windows.Forms.Button();
+            this.cbx_buscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbxbuscargrado
-            // 
-            this.tbxbuscargrado.Location = new System.Drawing.Point(732, 66);
-            this.tbxbuscargrado.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxbuscargrado.Name = "tbxbuscargrado";
-            this.tbxbuscargrado.Size = new System.Drawing.Size(67, 26);
-            this.tbxbuscargrado.TabIndex = 0;
             // 
             // btnbuscarGrado
             // 
@@ -97,18 +89,33 @@
             this.btncerrarcupo.Text = "CERRAR";
             this.btncerrarcupo.UseVisualStyleBackColor = true;
             // 
+            // cbx_buscar
+            // 
+            this.cbx_buscar.FormattingEnabled = true;
+            this.cbx_buscar.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cbx_buscar.Location = new System.Drawing.Point(731, 66);
+            this.cbx_buscar.Name = "cbx_buscar";
+            this.cbx_buscar.Size = new System.Drawing.Size(39, 26);
+            this.cbx_buscar.TabIndex = 32;
+            // 
             // frmcupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1139, 653);
+            this.Controls.Add(this.cbx_buscar);
             this.Controls.Add(this.btncerrarcupo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnbuscarGrado);
-            this.Controls.Add(this.tbxbuscargrado);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmcupo";
@@ -121,12 +128,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbxbuscargrado;
         private System.Windows.Forms.Button btnbuscarGrado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btncerrarcupo;
+        private System.Windows.Forms.ComboBox cbx_buscar;
     }
 }

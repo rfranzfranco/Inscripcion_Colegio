@@ -44,5 +44,17 @@ namespace InscripcionCol
         {
             dgvEstudiante.DataSource = estudianteController.Buscar(txtBuscarEst.Text);
         }
+
+        private void btnComprobante_Click(object sender, EventArgs e)
+        {
+            frmcomprobante frmComprobante=new frmcomprobante();
+            frmComprobante.Show();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            frmRegistrarEst frmRegistrar = new frmRegistrarEst(this);
+            frmRegistrar.Show();
+        }
     }
 }
