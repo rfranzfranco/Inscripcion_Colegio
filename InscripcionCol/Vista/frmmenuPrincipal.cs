@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InscripcionCol.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,6 +53,22 @@ namespace InscripcionCol
             {
                 Application.Exit();
             }
+        }
+
+        private void gestionarProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmdocente frmdocente = new frmdocente();
+            frmdocente.MdiParent = this;
+            frmdocente.WindowState = FormWindowState.Maximized;
+            frmdocente.Show();
+        }
+
+        private void gestionarBecasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmbeca frmBeca = new frmbeca();
+            frmBeca.MdiParent = this;
+            frmBeca.WindowState = FormWindowState.Maximized;
+            frmBeca.Show();
         }
     }
 }

@@ -40,3 +40,6 @@ D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del 
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.xml
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.SqlServer.dll
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.SqlServer.xml
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmcupo.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmdocente.resources
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmbeca.resources

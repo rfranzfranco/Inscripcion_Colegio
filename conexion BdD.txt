@@ -1,2 +1,4 @@
 conexion: RegistroColegioDBEntities
 nombre del modelo: RegistroColegioDBModel
+
+RegistroColegioDBEntities

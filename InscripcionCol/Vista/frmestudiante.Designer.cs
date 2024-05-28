@@ -34,18 +34,18 @@
             this.txtBuscarEst = new System.Windows.Forms.TextBox();
             this.btnBuscarEst = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCargaMasiva = new System.Windows.Forms.Button();
+            this.btnComprobante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.SuspendLayout();
             // 
             // btnestudiante
             // 
-            this.btnestudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnestudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
             this.btnestudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnestudiante.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnestudiante.ForeColor = System.Drawing.Color.LightGray;
+            this.btnestudiante.ForeColor = System.Drawing.Color.Black;
             this.btnestudiante.Location = new System.Drawing.Point(15, 48);
             this.btnestudiante.Margin = new System.Windows.Forms.Padding(4);
             this.btnestudiante.Name = "btnestudiante";
@@ -107,42 +107,42 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "GESTION DE ESTUDIANTES";
             // 
-            // btnModificar
+            // btnSeleccionar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(387, 48);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(117, 42);
-            this.btnModificar.TabIndex = 6;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Location = new System.Drawing.Point(383, 48);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(135, 42);
+            this.btnSeleccionar.TabIndex = 6;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(510, 48);
+            this.btnEliminar.Location = new System.Drawing.Point(527, 48);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(117, 42);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnCargaMasiva
+            // btnComprobante
             // 
-            this.btnCargaMasiva.Location = new System.Drawing.Point(231, 48);
-            this.btnCargaMasiva.Name = "btnCargaMasiva";
-            this.btnCargaMasiva.Size = new System.Drawing.Size(150, 42);
-            this.btnCargaMasiva.TabIndex = 9;
-            this.btnCargaMasiva.Text = "CARGA MASIVA";
-            this.btnCargaMasiva.UseVisualStyleBackColor = true;
+            this.btnComprobante.Location = new System.Drawing.Point(233, 48);
+            this.btnComprobante.Name = "btnComprobante";
+            this.btnComprobante.Size = new System.Drawing.Size(141, 42);
+            this.btnComprobante.TabIndex = 9;
+            this.btnComprobante.Text = "COMPROBANTE";
+            this.btnComprobante.UseVisualStyleBackColor = true;
             // 
             // frmestudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1312, 629);
-            this.Controls.Add(this.btnCargaMasiva);
+            this.Controls.Add(this.btnComprobante);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscarEst);
             this.Controls.Add(this.txtBuscarEst);
@@ -168,8 +168,8 @@
         private System.Windows.Forms.TextBox txtBuscarEst;
         private System.Windows.Forms.Button btnBuscarEst;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnCargaMasiva;
+        private System.Windows.Forms.Button btnComprobante;
     }
 }

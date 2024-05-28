@@ -16,5 +16,15 @@ namespace InscripcionCol.Vista
         {
             InitializeComponent();
         }
+
+        private void btnbuscarGrado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmcupo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

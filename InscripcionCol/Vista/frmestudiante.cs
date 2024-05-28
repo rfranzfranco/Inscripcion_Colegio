@@ -26,7 +26,6 @@ namespace InscripcionCol
             frmRegistrarEst Registrar = new frmRegistrarEst(this);
             Registrar.Show();
         }
-
         EstudianteController estudiante = new EstudianteController();
         public void cargar()
         {
@@ -37,12 +36,10 @@ namespace InscripcionCol
         {
             cargar();
         }
-
         private void dgvEstudiante_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void btnBuscarEst_Click(object sender, EventArgs e)
         {
             dgvEstudiante.DataSource = estudianteController.Buscar(txtBuscarEst.Text);

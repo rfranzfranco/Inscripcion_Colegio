@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InscripcionCol
+namespace InscripcionCol.Vista
 {
-    public partial class frmusuario : Form
+    public partial class frmreporte : Form
     {
-        public frmusuario()
+        public frmreporte()
         {
             InitializeComponent();
-        }
-
-        private void frmusuario_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

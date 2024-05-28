@@ -1,6 +1,6 @@
 ﻿namespace InscripcionCol.Vista
 {
-    partial class frminforme
+    partial class frmreporte
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // frminforme
+            // frmreporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 623);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frminforme";
-            this.Text = "frminforme";
+            this.Name = "frmreporte";
+            this.Text = "frmreporte";
             this.ResumeLayout(false);
 
         }

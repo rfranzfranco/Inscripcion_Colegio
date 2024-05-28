@@ -16,5 +16,10 @@ namespace InscripcionCol.Vista
         {
             InitializeComponent();
         }
+
+        private void frmdocente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

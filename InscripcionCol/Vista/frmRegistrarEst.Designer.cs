@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosEst = new System.Windows.Forms.GroupBox();
+            this.rbtfemenino = new System.Windows.Forms.RadioButton();
+            this.rbtmasculino = new System.Windows.Forms.RadioButton();
             this.cbx_escol = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -98,8 +100,9 @@
             this.txt_dptoComprob = new System.Windows.Forms.TextBox();
             this.date_regComprob = new System.Windows.Forms.DateTimePicker();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.rbtmasculino = new System.Windows.Forms.RadioButton();
-            this.rbtfemenino = new System.Windows.Forms.RadioButton();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.btn_limpiar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.gbDatosEst.SuspendLayout();
             this.gbDirActEst.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -160,6 +163,28 @@
             this.gbDatosEst.TabIndex = 1;
             this.gbDatosEst.TabStop = false;
             this.gbDatosEst.Text = "DATOS DE LA ESTUDIANTE";
+            // 
+            // rbtfemenino
+            // 
+            this.rbtfemenino.AutoSize = true;
+            this.rbtfemenino.Location = new System.Drawing.Point(699, 94);
+            this.rbtfemenino.Name = "rbtfemenino";
+            this.rbtfemenino.Size = new System.Drawing.Size(36, 22);
+            this.rbtfemenino.TabIndex = 33;
+            this.rbtfemenino.TabStop = true;
+            this.rbtfemenino.Text = "F";
+            this.rbtfemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbtmasculino
+            // 
+            this.rbtmasculino.AutoSize = true;
+            this.rbtmasculino.Location = new System.Drawing.Point(653, 94);
+            this.rbtmasculino.Name = "rbtmasculino";
+            this.rbtmasculino.Size = new System.Drawing.Size(39, 22);
+            this.rbtmasculino.TabIndex = 32;
+            this.rbtmasculino.TabStop = true;
+            this.rbtmasculino.Text = "M";
+            this.rbtmasculino.UseVisualStyleBackColor = true;
             // 
             // cbx_escol
             // 
@@ -756,8 +781,9 @@
             // 
             // date_regComprob
             // 
+            this.date_regComprob.Enabled = false;
             this.date_regComprob.Location = new System.Drawing.Point(735, 490);
-            this.date_regComprob.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
+            this.date_regComprob.MaxDate = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             this.date_regComprob.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.date_regComprob.Name = "date_regComprob";
             this.date_regComprob.Size = new System.Drawing.Size(319, 26);
@@ -765,7 +791,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(492, 556);
+            this.btn_guardar.Location = new System.Drawing.Point(537, 556);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(117, 42);
             this.btn_guardar.TabIndex = 9;
@@ -773,34 +799,42 @@
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // rbtmasculino
+            // btn_cerrar
             // 
-            this.rbtmasculino.AutoSize = true;
-            this.rbtmasculino.Location = new System.Drawing.Point(653, 94);
-            this.rbtmasculino.Name = "rbtmasculino";
-            this.rbtmasculino.Size = new System.Drawing.Size(39, 22);
-            this.rbtmasculino.TabIndex = 32;
-            this.rbtmasculino.TabStop = true;
-            this.rbtmasculino.Text = "M";
-            this.rbtmasculino.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Location = new System.Drawing.Point(936, 556);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(117, 42);
+            this.btn_cerrar.TabIndex = 10;
+            this.btn_cerrar.Text = "CERRAR";
+            this.btn_cerrar.UseVisualStyleBackColor = true;
             // 
-            // rbtfemenino
+            // btn_limpiar
             // 
-            this.rbtfemenino.AutoSize = true;
-            this.rbtfemenino.Location = new System.Drawing.Point(699, 94);
-            this.rbtfemenino.Name = "rbtfemenino";
-            this.rbtfemenino.Size = new System.Drawing.Size(36, 22);
-            this.rbtfemenino.TabIndex = 33;
-            this.rbtfemenino.TabStop = true;
-            this.rbtfemenino.Text = "F";
-            this.rbtfemenino.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Location = new System.Drawing.Point(670, 556);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(117, 42);
+            this.btn_limpiar.TabIndex = 11;
+            this.btn_limpiar.Text = "LIMPIAR";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(803, 556);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(117, 42);
+            this.btnModificar.TabIndex = 12;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // frmRegistrarEst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1129, 636);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btn_limpiar);
+            this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.date_regComprob);
             this.Controls.Add(this.txt_dptoComprob);
@@ -816,6 +850,7 @@
             this.Name = "frmRegistrarEst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar estudiante";
+            this.Load += new System.EventHandler(this.frmRegistrarEst_Load);
             this.gbDatosEst.ResumeLayout(false);
             this.gbDatosEst.PerformLayout();
             this.gbDirActEst.ResumeLayout(false);
@@ -901,5 +936,8 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.RadioButton rbtmasculino;
         private System.Windows.Forms.RadioButton rbtfemenino;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.Button btn_limpiar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

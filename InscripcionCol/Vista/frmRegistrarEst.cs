@@ -170,5 +170,10 @@ namespace InscripcionCol
         public TextBox txtapPaterno => txt_appaterno;
         public TextBox txtnombre => txt_nombre;
         public ComboBox txtgrado => cbx_escol;
+
+        private void frmRegistrarEst_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

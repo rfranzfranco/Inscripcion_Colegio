@@ -178,6 +178,12 @@
     <Compile Include="Vista\frmRegistrarEst.Designer.cs">
       <DependentUpon>frmRegistrarEst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmreporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmreporte.Designer.cs">
+      <DependentUpon>frmreporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmusuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vista\frmbeca.resx">
+      <DependentUpon>frmbeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmcupo.resx">
+      <DependentUpon>frmcupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmdocente.resx">
+      <DependentUpon>frmdocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frminforme.resx">
+      <DependentUpon>frminforme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frminiciarsesion.resx">
       <DependentUpon>frminiciarsesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRegistrarEst.resx">
       <DependentUpon>frmRegistrarEst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmreporte.resx">
+      <DependentUpon>frmreporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmusuario.resx">
       <DependentUpon>frmusuario.cs</DependentUpon>
@@ -252,6 +273,7 @@
       <DependentUpon>ModeloBdD.edmx</DependentUpon>
       <LastGenOutput>ModeloBdD.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\chequeo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\intimidad.png" />
