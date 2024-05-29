@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using InscripcionCol.Modelo;
 using System.Data.Entity.Migrations;
 using System.Data.Entity;
+using System.Runtime.Remoting.Contexts;
 
 namespace InscripcionCol.Controlador
 {
@@ -205,6 +206,38 @@ namespace InscripcionCol.Controlador
             _db.Entry(comprobante).State = EntityState.Modified;
             int result = await _db.SaveChangesAsync();
             return result > 0; 
+        }
+        public async Task<List<CupoViewModel>> ObtenerCuposDisponiblesAsync()
+        {
+            var cupos = await _db.TCurso
+                .Include(c => c.TComprobante) // Incluir los comprobantes para contar estudiantes
+                .Select(c => new CupoViewModel
+                {
+                    Grado = c.grado,
+                    Paralelo = c.paralelo,
+                    Cupo = 30,
+                    Cupo_Disponible = 30 - c.TComprobante.Count(comp => comp.id_curso == c.id_curso) // Contar los estudiantes inscritos a través de los comprobantes
+                })
+                .ToListAsync();
+
+            return cupos;
+        }
+
+        public async Task<List<CupoViewModel>> ObtenerCuposDisponiblesPorGradoAsync(int grado)
+        {
+            var cupos = await _db.TCurso
+                .Where(c => c.grado == grado)
+                .Include(c => c.TComprobante) // Incluir los comprobantes para contar estudiantes
+                .Select(c => new CupoViewModel
+                {
+                    Grado = c.grado,
+                    Paralelo = c.paralelo,
+                    Cupo = 30,
+                    Cupo_Disponible = 30 - c.TComprobante.Count(comp => comp.id_curso == c.id_curso) // Contar los estudiantes inscritos a través de los comprobantes
+                })
+                .ToListAsync();
+
+            return cupos;
         }
     }
 }
