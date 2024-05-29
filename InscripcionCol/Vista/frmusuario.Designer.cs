@@ -62,8 +62,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.gbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
@@ -441,6 +441,16 @@
             this.btnmodificar.Text = "MODIFICAR";
             this.btnmodificar.UseVisualStyleBackColor = true;
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(275, 619);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(104, 43);
+            this.btneliminar.TabIndex = 19;
+            this.btneliminar.Text = "ELIMNINAR";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            // 
             // frmusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -496,7 +506,6 @@
         private System.Windows.Forms.DataGridView dgvUsuario;
         private System.Windows.Forms.TextBox txtrepetirContra;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.TextBox txtcelular;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -507,5 +516,6 @@
         private System.Windows.Forms.RadioButton rbtmasculino;
         private System.Windows.Forms.DateTimePicker datefNac;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btneliminar;
     }
 }
