@@ -8,19 +8,26 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InscripcionCol.Controlador;
 
 namespace InscripcionCol
 {
     public partial class frmInicioSesion : Form
     {
+        private UsuarioController _usuarioController;
+
         public frmInicioSesion()
         {
             InitializeComponent();
+            _usuarioController = new UsuarioController();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -94,11 +101,29 @@ namespace InscripcionCol
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmcarga bienvenida=new frmcarga();
-            bienvenida.ShowDialog();
-            frmmenu menu = new frmmenu();
-            menu.Show();
+            var username = txtusuario.Text;
+            var password = txtcontraseña.Text;
+
+            if (username == "USUARIO" || password == "CONTRASEÑA")
+            {
+                MessageBox.Show("Por favor, ingrese su usuario y contraseña.");
+                return;
+            }
+
+            var usuario = _usuarioController.Listar().FirstOrDefault(u => u.usuario == username && u.contraseña == password);
+
+            if (usuario != null)
+            {
+                this.Hide();
+                frmcarga bienvenida = new frmcarga();
+                bienvenida.ShowDialog();
+                frmmenu menu = new frmmenu();
+                menu.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.");
+            }
         }
     }
 }
