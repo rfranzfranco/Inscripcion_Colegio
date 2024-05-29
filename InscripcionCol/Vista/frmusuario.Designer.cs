@@ -408,6 +408,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label9
             // 
@@ -450,6 +451,7 @@
             this.btneliminar.TabIndex = 19;
             this.btneliminar.Text = "ELIMNINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // frmusuario
             // 

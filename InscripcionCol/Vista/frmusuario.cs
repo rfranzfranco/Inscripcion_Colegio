@@ -141,6 +141,46 @@ namespace InscripcionCol
         {
             LimpiarCampos();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string parametroBusqueda = txtBuscar.Text.Trim();
+
+            // Realizar la búsqueda y actualizar el DataGridView
+            var usuariosEncontrados = usuarioController.Buscar(parametroBusqueda);
+
+            if (usuariosEncontrados.Any())
+            {
+                dgvUsuario.DataSource = usuariosEncontrados;
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron usuarios con el CI especificado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuario.SelectedRows.Count > 0)
+            {
+                int ci = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["ci"].Value);
+
+                if (usuarioController.EliminarUsuario(ci))
+                {
+                    MessageBox.Show("Usuario eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarUsuarios(); // Recargar los datos en el DataGridView
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un usuario para eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 

@@ -65,8 +65,62 @@ namespace InscripcionCol.Controlador
                     throw;
                 }
             }
-        }      
+        }
+        public List<UsuarioViewModel> Buscar(string param)
+        {
+            if (string.IsNullOrWhiteSpace(param))
+            {
+                return Listar();
+            }
+            else
+            {
+                if (int.TryParse(param, out int ci))
+                {
+                    return Listar().Where(registro => registro.ci == ci).ToList();
+                }
+                else
+                {
+                    MessageBox.Show("El CI debe ser un número válido.", "Error de Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return new List<UsuarioViewModel>();
+                }
+            }
+        }
+        public bool EliminarUsuario(int ci)
+        {
+            using (var transaction = _db.Database.BeginTransaction())
+            {
+                try
+                {
+                    // Encontrar el registro correspondiente en TRegistro
+                    var registro = _db.TRegistro.SingleOrDefault(r => r.ci == ci);
+                    if (registro == null)
+                    {
+                        MessageBox.Show("No se encontró el registro correspondiente.");
+                        return false;
+                    }
 
+                    // Encontrar el usuario correspondiente en TUsuario
+                    var usuario = _db.TUsuario.SingleOrDefault(u => u.id_registro == registro.id_registro);
+                    if (usuario != null)
+                    {
+                        _db.TUsuario.Remove(usuario);
+                    }
+
+                    // Eliminar el registro en TRegistro
+                    _db.TRegistro.Remove(registro);
+
+                    _db.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ha ocurrido un error al eliminar el usuario: {ex.Message}");
+                    transaction.Rollback();
+                    return false;
+                }
+            }
+        }
     }
 }
 
