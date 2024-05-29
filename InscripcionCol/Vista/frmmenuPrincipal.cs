@@ -70,5 +70,11 @@ namespace InscripcionCol
             frmBeca.WindowState = FormWindowState.Maximized;
             frmBeca.Show();
         }
+
+        private void visualizarCuposToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmcupo frmCupo = new frmcupo();
+            frmCupo.Show();
+        }
     }
 }

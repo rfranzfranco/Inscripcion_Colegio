@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
+    <Compile Include="Controlador\CupoViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
     <Compile Include="Modelo\ModeloBdD.Context.cs">

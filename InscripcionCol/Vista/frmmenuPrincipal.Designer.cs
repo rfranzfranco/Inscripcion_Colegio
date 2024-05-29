@@ -94,6 +94,7 @@
             this.visualizarCuposToolStripMenuItem1.Name = "visualizarCuposToolStripMenuItem1";
             this.visualizarCuposToolStripMenuItem1.Size = new System.Drawing.Size(282, 28);
             this.visualizarCuposToolStripMenuItem1.Text = "Visualizar Cupos";
+            this.visualizarCuposToolStripMenuItem1.Click += new System.EventHandler(this.visualizarCuposToolStripMenuItem1_Click);
             // 
             // gestionarBecasToolStripMenuItem
             // 
