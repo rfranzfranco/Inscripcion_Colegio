@@ -40,8 +40,8 @@ namespace InscripcionCol
         }
 
         private void frmmenu_Load(object sender, EventArgs e)
-        {
-            this.FormClosed += new FormClosedEventHandler(cerrarform);
+        {            
+                this.FormClosed += new FormClosedEventHandler(cerrarform);                        
         }
         private void cerrarform(object sender, EventArgs e)
         {

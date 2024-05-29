@@ -69,11 +69,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(923, 514);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.dgvcomprobante);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmcomprobante";
             this.Text = "frmcomprobante";
             ((System.ComponentModel.ISupportInitialize)(this.dgvcomprobante)).EndInit();

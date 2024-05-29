@@ -113,7 +113,7 @@
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(135, 42);
             this.btnSeleccionar.TabIndex = 6;
-            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.Text = "MODIFICAR";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
@@ -125,6 +125,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnComprobante
             // 
