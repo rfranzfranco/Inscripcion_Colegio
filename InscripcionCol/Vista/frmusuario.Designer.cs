@@ -431,17 +431,6 @@
             this.dgvUsuario.Size = new System.Drawing.Size(666, 624);
             this.dgvUsuario.TabIndex = 6;
             // 
-            // btneliminar
-            // 
-            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(275, 619);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(104, 43);
-            this.btneliminar.TabIndex = 19;
-            this.btneliminar.Text = "ELIMINAR";
-            this.btneliminar.UseVisualStyleBackColor = true;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
