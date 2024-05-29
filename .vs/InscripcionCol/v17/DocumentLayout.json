@@ -1,25 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\",
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|c:\\users\\pc\\desktop\\nuevo\\inscripcion_colegio\\inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|c:\\users\\pc\\desktop\\nuevo\\inscripcion_colegio\\inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|c:\\users\\pc\\desktop\\nuevo\\inscripcion_colegio\\inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmregistrarest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\controlador\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\inscripcioncol\\controlador\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\estudiantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\estudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\dise\u00F1o de sistemas - sis 3651a\\proyecto continuado\\versiones del programa\\ultima version\\inscripcion_colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -30,53 +38,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmusuario.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmusuario.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs",
+              "RelativeToolTip": "InscripcionCol\\Vista\\frmusuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T16:06:18.719Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmusuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmusuario.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmusuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "InscripcionCol\\Vista\\frmusuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T16:04:59.357Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmestudiante.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmestudiante.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
+              "RelativeToolTip": "InscripcionCol\\Vista\\frmestudiante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:47:50.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EstudianteViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteViewModel.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\EstudianteViewModel.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteViewModel.cs",
+              "RelativeToolTip": "InscripcionCol\\Controlador\\EstudianteViewModel.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA5wAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T03:23:23.925Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmestudiante.cs",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
-              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmestudiante.cs",
-              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
-              "RelativeToolTip": "InscripcionCol\\Vista\\frmestudiante.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAABlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:47:50.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EstudianteViewModel.cs",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteViewModel.cs",
-              "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\EstudianteViewModel.cs",
-              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteViewModel.cs",
-              "RelativeToolTip": "InscripcionCol\\Controlador\\EstudianteViewModel.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA5wAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T03:23:23.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "frmRegistrarEst.cs",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmRegistrarEst.cs",
-              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmRegistrarEst.cs",
               "ViewState": "AQIAAAMBAAAAAAAAAAAQwEEBAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,28 +104,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EstudianteController.cs",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\EstudianteController.cs",
-              "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\EstudianteController.cs",
               "RelativeToolTip": "InscripcionCol\\Controlador\\EstudianteController.cs",
               "ViewState": "AQIAAK8AAAAAAAAAAAAAAA8AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T01:47:43.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T01:47:43.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmestudiante.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\NUEVO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmestudiante.cs",
               "ToolTip": "D:\\SEM 1-2024\\DISE\u00D1O DE SISTEMAS - SIS 3651A\\PROYECTO CONTINUADO\\versiones del programa\\Ultima version\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmestudiante.cs [Dise\u00F1o]",
-              "RelativeToolTip": "InscripcionCol\\Vista\\frmestudiante.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T01:33:44.429Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-29T01:33:44.429Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

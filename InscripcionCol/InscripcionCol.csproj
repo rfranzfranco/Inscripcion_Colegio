@@ -68,6 +68,8 @@
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
+    <Compile Include="Controlador\UsuarioController.cs" />
+    <Compile Include="Controlador\UsuarioViewModel.cs" />
     <Compile Include="Modelo\ModeloBdD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

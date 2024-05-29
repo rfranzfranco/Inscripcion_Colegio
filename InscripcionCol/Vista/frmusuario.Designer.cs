@@ -46,7 +46,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtNomusuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.txtsexo = new System.Windows.Forms.Label();
             this.txtApMaterno = new System.Windows.Forms.TextBox();
             this.txtApPaterno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,8 +62,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.gbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.btnAgregarUsuario.TabIndex = 0;
             this.btnAgregarUsuario.Text = "AGREGAR USUARIO";
             this.btnAgregarUsuario.UseVisualStyleBackColor = false;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click_1);
             // 
             // gbDatosUsuario
             // 
@@ -100,7 +101,7 @@
             this.gbDatosUsuario.Controls.Add(this.label12);
             this.gbDatosUsuario.Controls.Add(this.txtNomusuario);
             this.gbDatosUsuario.Controls.Add(this.txtNombre);
-            this.gbDatosUsuario.Controls.Add(this.label13);
+            this.gbDatosUsuario.Controls.Add(this.txtsexo);
             this.gbDatosUsuario.Controls.Add(this.txtApMaterno);
             this.gbDatosUsuario.Controls.Add(this.txtApPaterno);
             this.gbDatosUsuario.Controls.Add(this.label7);
@@ -196,6 +197,7 @@
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtdireccion
             // 
@@ -214,6 +216,7 @@
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label11
             // 
@@ -271,15 +274,15 @@
             this.txtNombre.Size = new System.Drawing.Size(257, 26);
             this.txtNombre.TabIndex = 10;
             // 
-            // label13
+            // txtsexo
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(319, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 18);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Sexo:";
+            this.txtsexo.AutoSize = true;
+            this.txtsexo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsexo.Location = new System.Drawing.Point(319, 30);
+            this.txtsexo.Name = "txtsexo";
+            this.txtsexo.Size = new System.Drawing.Size(48, 18);
+            this.txtsexo.TabIndex = 18;
+            this.txtsexo.Text = "Sexo:";
             // 
             // txtApMaterno
             // 
@@ -425,18 +428,8 @@
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Location = new System.Drawing.Point(452, 117);
             this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.Size = new System.Drawing.Size(666, 647);
+            this.dgvUsuario.Size = new System.Drawing.Size(666, 624);
             this.dgvUsuario.TabIndex = 6;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(275, 619);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(104, 43);
-            this.btneliminar.TabIndex = 19;
-            this.btneliminar.Text = "ELIMINAR";
-            this.btneliminar.UseVisualStyleBackColor = true;
             // 
             // btnmodificar
             // 
@@ -448,12 +441,22 @@
             this.btnmodificar.Text = "MODIFICAR";
             this.btnmodificar.UseVisualStyleBackColor = true;
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(275, 619);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(104, 43);
+            this.btneliminar.TabIndex = 19;
+            this.btneliminar.Text = "ELIMNINAR";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            // 
             // frmusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1135, 777);
+            this.ClientSize = new System.Drawing.Size(1135, 749);
             this.ControlBox = false;
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmodificar);
@@ -503,16 +506,16 @@
         private System.Windows.Forms.DataGridView dgvUsuario;
         private System.Windows.Forms.TextBox txtrepetirContra;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.TextBox txtcelular;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label txtsexo;
         private System.Windows.Forms.RadioButton rbtfemenino;
         private System.Windows.Forms.RadioButton rbtmasculino;
         private System.Windows.Forms.DateTimePicker datefNac;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btneliminar;
     }
 }
