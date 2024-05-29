@@ -48,7 +48,7 @@ namespace InscripcionCol
             if (txtusuario.Text == "USUARIO")
             {
                 txtusuario.Text = "";
-                txtusuario.ForeColor = Color.LightGray;
+                txtusuario.ForeColor = Color.Black;
             }
         }
 
@@ -57,7 +57,7 @@ namespace InscripcionCol
             if (txtusuario.Text == "")
             {
                 txtusuario.Text = "USUARIO";
-                txtusuario.ForeColor = Color.DimGray;
+                txtusuario.ForeColor = Color.Black;
             }
         }
 
@@ -66,7 +66,7 @@ namespace InscripcionCol
             if (txtcontraseña.Text == "CONTRASEÑA")
             {
                 txtcontraseña.Text = "";
-                txtcontraseña.ForeColor = Color.LightGray;
+                txtcontraseña.ForeColor = Color.Black;
                 txtcontraseña.UseSystemPasswordChar = true;
             }
         }
@@ -76,7 +76,7 @@ namespace InscripcionCol
             if (txtcontraseña.Text == "")
             {
                 txtcontraseña.Text = "CONTRASEÑA";
-                txtcontraseña.ForeColor = Color.DimGray;
+                txtcontraseña.ForeColor = Color.Black;
                 txtcontraseña.UseSystemPasswordChar = false;
             }
         }
