@@ -118,7 +118,7 @@ namespace InscripcionCol.Controlador
             }
             else
             {
-                return Listar().Where(estudiante => estudiante.Codigo_Rude.Contains(param)).ToList();
+                return Listar().Where(estudiante => estudiante.Codigo_Rude.ToString().Contains(param)).ToList();
             }
         } 
         public bool EliminarEstudiante(int idEstudiante)

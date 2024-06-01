@@ -30,6 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosEst = new System.Windows.Forms.GroupBox();
+            this.cbx_locNac = new System.Windows.Forms.ComboBox();
+            this.cbx_provNac = new System.Windows.Forms.ComboBox();
+            this.cbx_dptoNac = new System.Windows.Forms.ComboBox();
+            this.cbx_paisNac = new System.Windows.Forms.ComboBox();
             this.rbtfemenino = new System.Windows.Forms.RadioButton();
             this.rbtmasculino = new System.Windows.Forms.RadioButton();
             this.cbx_escol = new System.Windows.Forms.ComboBox();
@@ -46,12 +50,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_ci = new System.Windows.Forms.TextBox();
-            this.txt_localidadNac = new System.Windows.Forms.TextBox();
-            this.txt_dptoNac = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_provinciaNac = new System.Windows.Forms.TextBox();
-            this.txt_paisNac = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_apmaterno = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,12 +64,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_appaterno = new System.Windows.Forms.TextBox();
             this.gbDirActEst = new System.Windows.Forms.GroupBox();
+            this.cbx_locAct = new System.Windows.Forms.ComboBox();
+            this.cbx_munAct = new System.Windows.Forms.ComboBox();
+            this.cbx_provAct = new System.Windows.Forms.ComboBox();
             this.cbx_dptoAct = new System.Windows.Forms.ComboBox();
-            this.txt_localidadAct = new System.Windows.Forms.TextBox();
-            this.txt_municipioAct = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.txt_provinciaAct = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.txt_cel = new System.Windows.Forms.TextBox();
@@ -124,6 +124,10 @@
             this.gbDatosEst.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDatosEst.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosEst.Controls.Add(this.cbx_locNac);
+            this.gbDatosEst.Controls.Add(this.cbx_provNac);
+            this.gbDatosEst.Controls.Add(this.cbx_dptoNac);
+            this.gbDatosEst.Controls.Add(this.cbx_paisNac);
             this.gbDatosEst.Controls.Add(this.rbtfemenino);
             this.gbDatosEst.Controls.Add(this.rbtmasculino);
             this.gbDatosEst.Controls.Add(this.cbx_escol);
@@ -140,12 +144,8 @@
             this.gbDatosEst.Controls.Add(this.label13);
             this.gbDatosEst.Controls.Add(this.label12);
             this.gbDatosEst.Controls.Add(this.txt_ci);
-            this.gbDatosEst.Controls.Add(this.txt_localidadNac);
-            this.gbDatosEst.Controls.Add(this.txt_dptoNac);
             this.gbDatosEst.Controls.Add(this.label10);
             this.gbDatosEst.Controls.Add(this.label11);
-            this.gbDatosEst.Controls.Add(this.txt_provinciaNac);
-            this.gbDatosEst.Controls.Add(this.txt_paisNac);
             this.gbDatosEst.Controls.Add(this.txt_nombre);
             this.gbDatosEst.Controls.Add(this.txt_apmaterno);
             this.gbDatosEst.Controls.Add(this.label9);
@@ -163,6 +163,41 @@
             this.gbDatosEst.TabIndex = 1;
             this.gbDatosEst.TabStop = false;
             this.gbDatosEst.Text = "DATOS DE LA ESTUDIANTE";
+            // 
+            // cbx_locNac
+            // 
+            this.cbx_locNac.FormattingEnabled = true;
+            this.cbx_locNac.Location = new System.Drawing.Point(471, 137);
+            this.cbx_locNac.Name = "cbx_locNac";
+            this.cbx_locNac.Size = new System.Drawing.Size(156, 26);
+            this.cbx_locNac.TabIndex = 10;
+            // 
+            // cbx_provNac
+            // 
+            this.cbx_provNac.FormattingEnabled = true;
+            this.cbx_provNac.Location = new System.Drawing.Point(471, 105);
+            this.cbx_provNac.Name = "cbx_provNac";
+            this.cbx_provNac.Size = new System.Drawing.Size(156, 26);
+            this.cbx_provNac.TabIndex = 9;
+            this.cbx_provNac.SelectedIndexChanged += new System.EventHandler(this.cbx_provNac_SelectedIndexChanged);
+            // 
+            // cbx_dptoNac
+            // 
+            this.cbx_dptoNac.FormattingEnabled = true;
+            this.cbx_dptoNac.Location = new System.Drawing.Point(471, 73);
+            this.cbx_dptoNac.Name = "cbx_dptoNac";
+            this.cbx_dptoNac.Size = new System.Drawing.Size(156, 26);
+            this.cbx_dptoNac.TabIndex = 8;
+            this.cbx_dptoNac.SelectedIndexChanged += new System.EventHandler(this.cbx_dptoNac_SelectedIndexChanged);
+            // 
+            // cbx_paisNac
+            // 
+            this.cbx_paisNac.FormattingEnabled = true;
+            this.cbx_paisNac.Location = new System.Drawing.Point(471, 41);
+            this.cbx_paisNac.Name = "cbx_paisNac";
+            this.cbx_paisNac.Size = new System.Drawing.Size(156, 26);
+            this.cbx_paisNac.TabIndex = 7;
+            this.cbx_paisNac.SelectedIndexChanged += new System.EventHandler(this.cbx_paisNac_SelectedIndexChanged);
             // 
             // rbtfemenino
             // 
@@ -311,20 +346,6 @@
             this.txt_ci.Size = new System.Drawing.Size(99, 26);
             this.txt_ci.TabIndex = 4;
             // 
-            // txt_localidadNac
-            // 
-            this.txt_localidadNac.Location = new System.Drawing.Point(471, 137);
-            this.txt_localidadNac.Name = "txt_localidadNac";
-            this.txt_localidadNac.Size = new System.Drawing.Size(156, 26);
-            this.txt_localidadNac.TabIndex = 10;
-            // 
-            // txt_dptoNac
-            // 
-            this.txt_dptoNac.Location = new System.Drawing.Point(471, 73);
-            this.txt_dptoNac.Name = "txt_dptoNac";
-            this.txt_dptoNac.Size = new System.Drawing.Size(156, 26);
-            this.txt_dptoNac.TabIndex = 8;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -343,23 +364,9 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Dpto:";
             // 
-            // txt_provinciaNac
-            // 
-            this.txt_provinciaNac.Location = new System.Drawing.Point(471, 105);
-            this.txt_provinciaNac.Name = "txt_provinciaNac";
-            this.txt_provinciaNac.Size = new System.Drawing.Size(156, 26);
-            this.txt_provinciaNac.TabIndex = 9;
-            // 
-            // txt_paisNac
-            // 
-            this.txt_paisNac.Location = new System.Drawing.Point(471, 41);
-            this.txt_paisNac.Name = "txt_paisNac";
-            this.txt_paisNac.Size = new System.Drawing.Size(156, 26);
-            this.txt_paisNac.TabIndex = 7;
-            // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(139, 103);
+            this.txt_nombre.Location = new System.Drawing.Point(139, 105);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(222, 26);
             this.txt_nombre.TabIndex = 3;
@@ -392,7 +399,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(388, 111);
+            this.label7.Location = new System.Drawing.Point(392, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 6;
@@ -401,7 +408,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 44);
+            this.label6.Location = new System.Drawing.Point(425, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 5;
@@ -419,7 +426,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 106);
+            this.label4.Location = new System.Drawing.Point(65, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 3;
@@ -428,7 +435,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 75);
+            this.label3.Location = new System.Drawing.Point(3, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 2;
@@ -437,7 +444,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 44);
+            this.label2.Location = new System.Drawing.Point(5, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 18);
             this.label2.TabIndex = 1;
@@ -445,7 +452,7 @@
             // 
             // txt_appaterno
             // 
-            this.txt_appaterno.Location = new System.Drawing.Point(139, 44);
+            this.txt_appaterno.Location = new System.Drawing.Point(139, 41);
             this.txt_appaterno.Name = "txt_appaterno";
             this.txt_appaterno.Size = new System.Drawing.Size(222, 26);
             this.txt_appaterno.TabIndex = 1;
@@ -455,12 +462,12 @@
             this.gbDirActEst.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDirActEst.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDirActEst.Controls.Add(this.cbx_locAct);
+            this.gbDirActEst.Controls.Add(this.cbx_munAct);
+            this.gbDirActEst.Controls.Add(this.cbx_provAct);
             this.gbDirActEst.Controls.Add(this.cbx_dptoAct);
-            this.gbDirActEst.Controls.Add(this.txt_localidadAct);
-            this.gbDirActEst.Controls.Add(this.txt_municipioAct);
             this.gbDirActEst.Controls.Add(this.label36);
             this.gbDirActEst.Controls.Add(this.label37);
-            this.gbDirActEst.Controls.Add(this.txt_provinciaAct);
             this.gbDirActEst.Controls.Add(this.label34);
             this.gbDirActEst.Controls.Add(this.label35);
             this.gbDirActEst.Controls.Add(this.txt_cel);
@@ -481,8 +488,36 @@
             this.gbDirActEst.Text = "DIRECCION ACTUAL DE LA ESTUDIANTE (Información para uso exclusivo de la unidad ed" +
     "ucativa)";
             // 
+            // cbx_locAct
+            // 
+            this.cbx_locAct.FormattingEnabled = true;
+            this.cbx_locAct.Location = new System.Drawing.Point(103, 121);
+            this.cbx_locAct.Name = "cbx_locAct";
+            this.cbx_locAct.Size = new System.Drawing.Size(381, 26);
+            this.cbx_locAct.TabIndex = 19;
+            this.cbx_locAct.SelectedIndexChanged += new System.EventHandler(this.cbx_locAct_SelectedIndexChanged);
+            // 
+            // cbx_munAct
+            // 
+            this.cbx_munAct.FormattingEnabled = true;
+            this.cbx_munAct.Location = new System.Drawing.Point(103, 89);
+            this.cbx_munAct.Name = "cbx_munAct";
+            this.cbx_munAct.Size = new System.Drawing.Size(381, 26);
+            this.cbx_munAct.TabIndex = 18;
+            this.cbx_munAct.SelectedIndexChanged += new System.EventHandler(this.cbx_munAct_SelectedIndexChanged);
+            // 
+            // cbx_provAct
+            // 
+            this.cbx_provAct.FormattingEnabled = true;
+            this.cbx_provAct.Location = new System.Drawing.Point(103, 57);
+            this.cbx_provAct.Name = "cbx_provAct";
+            this.cbx_provAct.Size = new System.Drawing.Size(381, 26);
+            this.cbx_provAct.TabIndex = 17;
+            this.cbx_provAct.SelectedIndexChanged += new System.EventHandler(this.cbx_provAct_SelectedIndexChanged);
+            // 
             // cbx_dptoAct
             // 
+            this.cbx_dptoAct.Enabled = false;
             this.cbx_dptoAct.FormattingEnabled = true;
             this.cbx_dptoAct.Items.AddRange(new object[] {
             "La Paz",
@@ -498,20 +533,7 @@
             this.cbx_dptoAct.Name = "cbx_dptoAct";
             this.cbx_dptoAct.Size = new System.Drawing.Size(381, 26);
             this.cbx_dptoAct.TabIndex = 16;
-            // 
-            // txt_localidadAct
-            // 
-            this.txt_localidadAct.Location = new System.Drawing.Point(103, 121);
-            this.txt_localidadAct.Name = "txt_localidadAct";
-            this.txt_localidadAct.Size = new System.Drawing.Size(381, 26);
-            this.txt_localidadAct.TabIndex = 19;
-            // 
-            // txt_municipioAct
-            // 
-            this.txt_municipioAct.Location = new System.Drawing.Point(103, 89);
-            this.txt_municipioAct.Name = "txt_municipioAct";
-            this.txt_municipioAct.Size = new System.Drawing.Size(381, 26);
-            this.txt_municipioAct.TabIndex = 18;
+            this.cbx_dptoAct.SelectedIndexChanged += new System.EventHandler(this.cbx_dptoAct_SelectedIndexChanged);
             // 
             // label36
             // 
@@ -530,13 +552,6 @@
             this.label37.Size = new System.Drawing.Size(79, 18);
             this.label37.TabIndex = 14;
             this.label37.Text = "Municipio:";
-            // 
-            // txt_provinciaAct
-            // 
-            this.txt_provinciaAct.Location = new System.Drawing.Point(103, 57);
-            this.txt_provinciaAct.Name = "txt_provinciaAct";
-            this.txt_provinciaAct.Size = new System.Drawing.Size(381, 26);
-            this.txt_provinciaAct.TabIndex = 17;
             // 
             // label34
             // 
@@ -757,7 +772,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(563, 461);
+            this.label32.Location = new System.Drawing.Point(661, 464);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(166, 18);
             this.label32.TabIndex = 5;
@@ -766,7 +781,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(594, 496);
+            this.label33.Location = new System.Drawing.Point(692, 499);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(135, 18);
             this.label33.TabIndex = 6;
@@ -774,19 +789,21 @@
             // 
             // txt_dptoComprob
             // 
-            this.txt_dptoComprob.Location = new System.Drawing.Point(735, 458);
+            this.txt_dptoComprob.Enabled = false;
+            this.txt_dptoComprob.Location = new System.Drawing.Point(833, 461);
             this.txt_dptoComprob.Name = "txt_dptoComprob";
-            this.txt_dptoComprob.Size = new System.Drawing.Size(381, 26);
+            this.txt_dptoComprob.Size = new System.Drawing.Size(283, 26);
             this.txt_dptoComprob.TabIndex = 31;
+            this.txt_dptoComprob.Text = "Oruro";
             // 
             // date_regComprob
             // 
             this.date_regComprob.Enabled = false;
-            this.date_regComprob.Location = new System.Drawing.Point(735, 490);
+            this.date_regComprob.Location = new System.Drawing.Point(833, 493);
             this.date_regComprob.MaxDate = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             this.date_regComprob.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.date_regComprob.Name = "date_regComprob";
-            this.date_regComprob.Size = new System.Drawing.Size(319, 26);
+            this.date_regComprob.Size = new System.Drawing.Size(283, 26);
             this.date_regComprob.TabIndex = 0;
             // 
             // btn_guardar
@@ -801,9 +818,9 @@
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(936, 556);
+            this.btn_cerrar.Location = new System.Drawing.Point(936, 554);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(117, 42);
+            this.btn_cerrar.Size = new System.Drawing.Size(123, 44);
             this.btn_cerrar.TabIndex = 35;
             this.btn_cerrar.Text = "CERRAR";
             this.btn_cerrar.UseVisualStyleBackColor = true;
@@ -872,7 +889,6 @@
         private System.Windows.Forms.GroupBox gbDatosEst;
         private System.Windows.Forms.GroupBox gbDirActEst;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox txt_paisNac;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.TextBox txt_apmaterno;
         private System.Windows.Forms.Label label9;
@@ -889,11 +905,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_ci;
-        private System.Windows.Forms.TextBox txt_localidadNac;
-        private System.Windows.Forms.TextBox txt_dptoNac;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txt_provinciaNac;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker date_nac;
         private System.Windows.Forms.TextBox txt_rude;
@@ -929,11 +942,8 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txt_dptoComprob;
         private System.Windows.Forms.DateTimePicker date_regComprob;
-        private System.Windows.Forms.TextBox txt_localidadAct;
-        private System.Windows.Forms.TextBox txt_municipioAct;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox txt_provinciaAct;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox cbx_dptoAct;
@@ -943,5 +953,12 @@
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ComboBox cbx_paisNac;
+        private System.Windows.Forms.ComboBox cbx_dptoNac;
+        private System.Windows.Forms.ComboBox cbx_locNac;
+        private System.Windows.Forms.ComboBox cbx_provNac;
+        private System.Windows.Forms.ComboBox cbx_locAct;
+        private System.Windows.Forms.ComboBox cbx_munAct;
+        private System.Windows.Forms.ComboBox cbx_provAct;
     }
 }

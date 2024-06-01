@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="RegistroColegioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TBeca">
     <Key>
       <PropertyRef Name="id_beca" />
@@ -90,7 +100,7 @@
     <Property Name="ci" Type="int" Nullable="false" />
     <Property Name="complemento" Type="nvarchar" MaxLength="2" Nullable="false" />
     <Property Name="expedido" Type="nvarchar" MaxLength="2" Nullable="false" />
-    <Property Name="codigo_rude" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="codigo_rude" Type="bigint" Nullable="false" />
     <Property Name="sexo" Type="nvarchar" MaxLength="1" Nullable="false" />
     <Property Name="fec_nacimiento" Type="datetime" Nullable="false" />
     <Property Name="grado_sec" Type="int" Nullable="false" />
@@ -319,6 +329,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="RegistroColegioDBModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBeca" EntityType="Self.TBeca" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBeca-Estudiante" EntityType="Self.TBeca-Estudiante" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TComprobante" EntityType="Self.TComprobante" Schema="dbo" store:Type="Tables" />

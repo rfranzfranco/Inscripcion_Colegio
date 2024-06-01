@@ -39,5 +39,6 @@ namespace InscripcionCol.Modelo
         public virtual DbSet<TTutor> TTutor { get; set; }
         public virtual DbSet<TTutor_Est> TTutor_Est { get; set; }
         public virtual DbSet<TUsuario> TUsuario { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

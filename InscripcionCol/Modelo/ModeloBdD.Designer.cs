@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\PC\Desktop\INSCRIPCION\Inscripcion_Colegio\InscripcionCol\Modelo\ModeloBdD.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\Modelo\ModeloBdD.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

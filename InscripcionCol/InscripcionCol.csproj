@@ -86,6 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloBdD.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\sysdiagrams.cs">
+      <DependentUpon>ModeloBdD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\TBeca.cs">
       <DependentUpon>ModeloBdD.tt</DependentUpon>
     </Compile>

@@ -9,7 +9,7 @@ namespace InscripcionCol.Controlador
     public class EstudianteViewModel
     {
         public int Id_Estudiante { get; set; }
-        public string Codigo_Rude { get; set; }
+        public Int64 Codigo_Rude { get; set; }
         public int Ci_E { get; set; }
         public string Ap_Paterno_E { get; set; }
         public string Ap_Materno_E { get; set; }

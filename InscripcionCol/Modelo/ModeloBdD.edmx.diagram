@@ -33,6 +33,7 @@
         <AssociationConnector Association="RegistroColegioDBModel.FK_TTutor_Est_TEstudiante1" ManuallyRouted="false" />
         <AssociationConnector Association="RegistroColegioDBModel.FK_TUsuario_TRegistro" ManuallyRouted="false" />
         <AssociationConnector Association="RegistroColegioDBModel.FK_TTutor_Est_TTutor1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RegistroColegioDBModel.sysdiagrams" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

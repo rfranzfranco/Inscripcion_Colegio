@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="RegistroColegioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="TBeca">
           <Key>
             <PropertyRef Name="id_beca" />
@@ -95,7 +105,7 @@
           <Property Name="ci" Type="int" Nullable="false" />
           <Property Name="complemento" Type="nvarchar" MaxLength="2" Nullable="false" />
           <Property Name="expedido" Type="nvarchar" MaxLength="2" Nullable="false" />
-          <Property Name="codigo_rude" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="codigo_rude" Type="bigint" Nullable="false" />
           <Property Name="sexo" Type="nvarchar" MaxLength="1" Nullable="false" />
           <Property Name="fec_nacimiento" Type="datetime" Nullable="false" />
           <Property Name="grado_sec" Type="int" Nullable="false" />
@@ -324,6 +334,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="RegistroColegioDBModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBeca" EntityType="Self.TBeca" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBeca-Estudiante" EntityType="Self.TBeca-Estudiante" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TComprobante" EntityType="Self.TComprobante" Schema="dbo" store:Type="Tables" />
@@ -504,7 +515,7 @@
           <Property Name="ci" Type="Int32" Nullable="false" />
           <Property Name="complemento" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="expedido" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="codigo_rude" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="codigo_rude" Type="Int64" Nullable="false" />
           <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="grado_sec" Type="Int32" Nullable="false" />
@@ -816,7 +827,18 @@
             <End Role="TTutor" EntitySet="TTutor" />
             <End Role="TTutor_Est" EntitySet="TTutor_Est" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="RegistroColegioDBModel.sysdiagrams" />
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -984,6 +1006,17 @@
                 <ScalarProperty Name="contraseña" ColumnName="contraseña" />
                 <ScalarProperty Name="rol" ColumnName="rol" />
                 <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="RegistroColegioDBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

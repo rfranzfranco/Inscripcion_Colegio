@@ -105,7 +105,7 @@
     <Property Name="ci" Type="Int32" Nullable="false" />
     <Property Name="complemento" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="expedido" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="codigo_rude" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="codigo_rude" Type="Int64" Nullable="false" />
     <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="grado_sec" Type="Int32" Nullable="false" />
@@ -417,5 +417,16 @@
       <End Role="TTutor" EntitySet="TTutor" />
       <End Role="TTutor_Est" EntitySet="TTutor_Est" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="RegistroColegioDBModel.sysdiagrams" />
   </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

@@ -31,7 +31,7 @@ namespace InscripcionCol.Modelo
         public int ci { get; set; }
         public string complemento { get; set; }
         public string expedido { get; set; }
-        public string codigo_rude { get; set; }
+        public long codigo_rude { get; set; }
         public string sexo { get; set; }
         public System.DateTime fec_nacimiento { get; set; }
         public int grado_sec { get; set; }
