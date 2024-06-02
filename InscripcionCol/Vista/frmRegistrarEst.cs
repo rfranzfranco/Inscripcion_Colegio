@@ -19,14 +19,15 @@ namespace InscripcionCol
     public partial class frmRegistrarEst : Form
     {
         private readonly RegistroColegioDBEntities _db = new RegistroColegioDBEntities();
-        private readonly EstudianteController _estudianteController;
+        private readonly EstudianteController estudianteController;
         private readonly frmestudiante _frmestudiante;
-        private EstudianteViewModel _estudianteSeleccionado;
-        public frmRegistrarEst(frmestudiante frmEstudiante, EstudianteController estudianteController)
+        private EstudianteViewModel estudiante;
+        private bool isEditing = false;
+        public frmRegistrarEst(frmestudiante parent, EstudianteController estudianteController)
         {
             InitializeComponent();
-            _frmestudiante = frmEstudiante;
-            _estudianteController = estudianteController;
+            _frmestudiante = parent;
+            this.estudianteController = estudianteController;
 
             cbx_paisNac.SelectedIndexChanged += cbx_paisNac_SelectedIndexChanged;
             cbx_dptoNac.SelectedIndexChanged += cbx_dptoNac_SelectedIndexChanged;
@@ -6746,23 +6747,25 @@ namespace InscripcionCol
                 }
             };
         }
-        public frmRegistrarEst(frmestudiante frmEstudiante, EstudianteViewModel estudianteSeleccionado, EstudianteController estudianteController) : this(frmEstudiante, estudianteController)
+        public frmRegistrarEst(frmestudiante parent, EstudianteViewModel estudiante, EstudianteController estudianteController) : this(parent, estudianteController)
         {
-            _estudianteSeleccionado = estudianteSeleccionado;
-            CargarDatosEstudianteSeleccionado();         
+
+            this.estudiante = estudiante;
+            this.isEditing = true;
+            CargarDatosEstudiante();
         }        
-        private void CargarDatosEstudianteSeleccionado()
+        private void CargarDatosEstudiante()
         {
-            if (_estudianteSeleccionado != null)
+            if (estudiante != null)
             {
-                txt_appaterno.Text = _estudianteSeleccionado.Ap_Paterno_E;
-                txt_apmaterno.Text = _estudianteSeleccionado.Ap_Materno_E;
-                txt_nombre.Text = _estudianteSeleccionado.Nombre_E;
-                txt_ci.Text = _estudianteSeleccionado.Ci_E.ToString();
-                txt_compl.Text = _estudianteSeleccionado.Complemento;
-                txt_exp.Text = _estudianteSeleccionado.Expedido;
-                txt_rude.Text = _estudianteSeleccionado.Codigo_Rude.ToString();
-                if (_estudianteSeleccionado.Sexo == "M")
+                txt_appaterno.Text = estudiante.Ap_Paterno_E;
+                txt_apmaterno.Text = estudiante.Ap_Materno_E;
+                txt_nombre.Text = estudiante.Nombre_E;
+                txt_ci.Text = estudiante.Ci_E.ToString();
+                txt_compl.Text = estudiante.Complemento;
+                txt_exp.Text = estudiante.Expedido;
+                txt_rude.Text = estudiante.Codigo_Rude.ToString();
+                if (estudiante.Sexo == "M")
                 {
                     rbtmasculino.Checked = true;
                 }
@@ -6770,34 +6773,34 @@ namespace InscripcionCol
                 {
                     rbtfemenino.Checked = true;
                 }
-                date_nac.Value = _estudianteSeleccionado.fecha_Nacimiento;
-                cbx_escol.Text = _estudianteSeleccionado.Grado.ToString();
+                date_nac.Value = estudiante.fecha_Nacimiento;
+                cbx_escol.Text = estudiante.Grado.ToString();
 
-                cbx_paisNac.Text = _estudianteSeleccionado.Pais;
-                cbx_provNac.Text = _estudianteSeleccionado.Provincia;
-                cbx_dptoNac.Text = _estudianteSeleccionado.Departamento;
-                cbx_locNac.Text = _estudianteSeleccionado.Localidad;
-                cbx_dptoAct.Text = _estudianteSeleccionado.DepartamentoActual;
-                cbx_provAct.Text = _estudianteSeleccionado.ProvinciaActual;
-                cbx_munAct.Text = _estudianteSeleccionado.MunicipioActual;
-                cbx_locAct.Text = _estudianteSeleccionado.LocalidadActual;
-                txt_zonaAct.Text = _estudianteSeleccionado.ZonaActual;
-                txt_avenAct.Text = _estudianteSeleccionado.AvenidaActual;
-                txt_num.Text = _estudianteSeleccionado.NumeroViviendaActual;
-                txt_telefono.Text = _estudianteSeleccionado.Telefono_Fijo.ToString();
-                txt_cel.Text = _estudianteSeleccionado.Celular.ToString();
-                txt_ciTutor.Text = _estudianteSeleccionado.Ci_T.ToString();
-                txt_appaternoTutor.Text = _estudianteSeleccionado.Ap_Paterno_T;
-                txt_apmaternoTutor.Text = _estudianteSeleccionado.Ap_Materno_T;
-                txt_nombreTutor.Text = _estudianteSeleccionado.Nombre_T;
-                txt_complTutor.Text = _estudianteSeleccionado.ComplementoTutor;
-                txt_expTutor.Text = _estudianteSeleccionado.ExpedidoTutor;
-                txt_dptoComprob.Text = _estudianteSeleccionado.DepartamentoComprobante;
-                date_regComprob.Value = _estudianteSeleccionado.FechaRegistroComprobante;
+                cbx_paisNac.SelectedItem = estudiante.Pais;
+                cbx_dptoNac.SelectedItem = estudiante.Departamento;
+                cbx_provNac.SelectedItem = estudiante.Provincia;                
+                cbx_locNac.SelectedItem = estudiante.Localidad;
+                cbx_dptoAct.SelectedItem = estudiante.DepartamentoActual;
+                cbx_provAct.SelectedItem = estudiante.ProvinciaActual;
+                cbx_munAct.SelectedItem = estudiante.MunicipioActual;
+                cbx_locAct.SelectedItem = estudiante.LocalidadActual;
+                txt_zonaAct.Text = estudiante.ZonaActual;
+                txt_avenAct.Text = estudiante.AvenidaActual;
+                txt_num.Text = estudiante.NumeroViviendaActual;
+                txt_telefono.Text = estudiante.Telefono_Fijo.ToString();
+                txt_cel.Text = estudiante.Celular.ToString();
+                txt_ciTutor.Text = estudiante.Ci_T.ToString();
+                txt_appaternoTutor.Text = estudiante.Ap_Paterno_T;
+                txt_apmaternoTutor.Text = estudiante.Ap_Materno_T;
+                txt_nombreTutor.Text = estudiante.Nombre_T;
+                txt_complTutor.Text = estudiante.ComplementoTutor;
+                txt_expTutor.Text = estudiante.ExpedidoTutor;
+                txt_dptoComprob.Text = estudiante.DepartamentoComprobante;
+                date_regComprob.Value = estudiante.FechaRegistroComprobante;
             }
         }
 
-        TEstudiante estudiante = new TEstudiante();
+        TEstudiante testudiante = new TEstudiante();
         TNacimiento nacimiento = new TNacimiento();
         TDireccion direccion = new TDireccion();
         TContacto contacto = new TContacto();
@@ -6805,14 +6808,14 @@ namespace InscripcionCol
         TCurso curso = new TCurso();
         TComprobante comp = new TComprobante();
         TTutor_Est tutor_Est = new TTutor_Est();
-        TDir_Est dir_Est=new TDir_Est();        
+        TDir_Est dir_Est = new TDir_Est();
 
         public void asignarCurso()
         {
             Random rnd = new Random();
             int minCurso, maxCurso;
 
-            switch (estudiante.grado_sec)
+            switch (testudiante.grado_sec)
             {
                 case 1:
                     minCurso = 1;
@@ -6868,13 +6871,13 @@ namespace InscripcionCol
             }
             try
             {                
-                estudiante.ap_paterno = txt_appaterno.Text;
-                estudiante.ap_materno = txt_apmaterno.Text;
-                estudiante.nombre = txt_nombre.Text;
-                estudiante.ci = Convert.ToInt32(txt_ci.Text);
-                estudiante.complemento = txt_compl.Text;
-                estudiante.expedido = txt_exp.Text;
-                estudiante.codigo_rude = Convert.ToInt64(txt_rude.Text);
+                testudiante.ap_paterno = txt_appaterno.Text;
+                testudiante.ap_materno = txt_apmaterno.Text;
+                testudiante.nombre = txt_nombre.Text;
+                testudiante.ci = Convert.ToInt32(txt_ci.Text);
+                testudiante.complemento = txt_compl.Text;
+                testudiante.expedido = txt_exp.Text;
+                testudiante.codigo_rude = Convert.ToInt64(txt_rude.Text);
                 string genero;
                 if (rbtmasculino.Checked == true)
                 {
@@ -6884,19 +6887,19 @@ namespace InscripcionCol
                 {
                     genero = "F";
                 }
-                estudiante.sexo = genero;
-                estudiante.fec_nacimiento = date_nac.Value.Date;
-                estudiante.grado_sec=Convert.ToInt32(cbx_escol.Text);
-                bool estudianteRegistrado = await _estudianteController.RegistrarEstudianteAsync(estudiante);
+                testudiante.sexo = genero;
+                testudiante.fec_nacimiento = date_nac.Value.Date;
+                testudiante.grado_sec=Convert.ToInt32(cbx_escol.Text);
+                bool estudianteRegistrado = await estudianteController.RegistrarEstudianteAsync(testudiante);
 
                 if(estudianteRegistrado)
                 {                                    
-                    nacimiento.id_estudiante = estudiante.id_estudiante;
+                    nacimiento.id_estudiante = testudiante.id_estudiante;
                     nacimiento.pais = cbx_paisNac.Text;
                     nacimiento.provincia = cbx_provNac.Text;
                     nacimiento.dpto = cbx_dptoNac.Text;
                     nacimiento.localidad = cbx_locNac.Text;
-                    await _estudianteController.RegistrarNacimientoAsync(nacimiento);
+                    await estudianteController.RegistrarNacimientoAsync(nacimiento);
                                         
                     direccion.dpto = cbx_dptoAct.Text;
                     direccion.provincia = cbx_provAct.Text;
@@ -6905,16 +6908,16 @@ namespace InscripcionCol
                     direccion.zona=txt_zonaAct.Text;
                     direccion.avenida=txt_avenAct.Text;
                     direccion.nro_vivienda = txt_num.Text;
-                    await _estudianteController.RegistrarDireccionAsync(direccion);
+                    await estudianteController.RegistrarDireccionAsync(direccion);
 
-                    dir_Est.id_estudiante = estudiante.id_estudiante;
+                    dir_Est.id_estudiante = testudiante.id_estudiante;
                     dir_Est.id_direccion = direccion.id_direccion;
-                    await _estudianteController.RegistrarDir_EstAsync(dir_Est);
+                    await estudianteController.RegistrarDir_EstAsync(dir_Est);
 
                     contacto.id_direccion=direccion.id_direccion;
                     contacto.telefono_fijo = Convert.ToInt32(txt_telefono.Text);
                     contacto.celular = Convert.ToInt32(txt_cel.Text);
-                    await _estudianteController.RegistrarContactoAsync(contacto);
+                    await estudianteController.RegistrarContactoAsync(contacto);
 
                     tutor.ci = Convert.ToInt32(txt_ciTutor.Text);
                     tutor.complemento = txt_complTutor.Text;
@@ -6922,18 +6925,18 @@ namespace InscripcionCol
                     tutor.ap_paterno = txt_appaternoTutor.Text;
                     tutor.ap_materno = txt_apmaternoTutor.Text;
                     tutor.nombre = txt_nombreTutor.Text;
-                    await _estudianteController.RegistrarTutorAsync(tutor);
+                    await estudianteController.RegistrarTutorAsync(tutor);
 
-                    tutor_Est.id_estudiante=estudiante.id_estudiante;
+                    tutor_Est.id_estudiante=testudiante.id_estudiante;
                     tutor_Est.id_tutor=tutor.id_tutor;
-                    await _estudianteController.RegistrarTutor_EstAsync(tutor_Est);
+                    await estudianteController.RegistrarTutor_EstAsync(tutor_Est);
 
-                    comp.id_estudiante = estudiante.id_estudiante;
+                    comp.id_estudiante = testudiante.id_estudiante;
                     comp.id_tutor=tutor.id_tutor;
                     comp.lugar_dpto = txt_dptoComprob.Text;
                     comp.fecha_reg = date_regComprob.Value.Date;
                     asignarCurso();
-                    await _estudianteController.RegistrarComprobanteAsync(comp);
+                    await estudianteController.RegistrarComprobanteAsync(comp);
 
                     MessageBox.Show("Se ha registrado el estudiante con exito","INFORMACIÓN",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     _frmestudiante.cargar();
@@ -6984,109 +6987,51 @@ namespace InscripcionCol
                 return;
             }
 
-            try
-            {
-                // Obtener la entidad estudiante desde la base de datos
-                var estudianteExistente = _db.TEstudiante.Find(_estudianteSeleccionado.Id_Estudiante);
-                if (estudianteExistente == null)
-                {
-                    MessageBox.Show("El estudiante no existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
+            if (isEditing)
+            {                
                 // Actualizar los datos del estudiante
-                estudianteExistente.ap_paterno = txt_appaterno.Text;
-                estudianteExistente.ap_materno = txt_apmaterno.Text;
-                estudianteExistente.nombre = txt_nombre.Text;
-                estudianteExistente.ci = Convert.ToInt32(txt_ci.Text);
-                estudianteExistente.complemento = txt_compl.Text;
-                estudianteExistente.expedido = txt_exp.Text;
-                estudianteExistente.codigo_rude = Convert.ToInt64(txt_rude.Text);
-                estudianteExistente.sexo = rbtmasculino.Checked ? "M" : "F";
-                estudianteExistente.fec_nacimiento = date_nac.Value.Date;
-                estudianteExistente.grado_sec = Convert.ToInt32(cbx_escol.Text);
-
-                // Modificar el estudiante
-                bool estudianteModificado = await _estudianteController.ModificarEstudianteAsync(estudianteExistente);
-
-                if (estudianteModificado)
+                estudiante.Ap_Paterno_E = txt_appaterno.Text;
+                estudiante.Ap_Materno_E = txt_apmaterno.Text;
+                estudiante.Nombre_E = txt_nombre.Text;
+                estudiante.Ci_E = Convert.ToInt32(txt_ci.Text);
+                estudiante.Complemento = txt_compl.Text;
+                estudiante.Expedido = txt_exp.Text;
+                estudiante.Codigo_Rude = Convert.ToInt64(txt_rude.Text);
+                estudiante.sexo = rbtmasculino.Checked ? "M" : "F";
+                estudiante.fecha_Nacimiento = date_nac.Value.Date;
+                estudiante.Grado = Convert.ToInt32(cbx_escol.Text);
+                estudiante.Pais = cbx_paisNac.Text;
+                estudiante.Departamento = cbx_dptoNac.Text;
+                estudiante.Provincia = cbx_provNac.Text;
+                estudiante.Localidad = cbx_locNac.Text;
+                estudiante.DepartamentoActual = cbx_dptoAct.Text;
+                estudiante.ProvinciaActual = cbx_provAct.Text;
+                estudiante.MunicipioActual = cbx_munAct.Text;
+                estudiante.LocalidadActual = cbx_locAct.Text;
+                estudiante.ZonaActual = txt_zonaAct.Text;
+                estudiante.AvenidaActual = txt_avenAct.Text;
+                estudiante.NumeroViviendaActual = txt_num.Text;
+                estudiante.Telefono_Fijo = Convert.ToInt32(txt_telefono.Text);
+                estudiante.Celular = Convert.ToInt32(txt_cel.Text);
+                estudiante.Ci_T = Convert.ToInt32(txt_ciTutor.Text);
+                estudiante.Ap_Paterno_T = txt_appaternoTutor.Text;
+                estudiante.Ap_Materno_T = txt_apmaternoTutor.Text;
+                estudiante.Nombre_T = txt_nombreTutor.Text;
+                estudiante.ComplementoTutor = txt_complTutor.Text;
+                estudiante.ExpedidoTutor = txt_expTutor.Text;
+                estudiante.DepartamentoComprobante= txt_dptoComprob.Text;
+                estudiante.FechaRegistroComprobante = date_regComprob.Value.Date;
+                if (await estudianteController.ModificarEstudianteAsync(estudiante))
                 {
-                    // Obtener y modificar nacimiento
-                    var nacimientoExistente = _db.TNacimiento.FirstOrDefault(n => n.id_estudiante == estudianteExistente.id_estudiante);
-                    if (nacimientoExistente != null)
-                    {
-                        nacimientoExistente.pais = cbx_paisNac.Text;
-                        nacimientoExistente.provincia = cbx_provNac.Text;
-                        nacimientoExistente.dpto = cbx_dptoNac.Text;
-                        nacimientoExistente.localidad = cbx_locNac.Text;
-                        await _estudianteController.ModificarNacimientoAsync(nacimientoExistente);
-                    }
-
-                    // Obtener y modificar dirección
-                    var dirEstExistente = _db.TDir_Est.FirstOrDefault(de => de.id_estudiante == estudianteExistente.id_estudiante);
-                    if (dirEstExistente != null)
-                    {
-                        var direccionExistente = _db.TDireccion.Find(dirEstExistente.id_direccion);
-                        if (direccionExistente != null)
-                        {
-                            direccionExistente.dpto = cbx_dptoAct.Text;
-                            direccionExistente.provincia = cbx_provAct.Text;
-                            direccionExistente.municipio = cbx_munAct.Text;
-                            direccionExistente.localidad = cbx_locAct.Text;
-                            direccionExistente.zona = txt_zonaAct.Text;
-                            direccionExistente.avenida = txt_avenAct.Text;
-                            direccionExistente.nro_vivienda = txt_num.Text;
-                            await _estudianteController.ModificarDireccionAsync(direccionExistente);
-                        }
-
-                        // Obtener y modificar contacto
-                        var contactoExistente = _db.TContacto.FirstOrDefault(c => c.id_direccion == direccionExistente.id_direccion);
-                        if (contactoExistente != null)
-                        {
-                            contactoExistente.telefono_fijo = Convert.ToInt32(txt_telefono.Text);
-                            contactoExistente.celular = Convert.ToInt32(txt_cel.Text);
-                            await _estudianteController.ModificarContactoAsync(contactoExistente);
-                        }
-                    }
-
-                    // Obtener y modificar tutor
-                    var tutorEstExistente=_db.TTutor_Est.FirstOrDefault(te=>te.id_estudiante==estudianteExistente.id_estudiante);
-                    if (tutorEstExistente != null)
-                    { 
-                        var tutorExistente = _db.TTutor.Find(tutorEstExistente.id_tutor);
-                        if (tutorExistente != null)
-                        {
-                            tutorExistente.ci = Convert.ToInt32(txt_ciTutor.Text);
-                            tutorExistente.complemento = txt_complTutor.Text;
-                            tutorExistente.expedido = txt_expTutor.Text;
-                            tutorExistente.ap_paterno = txt_appaternoTutor.Text;
-                            tutorExistente.ap_materno = txt_apmaternoTutor.Text;
-                            tutorExistente.nombre = txt_nombreTutor.Text;
-                            await _estudianteController.ModificarTutorAsync(tutorExistente);
-                        }
-                    }
-                    // Obtener y modificar comprobante
-                    var comprobanteExistente = _db.TComprobante.FirstOrDefault(c => c.id_estudiante == estudianteExistente.id_estudiante);
-                    if (comprobanteExistente != null)
-                    {
-                        comprobanteExistente.lugar_dpto = txt_dptoComprob.Text;
-                        comprobanteExistente.fecha_reg = date_regComprob.Value.Date;
-                        await _estudianteController.ModificarComprobanteAsync(comprobanteExistente);
-                    }
-
-                    MessageBox.Show("Estudiante modificado con éxito", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Estudiante modificado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _frmestudiante.cargar();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al modificar el estudiante", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al modificar el estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }            
         }
 
         private void cbx_paisNac_SelectedIndexChanged(object sender, EventArgs e)
@@ -7096,9 +7041,6 @@ namespace InscripcionCol
             {
                 cbx_dptoNac.DisplayMember = "Nombre";
                 cbx_dptoNac.DataSource = selectedPais.SubUbicaciones;
-                cbx_dptoNac.Enabled = true;
-                cbx_provNac.Enabled = false;
-                cbx_locNac.Enabled = false;
             }
         }
 
@@ -7109,8 +7051,6 @@ namespace InscripcionCol
             {
                 cbx_provNac.DisplayMember = "Nombre";
                 cbx_provNac.DataSource = selectedDpto.SubUbicaciones;
-                cbx_provNac.Enabled = true;
-                cbx_locNac.Enabled = false;
             }
         }
 
@@ -7121,20 +7061,16 @@ namespace InscripcionCol
             {
                 cbx_locNac.DisplayMember = "Nombre";
                 cbx_locNac.DataSource = selectedProv.SubUbicaciones;
-                cbx_locNac.Enabled = true;
             }
         }
 
         private void cbx_dptoAct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedDpto = (UbicacionDptos)cbx_dptoAct.SelectedItem;
+            var selectedDpto = cbx_dptoAct.SelectedItem as UbicacionDptos;
             if (selectedDpto != null)
             {
                 cbx_provAct.DisplayMember = "NombreD";
                 cbx_provAct.DataSource = selectedDpto.SubUbicaciones;
-                cbx_provAct.Enabled = true;
-                cbx_munAct.Enabled = false;
-                cbx_locAct.Enabled = false;
             }
         }
 
@@ -7145,7 +7081,6 @@ namespace InscripcionCol
             {
                 cbx_munAct.DisplayMember = "NombreD";
                 cbx_munAct.DataSource = selectedProv.SubUbicaciones;
-                cbx_munAct.Enabled = true;
             }
         }
         
@@ -7156,7 +7091,6 @@ namespace InscripcionCol
             {
                 cbx_locAct.DisplayMember = "NombreD";
                 cbx_locAct.DataSource = selectedMun.SubUbicaciones;
-                cbx_locAct.Enabled = true;
             }
         }
         private void cbx_locAct_SelectedIndexChanged(object sender, EventArgs e)

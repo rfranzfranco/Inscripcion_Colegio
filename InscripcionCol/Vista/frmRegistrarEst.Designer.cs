@@ -257,12 +257,12 @@
             // date_nac
             // 
             this.date_nac.Location = new System.Drawing.Point(791, 94);
-            this.date_nac.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.date_nac.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date_nac.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.date_nac.MinDate = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             this.date_nac.Name = "date_nac";
             this.date_nac.Size = new System.Drawing.Size(301, 26);
             this.date_nac.TabIndex = 14;
-            this.date_nac.Value = new System.DateTime(2024, 5, 24, 17, 39, 17, 0);
+            this.date_nac.Value = new System.DateTime(2004, 1, 1, 0, 0, 0, 0);
             // 
             // txt_rude
             // 

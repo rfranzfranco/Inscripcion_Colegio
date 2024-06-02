@@ -171,41 +171,98 @@ namespace InscripcionCol.Controlador
                 }
             }
         }
-        public async Task<bool> ModificarEstudianteAsync(TEstudiante estudiante)
+        public async Task<bool> ModificarEstudianteAsync(EstudianteViewModel estudianteViewModel)
         {
-            _db.Entry(estudiante).State=EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0;
-        }
-        public async Task<bool> ModificarNacimientoAsync(TNacimiento nacimiento)
-        {
-            _db.Entry(nacimiento).State = EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0;
-        }
-        public async Task<bool> ModificarDireccionAsync(TDireccion direccion)
-        {
-            _db.Entry(direccion).State = EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0;
-        }
-        public async Task<bool> ModificarContactoAsync(TContacto contacto)
-        {
-            _db.Entry(contacto).State = EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0;
-        }
-        public async Task<bool> ModificarTutorAsync(TTutor tutor)
-        {
-            _db.Entry(tutor).State = EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0;
-        }
-        public async Task<bool> ModificarComprobanteAsync(TComprobante comprobante)
-        {
-            _db.Entry(comprobante).State = EntityState.Modified;
-            int result = await _db.SaveChangesAsync();
-            return result > 0; 
+            using (var transaction = _db.Database.BeginTransaction())
+            {
+                try
+                {
+                    var estudiante = await _db.TEstudiante.FindAsync(estudianteViewModel.Id_Estudiante);
+                    if (estudiante != null)
+                    {
+                        estudiante.codigo_rude = estudianteViewModel.Codigo_Rude;
+                        estudiante.ci = estudianteViewModel.Ci_E;
+                        estudiante.ap_paterno = estudianteViewModel.Ap_Paterno_E;
+                        estudiante.ap_materno = estudianteViewModel.Ap_Materno_E;
+                        estudiante.nombre = estudianteViewModel.Nombre_E;
+                        estudiante.sexo = estudianteViewModel.Sexo;
+                        estudiante.fec_nacimiento = estudianteViewModel.fecha_Nacimiento;
+                        estudiante.complemento = estudianteViewModel.Complemento;
+                        estudiante.expedido = estudianteViewModel.Expedido;
+
+                        // Actualizar TNacimiento
+                        var nacimiento = await _db.TNacimiento.FirstOrDefaultAsync(n => n.id_estudiante == estudiante.id_estudiante);
+                        if (nacimiento != null)
+                        {
+                            nacimiento.pais = estudianteViewModel.Pais;
+                            nacimiento.dpto = estudianteViewModel.Departamento;
+                            nacimiento.provincia = estudianteViewModel.Provincia;
+                            nacimiento.localidad = estudianteViewModel.Localidad;
+                        }
+
+                        // Actualizar TDireccion
+                        var direcciones = await _db.TDir_Est.Where(de => de.id_estudiante == estudiante.id_estudiante).ToListAsync();
+                        foreach (var dirEst in direcciones)
+                        {
+                            var direccion = await _db.TDireccion.FindAsync(dirEst.id_direccion);
+                            if (direccion != null)
+                            {
+                                direccion.nro_vivienda = estudianteViewModel.NumeroViviendaActual;
+                                direccion.dpto = estudianteViewModel.DepartamentoActual;
+                                direccion.provincia = estudianteViewModel.ProvinciaActual;
+                                direccion.municipio = estudianteViewModel.MunicipioActual;
+                                direccion.localidad = estudianteViewModel.LocalidadActual;
+                                direccion.zona = estudianteViewModel.ZonaActual;
+                                direccion.avenida = estudianteViewModel.AvenidaActual;
+
+                                // Actualizar TContacto
+                                var contacto = await _db.TContacto.FirstOrDefaultAsync(c => c.id_direccion == direccion.id_direccion);
+                                if (contacto != null)
+                                {
+                                    contacto.telefono_fijo = estudianteViewModel.Telefono_Fijo;
+                                    contacto.celular = estudianteViewModel.Celular;
+                                }
+                            }
+                        }
+
+                        // Actualizar TTutor y TTutor_Est
+                        var tutoresEst = await _db.TTutor_Est.Where(te => te.id_estudiante == estudiante.id_estudiante).ToListAsync();
+                        foreach (var tutorEst in tutoresEst)
+                        {
+                            var tutor = await _db.TTutor.FindAsync(tutorEst.id_tutor);
+                            if (tutor != null)
+                            {
+                                tutor.ci = estudianteViewModel.Ci_T;
+                                tutor.ap_paterno = estudianteViewModel.Ap_Paterno_T;
+                                tutor.ap_materno = estudianteViewModel.Ap_Materno_T;
+                                tutor.nombre = estudianteViewModel.Nombre_T;
+                                tutor.complemento = estudianteViewModel.ComplementoTutor;
+                                tutor.expedido = estudianteViewModel.ExpedidoTutor;
+                            }
+                        }
+
+                        // Actualizar TComprobante
+                        var comprobante = await _db.TComprobante.FirstOrDefaultAsync(co => co.id_estudiante == estudiante.id_estudiante);
+                        if (comprobante != null)
+                        {
+                            comprobante.lugar_dpto = estudianteViewModel.DepartamentoComprobante;
+                            comprobante.fecha_reg = estudianteViewModel.FechaRegistroComprobante;
+                        }
+
+                        // Guardar los cambios
+                        await _db.SaveChangesAsync();
+                        transaction.Commit();
+                        return true;
+                    }
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine(ex.Message);
+                    return false;
+                }
+            }
         }
         public async Task<List<CupoViewModel>> ObtenerCuposDisponiblesAsync()
         {
