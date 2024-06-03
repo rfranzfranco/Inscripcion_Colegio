@@ -151,6 +151,7 @@
             this.Name = "frmmenu";
             this.Text = "menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmmenu_FormClosing);
             this.Load += new System.EventHandler(this.frmmenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

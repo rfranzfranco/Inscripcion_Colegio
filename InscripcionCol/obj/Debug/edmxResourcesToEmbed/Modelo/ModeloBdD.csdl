@@ -70,10 +70,10 @@
       <PropertyRef Name="id_direccion" />
     </Key>
     <Property Name="id_direccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="provincia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="municipio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dpto" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="provincia" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="municipio" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="localidad" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="zona" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="avenida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="nro_vivienda" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
@@ -120,10 +120,10 @@
       <PropertyRef Name="id_nacimiento" />
     </Key>
     <Property Name="id_nacimiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="pais" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="dpto" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="provincia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="localidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pais" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dpto" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="provincia" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="localidad" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TNacimiento_TEstudiante" FromRole="TNacimiento" ToRole="TEstudiante" />
   </EntityType>

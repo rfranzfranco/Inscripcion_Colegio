@@ -69,10 +69,10 @@
       <PropertyRef Name="id_direccion" />
     </Key>
     <Property Name="id_direccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="dpto" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="provincia" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="municipio" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="localidad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dpto" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="provincia" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="municipio" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="localidad" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="zona" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="avenida" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="nro_vivienda" Type="nvarchar" MaxLength="6" Nullable="false" />
@@ -110,10 +110,10 @@
       <PropertyRef Name="id_nacimiento" />
     </Key>
     <Property Name="id_nacimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="pais" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="dpto" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="provincia" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="localidad" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="pais" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="dpto" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="provincia" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="localidad" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="id_estudiante" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TRegistro">

@@ -6749,11 +6749,11 @@ namespace InscripcionCol
         }
         public frmRegistrarEst(frmestudiante parent, EstudianteViewModel estudiante, EstudianteController estudianteController) : this(parent, estudianteController)
         {
-
             this.estudiante = estudiante;
             this.isEditing = true;
             CargarDatosEstudiante();
-        }        
+        }
+
         private void CargarDatosEstudiante()
         {
             if (estudiante != null)
@@ -6776,14 +6776,16 @@ namespace InscripcionCol
                 date_nac.Value = estudiante.fecha_Nacimiento;
                 cbx_escol.Text = estudiante.Grado.ToString();
 
-                cbx_paisNac.SelectedItem = estudiante.Pais;
-                cbx_dptoNac.SelectedItem = estudiante.Departamento;
-                cbx_provNac.SelectedItem = estudiante.Provincia;                
-                cbx_locNac.SelectedItem = estudiante.Localidad;
-                cbx_dptoAct.SelectedItem = estudiante.DepartamentoActual;
-                cbx_provAct.SelectedItem = estudiante.ProvinciaActual;
-                cbx_munAct.SelectedItem = estudiante.MunicipioActual;
-                cbx_locAct.SelectedItem = estudiante.LocalidadActual;
+                cbx_paisNac.Text = estudiante.Pais.ToString();
+                cbx_dptoNac.Text = estudiante.Departamento.ToString();
+                cbx_provNac.Text = estudiante.Provincia.ToString();
+                cbx_locNac.Text = estudiante.Localidad.ToString();
+
+                cbx_dptoAct.Text = estudiante.DepartamentoActual.ToString();
+                cbx_provAct.Text = estudiante.ProvinciaActual.ToString();
+                cbx_munAct.Text = estudiante.MunicipioActual.ToString();
+                cbx_locAct.Text = estudiante.LocalidadActual.ToString();
+
                 txt_zonaAct.Text = estudiante.ZonaActual;
                 txt_avenAct.Text = estudiante.AvenidaActual;
                 txt_num.Text = estudiante.NumeroViviendaActual;
@@ -6799,7 +6801,6 @@ namespace InscripcionCol
                 date_regComprob.Value = estudiante.FechaRegistroComprobante;
             }
         }
-
         TEstudiante testudiante = new TEstudiante();
         TNacimiento nacimiento = new TNacimiento();
         TDireccion direccion = new TDireccion();
@@ -6809,7 +6810,6 @@ namespace InscripcionCol
         TComprobante comp = new TComprobante();
         TTutor_Est tutor_Est = new TTutor_Est();
         TDir_Est dir_Est = new TDir_Est();
-
         public void asignarCurso()
         {
             Random rnd = new Random();
@@ -6956,7 +6956,6 @@ namespace InscripcionCol
         public TextBox txtapPaterno => txt_appaterno;
         public TextBox txtnombre => txt_nombre;
         public ComboBox txtgrado => cbx_escol;
-
         private void frmRegistrarEst_Load(object sender, EventArgs e)
         {
             var datos = ObtenerDatos();
@@ -6967,12 +6966,10 @@ namespace InscripcionCol
             cbx_dptoAct.DisplayMember = "NombreD";
             cbx_dptoAct.DataSource = dptos;
         }
-
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private async void btnModificar_Click(object sender, EventArgs e)
         {
             if (txt_appaterno.Text == "" || txt_apmaterno.Text == "" || txt_nombre.Text == "" || txt_ci.Text == "" || txt_rude.Text == "" ||
@@ -7043,7 +7040,6 @@ namespace InscripcionCol
                 cbx_dptoNac.DataSource = selectedPais.SubUbicaciones;
             }
         }
-
         private void cbx_dptoNac_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedDpto = (Ubicacion)cbx_dptoNac.SelectedItem;
@@ -7053,7 +7049,6 @@ namespace InscripcionCol
                 cbx_provNac.DataSource = selectedDpto.SubUbicaciones;
             }
         }
-
         private void cbx_provNac_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedProv = (Ubicacion)cbx_provNac.SelectedItem;
@@ -7063,7 +7058,6 @@ namespace InscripcionCol
                 cbx_locNac.DataSource = selectedProv.SubUbicaciones;
             }
         }
-
         private void cbx_dptoAct_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedDpto = cbx_dptoAct.SelectedItem as UbicacionDptos;
@@ -7073,7 +7067,6 @@ namespace InscripcionCol
                 cbx_provAct.DataSource = selectedDpto.SubUbicaciones;
             }
         }
-
         private void cbx_provAct_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedProv = (UbicacionDptos)cbx_provAct.SelectedItem;
@@ -7082,8 +7075,7 @@ namespace InscripcionCol
                 cbx_munAct.DisplayMember = "NombreD";
                 cbx_munAct.DataSource = selectedProv.SubUbicaciones;
             }
-        }
-        
+        }        
         private void cbx_munAct_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedMun = (UbicacionDptos)cbx_munAct.SelectedItem;
@@ -7098,5 +7090,34 @@ namespace InscripcionCol
 
         }
 
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_appaterno.Text = "";
+            txt_apmaterno.Text = "";
+            txt_nombre.Text = "";
+            txt_ci.Text = "";
+            txt_rude.Text = "";
+            txt_exp.Text = "";
+            txt_compl.Text = "";
+            cbx_escol.Text = "";
+            cbx_dptoNac.Text = "";
+            cbx_provNac.Text = "";
+            cbx_locNac.Text = "";
+            cbx_provAct.Text = "";
+            cbx_munAct.Text = "";
+            cbx_locAct.Text = "";
+            txt_zonaAct.Text = "";
+            txt_avenAct.Text = "";
+            txt_num.Text = "";
+            txt_telefono.Text = "";
+            txt_cel.Text = "";
+            txt_ciTutor.Text = "";
+            txt_appaternoTutor.Text = "";
+            txt_apmaternoTutor.Text = "";
+            txt_nombreTutor.Text = "";
+            txt_complTutor.Text = "";
+            txt_expTutor.Text = "";
+            date_regComprob.Value= DateTime.Now;
+        }
     }
 }
