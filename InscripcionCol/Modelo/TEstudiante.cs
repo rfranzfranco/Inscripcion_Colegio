@@ -17,11 +17,11 @@ namespace InscripcionCol.Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TEstudiante()
         {
-            this.TBeca_Estudiante = new HashSet<TBeca_Estudiante>();
             this.TComprobante = new HashSet<TComprobante>();
             this.TDir_Est = new HashSet<TDir_Est>();
             this.TNacimiento = new HashSet<TNacimiento>();
             this.TTutor_Est = new HashSet<TTutor_Est>();
+            this.TBeca = new HashSet<TBeca>();
         }
     
         public int id_estudiante { get; set; }
@@ -37,8 +37,6 @@ namespace InscripcionCol.Modelo
         public int grado_sec { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBeca_Estudiante> TBeca_Estudiante { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TComprobante> TComprobante { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TDir_Est> TDir_Est { get; set; }
@@ -46,5 +44,7 @@ namespace InscripcionCol.Modelo
         public virtual ICollection<TNacimiento> TNacimiento { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TTutor_Est> TTutor_Est { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBeca> TBeca { get; set; }
     }
 }

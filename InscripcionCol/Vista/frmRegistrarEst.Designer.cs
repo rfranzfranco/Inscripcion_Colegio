@@ -792,7 +792,7 @@
             this.txt_dptoComprob.Enabled = false;
             this.txt_dptoComprob.Location = new System.Drawing.Point(833, 461);
             this.txt_dptoComprob.Name = "txt_dptoComprob";
-            this.txt_dptoComprob.Size = new System.Drawing.Size(283, 26);
+            this.txt_dptoComprob.Size = new System.Drawing.Size(215, 26);
             this.txt_dptoComprob.TabIndex = 31;
             this.txt_dptoComprob.Text = "Oruro";
             // 

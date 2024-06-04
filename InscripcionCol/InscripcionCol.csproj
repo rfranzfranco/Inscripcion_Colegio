@@ -65,6 +65,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\BecaController.cs" />
+    <Compile Include="Controlador\BecaViewModel.cs" />
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\CupoViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
@@ -90,9 +92,6 @@
       <DependentUpon>ModeloBdD.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\TBeca.cs">
-      <DependentUpon>ModeloBdD.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\TBeca_Estudiante.cs">
       <DependentUpon>ModeloBdD.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\TComprobante.cs">

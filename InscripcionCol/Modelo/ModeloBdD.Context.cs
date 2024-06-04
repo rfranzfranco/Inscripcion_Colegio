@@ -26,7 +26,6 @@ namespace InscripcionCol.Modelo
         }
     
         public virtual DbSet<TBeca> TBeca { get; set; }
-        public virtual DbSet<TBeca_Estudiante> TBeca_Estudiante { get; set; }
         public virtual DbSet<TComprobante> TComprobante { get; set; }
         public virtual DbSet<TContacto> TContacto { get; set; }
         public virtual DbSet<TCurso> TCurso { get; set; }

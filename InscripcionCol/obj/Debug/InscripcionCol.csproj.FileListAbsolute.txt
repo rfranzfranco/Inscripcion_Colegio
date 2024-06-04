@@ -42,7 +42,6 @@ D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del 
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.SqlServer.xml
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmcupo.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmdocente.resources
-D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmbeca.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frminforme.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmreporte.resources
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmcomprobante.resources
@@ -104,3 +103,4 @@ C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\Inscripci
 C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\Inscripc.19A86D5E.Up2Date
 C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.exe
 C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.pdb
+D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.dtp.resources

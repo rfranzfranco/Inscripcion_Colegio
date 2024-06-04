@@ -8,24 +8,16 @@
     <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="monto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TBeca_Estudiante" Relationship="Self.FK_TBeca_Estudiante_TBeca" FromRole="TBeca" ToRole="TBeca_Estudiante" />
-  </EntityType>
-  <EntityType Name="TBeca_Estudiante">
-    <Key>
-      <PropertyRef Name="id_TBecEst" />
-    </Key>
-    <Property Name="id_beca" Type="Int32" Nullable="false" />
-    <Property Name="id_estudiante" Type="Int32" Nullable="false" />
-    <Property Name="id_TBecEst" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="TBeca" Relationship="Self.FK_TBeca_Estudiante_TBeca" FromRole="TBeca_Estudiante" ToRole="TBeca" />
-    <NavigationProperty Name="TEstudiante" Relationship="Self.FK_TBeca_Estudiante_TEstudiante" FromRole="TBeca_Estudiante" ToRole="TEstudiante" />
+    <Property Name="fecha_ini" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fecha_fin" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="TEstudiante" Relationship="RegistroColegioDBModel.FK_TBeca_TEstudiante" FromRole="TBeca" ToRole="TEstudiante" />
   </EntityType>
   <EntityType Name="TComprobante">
     <Key>
       <PropertyRef Name="id_comp" />
     </Key>
     <Property Name="id_comp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="lugar_dpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lugar_dpto" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <Property Name="id_curso" Type="Int32" Nullable="false" />
@@ -109,11 +101,11 @@
     <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="fec_nacimiento" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="grado_sec" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TBeca_Estudiante" Relationship="Self.FK_TBeca_Estudiante_TEstudiante" FromRole="TEstudiante" ToRole="TBeca_Estudiante" />
     <NavigationProperty Name="TComprobante" Relationship="Self.FK_TComprobante_TEstudiante1" FromRole="TEstudiante" ToRole="TComprobante" />
     <NavigationProperty Name="TDir_Est" Relationship="Self.FK_TDir_Est_TEstudiante" FromRole="TEstudiante" ToRole="TDir_Est" />
     <NavigationProperty Name="TNacimiento" Relationship="Self.FK_TNacimiento_TEstudiante" FromRole="TEstudiante" ToRole="TNacimiento" />
     <NavigationProperty Name="TTutor_Est" Relationship="Self.FK_TTutor_Est_TEstudiante1" FromRole="TEstudiante" ToRole="TTutor_Est" />
+    <NavigationProperty Name="TBeca" Relationship="RegistroColegioDBModel.FK_TBeca_TEstudiante" FromRole="TEstudiante" ToRole="TBeca" />
   </EntityType>
   <EntityType Name="TNacimiento">
     <Key>
@@ -178,30 +170,6 @@
     <Property Name="id_registro" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TRegistro" Relationship="Self.FK_TUsuario_TRegistro" FromRole="TUsuario" ToRole="TRegistro" />
   </EntityType>
-  <Association Name="FK_TBeca_Estudiante_TBeca">
-    <End Role="TBeca" Type="Self.TBeca" Multiplicity="1" />
-    <End Role="TBeca_Estudiante" Type="Self.TBeca_Estudiante" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TBeca">
-        <PropertyRef Name="id_beca" />
-      </Principal>
-      <Dependent Role="TBeca_Estudiante">
-        <PropertyRef Name="id_beca" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TBeca_Estudiante_TEstudiante">
-    <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
-    <End Role="TBeca_Estudiante" Type="Self.TBeca_Estudiante" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TEstudiante">
-        <PropertyRef Name="id_estudiante" />
-      </Principal>
-      <Dependent Role="TBeca_Estudiante">
-        <PropertyRef Name="id_estudiante" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TComprobante_TCurso">
     <End Role="TCurso" Type="Self.TCurso" Multiplicity="1" />
     <End Role="TComprobante" Type="Self.TComprobante" Multiplicity="*" />
@@ -348,7 +316,6 @@
   </Association>
   <EntityContainer Name="RegistroColegioDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TBeca" EntityType="Self.TBeca" />
-    <EntitySet Name="TBeca_Estudiante" EntityType="Self.TBeca_Estudiante" />
     <EntitySet Name="TComprobante" EntityType="Self.TComprobante" />
     <EntitySet Name="TContacto" EntityType="Self.TContacto" />
     <EntitySet Name="TCurso" EntityType="Self.TCurso" />
@@ -361,14 +328,6 @@
     <EntitySet Name="TTutor" EntityType="Self.TTutor" />
     <EntitySet Name="TTutor_Est" EntityType="Self.TTutor_Est" />
     <EntitySet Name="TUsuario" EntityType="Self.TUsuario" />
-    <AssociationSet Name="FK_TBeca_Estudiante_TBeca" Association="Self.FK_TBeca_Estudiante_TBeca">
-      <End Role="TBeca" EntitySet="TBeca" />
-      <End Role="TBeca_Estudiante" EntitySet="TBeca_Estudiante" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TBeca_Estudiante_TEstudiante" Association="Self.FK_TBeca_Estudiante_TEstudiante">
-      <End Role="TEstudiante" EntitySet="TEstudiante" />
-      <End Role="TBeca_Estudiante" EntitySet="TBeca_Estudiante" />
-    </AssociationSet>
     <AssociationSet Name="FK_TComprobante_TCurso" Association="Self.FK_TComprobante_TCurso">
       <End Role="TCurso" EntitySet="TCurso" />
       <End Role="TComprobante" EntitySet="TComprobante" />
@@ -418,6 +377,10 @@
       <End Role="TTutor_Est" EntitySet="TTutor_Est" />
     </AssociationSet>
     <EntitySet Name="sysdiagrams" EntityType="RegistroColegioDBModel.sysdiagrams" />
+    <AssociationSet Name="FK_TBeca_TEstudiante" Association="RegistroColegioDBModel.FK_TBeca_TEstudiante">
+      <End Role="TEstudiante" EntitySet="TEstudiante" />
+      <End Role="TBeca" EntitySet="TBeca" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -429,4 +392,16 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
+  <Association Name="FK_TBeca_TEstudiante">
+    <End Type="RegistroColegioDBModel.TEstudiante" Role="TEstudiante" Multiplicity="1" />
+    <End Type="RegistroColegioDBModel.TBeca" Role="TBeca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEstudiante">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="TBeca">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

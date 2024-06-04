@@ -17,22 +17,16 @@
     <Property Name="id_beca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="tipo" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="monto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="fecha_ini" Type="datetime" Nullable="false" />
+    <Property Name="fecha_fin" Type="datetime" Nullable="false" />
     <Property Name="id_estudiante" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TBeca-Estudiante">
-    <Key>
-      <PropertyRef Name="id_TBecEst" />
-    </Key>
-    <Property Name="id_beca" Type="int" Nullable="false" />
-    <Property Name="id_estudiante" Type="int" Nullable="false" />
-    <Property Name="id_TBecEst" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="TComprobante">
     <Key>
       <PropertyRef Name="id_comp" />
     </Key>
     <Property Name="id_comp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="lugar_dpto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="lugar_dpto" Type="nvarchar" MaxLength="25" Nullable="false" />
     <Property Name="fecha_reg" Type="datetime" Nullable="false" />
     <Property Name="id_estudiante" Type="int" Nullable="false" />
     <Property Name="id_curso" Type="int" Nullable="false" />
@@ -160,26 +154,14 @@
     <Property Name="rol" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="id_registro" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK_TBeca-Estudiante_TBeca">
-    <End Role="TBeca" Type="Self.TBeca" Multiplicity="1" />
-    <End Role="TBeca-Estudiante" Type="Self.TBeca-Estudiante" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TBeca">
-        <PropertyRef Name="id_beca" />
-      </Principal>
-      <Dependent Role="TBeca-Estudiante">
-        <PropertyRef Name="id_beca" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TBeca-Estudiante_TEstudiante">
+  <Association Name="FK_TBeca_TEstudiante">
     <End Role="TEstudiante" Type="Self.TEstudiante" Multiplicity="1" />
-    <End Role="TBeca-Estudiante" Type="Self.TBeca-Estudiante" Multiplicity="*" />
+    <End Role="TBeca" Type="Self.TBeca" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TEstudiante">
         <PropertyRef Name="id_estudiante" />
       </Principal>
-      <Dependent Role="TBeca-Estudiante">
+      <Dependent Role="TBeca">
         <PropertyRef Name="id_estudiante" />
       </Dependent>
     </ReferentialConstraint>
@@ -331,7 +313,6 @@
   <EntityContainer Name="RegistroColegioDBModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBeca" EntityType="Self.TBeca" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TBeca-Estudiante" EntityType="Self.TBeca-Estudiante" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TComprobante" EntityType="Self.TComprobante" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TContacto" EntityType="Self.TContacto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TCurso" EntityType="Self.TCurso" Schema="dbo" store:Type="Tables" />
@@ -344,13 +325,9 @@
     <EntitySet Name="TTutor" EntityType="Self.TTutor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TTutor_Est" EntityType="Self.TTutor_Est" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TUsuario" EntityType="Self.TUsuario" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_TBeca-Estudiante_TBeca" Association="Self.FK_TBeca-Estudiante_TBeca">
-      <End Role="TBeca" EntitySet="TBeca" />
-      <End Role="TBeca-Estudiante" EntitySet="TBeca-Estudiante" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TBeca-Estudiante_TEstudiante" Association="Self.FK_TBeca-Estudiante_TEstudiante">
+    <AssociationSet Name="FK_TBeca_TEstudiante" Association="Self.FK_TBeca_TEstudiante">
       <End Role="TEstudiante" EntitySet="TEstudiante" />
-      <End Role="TBeca-Estudiante" EntitySet="TBeca-Estudiante" />
+      <End Role="TBeca" EntitySet="TBeca" />
     </AssociationSet>
     <AssociationSet Name="FK_TComprobante_TCurso" Association="Self.FK_TComprobante_TCurso">
       <End Role="TCurso" EntitySet="TCurso" />

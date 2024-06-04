@@ -4,19 +4,12 @@
     <EntitySetMapping Name="TBeca">
       <EntityTypeMapping TypeName="RegistroColegioDBModel.TBeca">
         <MappingFragment StoreEntitySet="TBeca">
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
           <ScalarProperty Name="id_beca" ColumnName="id_beca" />
           <ScalarProperty Name="tipo" ColumnName="tipo" />
           <ScalarProperty Name="monto" ColumnName="monto" />
           <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TBeca_Estudiante">
-      <EntityTypeMapping TypeName="RegistroColegioDBModel.TBeca_Estudiante">
-        <MappingFragment StoreEntitySet="TBeca-Estudiante">
-          <ScalarProperty Name="id_beca" ColumnName="id_beca" />
-          <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
-          <ScalarProperty Name="id_TBecEst" ColumnName="id_TBecEst" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

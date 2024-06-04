@@ -14,18 +14,13 @@ namespace InscripcionCol.Modelo
     
     public partial class TBeca
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBeca()
-        {
-            this.TBeca_Estudiante = new HashSet<TBeca_Estudiante>();
-        }
-    
         public int id_beca { get; set; }
         public string tipo { get; set; }
         public decimal monto { get; set; }
         public int id_estudiante { get; set; }
+        public System.DateTime fecha_ini { get; set; }
+        public System.DateTime fecha_fin { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TBeca_Estudiante> TBeca_Estudiante { get; set; }
+        public virtual TEstudiante TEstudiante { get; set; }
     }
 }

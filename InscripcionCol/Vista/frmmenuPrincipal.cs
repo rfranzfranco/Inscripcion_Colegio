@@ -65,7 +65,7 @@ namespace InscripcionCol
 
         private void gestionarBecasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmbeca frmBeca = new frmbeca();
+            dtp frmBeca = new dtp();
             frmBeca.MdiParent = this;
             frmBeca.WindowState = FormWindowState.Maximized;
             frmBeca.Show();
