@@ -79,18 +79,54 @@ namespace InscripcionCol
         {
             //frmcomprobante frmComprobante=new frmcomprobante();
             //frmComprobante.Show();
-            ComprobanteController comprobante = new ComprobanteController();
-            comprobante.Colegio= "U.E. Donato Vásquez - Secundario";
-            comprobante.Direccion = "Calle Soria Galvarro Nº 5790, esquina Ayacucho";
-            comprobante.Telefono = "5255273";
-            comprobante.Logotipo =pbx_logo.Image;
-            comprobante.Imprimir(comprobante);
+            ComprobanteController comprobante = new ComprobanteController
+            {
+                Colegio = "U.E. Donato Vásquez - Secundario",
+                Direccion = "Calle Soria Galvarro Nº 5790, esquina Ayacucho",
+                Telefono = "5255273",
+                Logotipo = pbx_logo.Image
+            };
+
+            // Seleccionar y añadir el estudiante al comprobante
+            var comprobanteEstudiante = seleccionarEstComprobante();
+            if (comprobanteEstudiante != null)
+            {
+                comprobante.ListarCompEst.Add(comprobanteEstudiante);
+
+                // Imprimir el comprobante
+                comprobante.Imprimir();
+            }
+        }
+        public ComprobanteViewModel seleccionarEstComprobante()
+        {
+            if (dgvEstudiante.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvEstudiante.SelectedRows[0];
+                var estudianteSeleccionado = (EstudianteViewModel)selectedRow.DataBoundItem;
+
+                // Crear y devolver un ComprobanteViewModel con los datos del estudiante seleccionado
+                return new ComprobanteViewModel
+                {
+                    CI_estudiante = estudianteSeleccionado.Ci_E,
+                    RUDE = estudianteSeleccionado.Codigo_Rude,
+                    ap_paterno = estudianteSeleccionado.Ap_Paterno_E,
+                    ap_materno = estudianteSeleccionado.Ap_Materno_E,
+                    Nombre = estudianteSeleccionado.Nombre_E,
+                    grado = estudianteSeleccionado.Grado,
+                    paralelo = estudianteSeleccionado.Paralelo
+                };
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un estudiante", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return null;
+            }
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (dgvEstudiante.SelectedRows.Count > 0)
-            {
+            {                
                 var selectedRow = dgvEstudiante.SelectedRows[0];
                 var estudianteSeleccionado = (EstudianteViewModel)selectedRow.DataBoundItem;
                 MostrarFormularioModificarEstudiante(estudianteSeleccionado);

@@ -116,7 +116,7 @@
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(135, 42);
             this.btnSeleccionar.TabIndex = 6;
-            this.btnSeleccionar.Text = "MODIFICAR";
+            this.btnSeleccionar.Text = "SELECCIONAR";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
