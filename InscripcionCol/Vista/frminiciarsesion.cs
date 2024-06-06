@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InscripcionCol.Controlador;
+using static System.Collections.Specialized.BitVector32;
 
 namespace InscripcionCol
 {
     public partial class frmInicioSesion : Form
     {
         private UsuarioController _usuarioController;
+        private int intentosFallidos = 0; //Variable para contar los intentos fallidos 
 
         public frmInicioSesion()
         {
@@ -99,6 +101,26 @@ namespace InscripcionCol
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //bton de sesion
+        public static class Sesion
+        {
+            private static string rolUsuarioActual;
+
+            public static void IniciarSesion(string rol)
+            {
+                rolUsuarioActual = rol;
+            }
+
+            public static string ObtenerRol()
+            {
+                return rolUsuarioActual;
+            }
+
+            public static void CerrarSesion()
+            {
+                rolUsuarioActual = null;
+            }
+        }
         private void btnlogin_Click(object sender, EventArgs e)
         {
             var username = txtusuario.Text;
@@ -114,6 +136,9 @@ namespace InscripcionCol
 
             if (usuario != null)
             {
+                // Iniciar sesión y almacenar el rol del usuario actual
+                Sesion.IniciarSesion(usuario.rol);
+
                 this.Hide();
                 frmcarga bienvenida = new frmcarga();
                 bienvenida.ShowDialog();
@@ -122,7 +147,24 @@ namespace InscripcionCol
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
+                // Incrementar el contador de intentos fallidos y verificar el límite
+                intentosFallidos++;
+                if (intentosFallidos >= 3)
+                {
+                    // Mostrar mensaje de error y cerrar la aplicación después de 3 intentos fallidos
+                    MessageBox.Show("Ha excedido el número máximo de intentos. El sistema se cerrará.");
+                    Application.Exit();
+                }
+                else if (intentosFallidos == 1)
+                {
+                    // Mostrar mensaje de error indicando el primer intento fallido
+                    MessageBox.Show("Usuario o contraseña incorrectos. Primer intento fallido.");
+                }
+                else if (intentosFallidos == 2)
+                {
+                    // Mostrar mensaje de error indicando el segundo intento fallido
+                    MessageBox.Show("Usuario o contraseña incorrectos. Segundo intento fallido.");
+                }
             }
         }
     }

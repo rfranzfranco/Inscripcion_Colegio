@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data.Entity.Validation;
 using System.Windows.Forms;
 using InscripcionCol.Modelo;
+using System.Data.Entity;
 
 namespace InscripcionCol.Controlador
 {
@@ -118,6 +120,30 @@ namespace InscripcionCol.Controlador
                     MessageBox.Show($"Ha ocurrido un error al eliminar el usuario: {ex.Message}");
                     transaction.Rollback();
                     return false;
+                }
+            }
+        }
+        public async Task<bool> ModificarUsuarioAsync(TRegistro registro, TUsuario usuario)
+        {
+            using (var transaction = _db.Database.BeginTransaction())
+            {
+                try
+                {
+                    // Actualizar el registro en TRegistro
+                    _db.Entry(registro).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+
+                    // Actualizar el usuario en TUsuario
+                    _db.Entry(usuario).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
                 }
             }
         }

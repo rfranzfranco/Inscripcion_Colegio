@@ -19,5 +19,6 @@ namespace InscripcionCol.Controlador
         public string usuario { get; set; }
         public string contraseña { get; set; }
         public string rol { get; set; }
+        public string id_registro { get; set; }
     }
 }
