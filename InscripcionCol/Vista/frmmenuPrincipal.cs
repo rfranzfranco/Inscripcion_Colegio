@@ -41,12 +41,19 @@ namespace InscripcionCol
 
         private void frmmenu_Load(object sender, EventArgs e)
         {
-            this.FormClosed += new FormClosedEventHandler(cerrarform);
+            
         }
-        private void cerrarform(object sender, EventArgs e)
+        protected override CreateParams CreateParams
         {
-            salir();
+            get
+            {
+                const int CS_NOCLOSE = 0x200;
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = cp.ClassStyle | CS_NOCLOSE;
+                return cp;
+            }
         }
+
         void salir()
         {
             if (MessageBox.Show("Estas seguro de cerrar la aplicacion?", "Cerrar aplicacion", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -79,6 +86,11 @@ namespace InscripcionCol
         private void frmmenu_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            salir();
         }
     }
 }

@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Controlador\BecaController.cs" />
     <Compile Include="Controlador\BecaViewModel.cs" />
+    <Compile Include="Controlador\ComprobanteController.cs" />
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\CupoViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />

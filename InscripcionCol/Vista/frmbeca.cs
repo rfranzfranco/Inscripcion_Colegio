@@ -41,6 +41,8 @@ namespace InscripcionCol.Vista
 
             // Añadir el evento SelectedIndexChanged al ComboBox
             cbx_tipo.SelectedIndexChanged += cbx_tipo_SelectedIndexChanged;
+            date_inicio.Value = date_inicio.MaxDate;
+            date_fin.Value = date_fin.MaxDate;
         }
         private void cbx_tipo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -62,8 +64,8 @@ namespace InscripcionCol.Vista
             txt_nombre.Text = "";
             cbx_tipo.Text = "";
             txt_monto.Text = "";
-            date_inicio.Value=date_inicio.MinDate;
-            date_fin.Value = DateTime.Now;
+            date_inicio.Value=date_inicio.MaxDate;
+            date_fin.Value = date_fin.MaxDate;
         }
 
         private void btnBuscar_ci_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace InscripcionCol
     public partial class frmestudiante : Form
     {
         EstudianteController estudianteController = new EstudianteController();
+
         public frmestudiante()
         {
             InitializeComponent();            
@@ -76,8 +77,14 @@ namespace InscripcionCol
 
         private void btnComprobante_Click(object sender, EventArgs e)
         {
-            frmcomprobante frmComprobante=new frmcomprobante();
-            frmComprobante.Show();
+            //frmcomprobante frmComprobante=new frmcomprobante();
+            //frmComprobante.Show();
+            ComprobanteController comprobante = new ComprobanteController();
+            comprobante.Colegio= "U.E. Donato Vásquez - Secundario";
+            comprobante.Direccion = "Calle Soria Galvarro Nº 5790, esquina Ayacucho";
+            comprobante.Telefono = "5255273";
+            comprobante.Logotipo =pbx_logo.Image;
+            comprobante.Imprimir(comprobante);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

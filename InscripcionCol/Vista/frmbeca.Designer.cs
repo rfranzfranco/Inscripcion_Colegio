@@ -151,7 +151,7 @@
             this.date_fin.Name = "date_fin";
             this.date_fin.Size = new System.Drawing.Size(286, 26);
             this.date_fin.TabIndex = 26;
-            this.date_fin.Value = new System.DateTime(2024, 6, 2, 23, 59, 59, 0);
+            this.date_fin.Value = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             // 
             // date_inicio
             // 

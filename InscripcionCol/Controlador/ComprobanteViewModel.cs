@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace InscripcionCol.Controlador
 {
-    internal class ComprobanteViewModel
+    public class ComprobanteViewModel
     {
         public int CI_estudiante {  get; set; }
+        public int RUDE { get; set; }
         public string ap_paterno {  get; set; }
         public string ap_materno { get; set; }
         public string Nombre { get; set; }

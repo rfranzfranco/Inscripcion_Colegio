@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmestudiante));
             this.btnestudiante = new System.Windows.Forms.Button();
             this.dgvEstudiante = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,9 @@
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnComprobante = new System.Windows.Forms.Button();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnestudiante
@@ -137,6 +140,16 @@
             this.btnComprobante.UseVisualStyleBackColor = true;
             this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
             // 
+            // pbx_logo
+            // 
+            this.pbx_logo.Image = ((System.Drawing.Image)(resources.GetObject("pbx_logo.Image")));
+            this.pbx_logo.Location = new System.Drawing.Point(348, 23);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(26, 19);
+            this.pbx_logo.TabIndex = 10;
+            this.pbx_logo.TabStop = false;
+            this.pbx_logo.Visible = false;
+            // 
             // frmestudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -144,6 +157,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1312, 629);
             this.ControlBox = false;
+            this.Controls.Add(this.pbx_logo);
             this.Controls.Add(this.btnComprobante);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSeleccionar);
@@ -159,6 +173,7 @@
             this.Text = "Gestion de estudiantes";
             this.Load += new System.EventHandler(this.frmestudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +190,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnComprobante;
+        private System.Windows.Forms.PictureBox pbx_logo;
     }
 }
