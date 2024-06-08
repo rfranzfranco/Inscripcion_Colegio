@@ -283,6 +283,7 @@
       <DependentUpon>ModeloBdD.edmx</DependentUpon>
       <LastGenOutput>ModeloBdD.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\intimidad1.png" />
     <None Include="Resources\chequeo.png" />
   </ItemGroup>
   <ItemGroup>

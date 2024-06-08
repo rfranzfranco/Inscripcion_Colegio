@@ -92,5 +92,17 @@ namespace InscripcionCol
         {
             salir();
         }
+        public void CerrarSesion()
+        {
+            if (MessageBox.Show("¿Estás seguro de cerrar la sesión actual?", "Cerrar sesión", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+                Application.Restart(); // Reiniciar la aplicación para mostrar el formulario de inicio de sesión
+            }
+        }
+        private void btncerrarSesion_Click(object sender, EventArgs e)
+        {
+            CerrarSesion();
+        }
     }
 }

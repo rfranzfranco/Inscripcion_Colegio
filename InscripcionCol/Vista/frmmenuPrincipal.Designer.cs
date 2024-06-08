@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btncerrarSesion = new System.Windows.Forms.Button();
             this.gestionarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarCuposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +40,6 @@
             this.reportesEInformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnsalir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +55,40 @@
             this.reportesEInformesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1280, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1427, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsalir.BackColor = System.Drawing.Color.Red;
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.Location = new System.Drawing.Point(1248, 1);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(178, 32);
+            this.btnsalir.TabIndex = 2;
+            this.btnsalir.Text = "Salir de la aplicación";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // btncerrarSesion
+            // 
+            this.btncerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btncerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btncerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.btncerrarSesion.Location = new System.Drawing.Point(1086, 1);
+            this.btncerrarSesion.Name = "btncerrarSesion";
+            this.btncerrarSesion.Size = new System.Drawing.Size(128, 32);
+            this.btncerrarSesion.TabIndex = 4;
+            this.btncerrarSesion.Text = "Cerrar Sesión";
+            this.btncerrarSesion.UseVisualStyleBackColor = false;
+            this.btncerrarSesion.Click += new System.EventHandler(this.btncerrarSesion_Click);
             // 
             // gestionarUsuarioToolStripMenuItem
             // 
@@ -139,26 +171,13 @@
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
-            // btnsalir
-            // 
-            this.btnsalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsalir.BackColor = System.Drawing.Color.Tomato;
-            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(1101, 1);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(178, 32);
-            this.btnsalir.TabIndex = 2;
-            this.btnsalir.Text = "Salir de la aplicación";
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
             // frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 610);
+            this.ClientSize = new System.Drawing.Size(1427, 610);
+            this.Controls.Add(this.btncerrarSesion);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,5 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btncerrarSesion;
     }
 }
