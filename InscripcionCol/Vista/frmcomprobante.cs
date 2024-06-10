@@ -21,5 +21,10 @@ namespace InscripcionCol.Vista
         {
             this.Close();
         }
+
+        private void frmcomprobante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

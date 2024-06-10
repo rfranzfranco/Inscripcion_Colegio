@@ -77,6 +77,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmcomprobante";
             this.Text = "frmcomprobante";
+            this.Load += new System.EventHandler(this.frmcomprobante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcomprobante)).EndInit();
             this.ResumeLayout(false);
 

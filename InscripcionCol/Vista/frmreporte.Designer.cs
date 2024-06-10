@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_generarRep = new System.Windows.Forms.Button();
@@ -48,12 +48,12 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.cursoDetallesBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.reporteDatosViewBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.cursoDetallesBindingSource;
+            reportDataSource4.Name = "DataSet2";
+            reportDataSource4.Value = this.reporteDatosViewBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InscripcionCol.Vista.Reportecursos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(237, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -89,17 +89,23 @@
             // 
             this.dtp_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_fin.Location = new System.Drawing.Point(12, 187);
+            this.dtp_fin.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
+            this.dtp_fin.MinDate = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
             this.dtp_fin.Name = "dtp_fin";
             this.dtp_fin.Size = new System.Drawing.Size(200, 26);
             this.dtp_fin.TabIndex = 3;
+            this.dtp_fin.Value = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
             // 
             // dtp_inicio
             // 
             this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_inicio.Location = new System.Drawing.Point(12, 80);
+            this.dtp_inicio.MaxDate = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
+            this.dtp_inicio.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(200, 26);
             this.dtp_inicio.TabIndex = 2;
+            this.dtp_inicio.Value = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
             // 
             // label2
             // 

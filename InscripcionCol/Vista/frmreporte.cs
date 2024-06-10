@@ -20,7 +20,7 @@ namespace InscripcionCol.Vista
 
         private void frmreporte_Load(object sender, EventArgs e)
         {
-                        
+                     
         }
         private void ReporteFechas(DateTime startDate, DateTime endDate)
         {
@@ -35,7 +35,7 @@ namespace InscripcionCol.Vista
         {
             var fechaInicio=dtp_inicio.Value;
             var fechaFinal=dtp_fin.Value;
-            ReporteFechas(fechaInicio, fechaFinal);
+            ReporteFechas(new DateTime(fechaInicio.Year,fechaInicio.Month,fechaInicio.Day,0,0,0), new DateTime(fechaFinal.Year,fechaFinal.Month,fechaFinal.Day,23,59,59));
 
         }
     }
