@@ -75,7 +75,7 @@
             this.btnAgregarUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarUsuario.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarUsuario.Location = new System.Drawing.Point(18, 17);
-            this.btnAgregarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(288, 43);
             this.btnAgregarUsuario.TabIndex = 0;
@@ -115,9 +115,9 @@
             this.gbDatosUsuario.Controls.Add(this.txtci);
             this.gbDatosUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosUsuario.Location = new System.Drawing.Point(18, 73);
-            this.gbDatosUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatosUsuario.Name = "gbDatosUsuario";
-            this.gbDatosUsuario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosUsuario.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatosUsuario.Size = new System.Drawing.Size(448, 525);
             this.gbDatosUsuario.TabIndex = 1;
             this.gbDatosUsuario.TabStop = false;
@@ -126,7 +126,7 @@
             // datefNac
             // 
             this.datefNac.Location = new System.Drawing.Point(85, 411);
-            this.datefNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datefNac.Margin = new System.Windows.Forms.Padding(4);
             this.datefNac.MaxDate = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
             this.datefNac.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.datefNac.Name = "datefNac";
@@ -149,7 +149,7 @@
             // 
             this.rbtfemenino.AutoSize = true;
             this.rbtfemenino.Location = new System.Drawing.Point(382, 40);
-            this.rbtfemenino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtfemenino.Margin = new System.Windows.Forms.Padding(4);
             this.rbtfemenino.Name = "rbtfemenino";
             this.rbtfemenino.Size = new System.Drawing.Size(36, 22);
             this.rbtfemenino.TabIndex = 35;
@@ -161,7 +161,7 @@
             // 
             this.rbtmasculino.AutoSize = true;
             this.rbtmasculino.Location = new System.Drawing.Point(382, 16);
-            this.rbtmasculino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtmasculino.Margin = new System.Windows.Forms.Padding(4);
             this.rbtmasculino.Name = "rbtmasculino";
             this.rbtmasculino.Size = new System.Drawing.Size(39, 22);
             this.rbtmasculino.TabIndex = 34;
@@ -173,7 +173,7 @@
             // 
             this.txtrepetirContra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrepetirContra.Location = new System.Drawing.Point(173, 262);
-            this.txtrepetirContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtrepetirContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtrepetirContra.Name = "txtrepetirContra";
             this.txtrepetirContra.Size = new System.Drawing.Size(257, 26);
             this.txtrepetirContra.TabIndex = 17;
@@ -193,7 +193,7 @@
             // 
             this.txtcelular.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcelular.Location = new System.Drawing.Point(236, 27);
-            this.txtcelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(82, 26);
             this.txtcelular.TabIndex = 22;
@@ -202,7 +202,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(267, 462);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 43);
             this.btnCancelar.TabIndex = 15;
@@ -214,7 +214,7 @@
             // 
             this.txtdireccion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdireccion.Location = new System.Drawing.Point(13, 351);
-            this.txtdireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(417, 26);
             this.txtdireccion.TabIndex = 21;
@@ -223,7 +223,7 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(85, 462);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 43);
             this.btnGuardar.TabIndex = 14;
@@ -250,7 +250,7 @@
             "Director",
             "Secretaria/o"});
             this.cmbRol.Location = new System.Drawing.Point(173, 301);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(184, 26);
             this.cmbRol.TabIndex = 13;
@@ -259,7 +259,7 @@
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(173, 223);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(257, 26);
             this.txtContrasena.TabIndex = 12;
@@ -279,7 +279,7 @@
             // 
             this.txtNomusuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomusuario.Location = new System.Drawing.Point(173, 184);
-            this.txtNomusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomusuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomusuario.Name = "txtNomusuario";
             this.txtNomusuario.Size = new System.Drawing.Size(257, 26);
             this.txtNomusuario.TabIndex = 11;
@@ -288,7 +288,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(173, 145);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(257, 26);
             this.txtNombre.TabIndex = 10;
@@ -308,7 +308,7 @@
             // 
             this.txtApMaterno.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApMaterno.Location = new System.Drawing.Point(173, 106);
-            this.txtApMaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(257, 26);
             this.txtApMaterno.TabIndex = 9;
@@ -317,7 +317,7 @@
             // 
             this.txtApPaterno.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApPaterno.Location = new System.Drawing.Point(173, 67);
-            this.txtApPaterno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(257, 26);
             this.txtApPaterno.TabIndex = 8;
@@ -403,7 +403,7 @@
             // 
             this.txtci.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtci.Location = new System.Drawing.Point(59, 27);
-            this.txtci.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtci.Margin = new System.Windows.Forms.Padding(4);
             this.txtci.Name = "txtci";
             this.txtci.Size = new System.Drawing.Size(98, 26);
             this.txtci.TabIndex = 0;
@@ -425,7 +425,7 @@
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(1261, 61);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(98, 26);
             this.txtBuscar.TabIndex = 3;
@@ -435,7 +435,7 @@
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(1367, 52);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(104, 43);
             this.btnBuscar.TabIndex = 4;
@@ -462,16 +462,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Location = new System.Drawing.Point(474, 103);
-            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.Size = new System.Drawing.Size(997, 801);
+            this.dgvUsuario.Size = new System.Drawing.Size(997, 778);
             this.dgvUsuario.TabIndex = 6;
             // 
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.Location = new System.Drawing.Point(103, 617);
-            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(104, 43);
             this.btnmodificar.TabIndex = 18;
@@ -482,7 +482,7 @@
             // 
             this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Location = new System.Drawing.Point(285, 617);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(104, 43);
             this.btneliminar.TabIndex = 19;
@@ -495,7 +495,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1484, 917);
+            this.ClientSize = new System.Drawing.Size(1484, 749);
             this.ControlBox = false;
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmodificar);
@@ -507,7 +507,7 @@
             this.Controls.Add(this.gbDatosUsuario);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmusuario";
             this.Text = "Gestion de usuarios";
             this.Load += new System.EventHandler(this.frmusuario_Load);

@@ -70,6 +70,8 @@
     <Compile Include="Controlador\ComprobanteController.cs" />
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\CupoViewModel.cs" />
+    <Compile Include="Controlador\DocenteController.cs" />
+    <Compile Include="Controlador\DocenteViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
     <Compile Include="Controlador\UsuarioController.cs" />

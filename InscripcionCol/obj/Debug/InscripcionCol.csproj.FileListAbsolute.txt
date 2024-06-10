@@ -104,3 +104,33 @@ C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\Inscripc.
 C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.exe
 C:\Users\PC\Desktop\NUEVO\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.pdb
 D:\SEM 1-2024\DISEÑO DE SISTEMAS - SIS 3651A\PROYECTO CONTINUADO\versiones del programa\Ultima version\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.dtp.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\InscripcionCol.exe.config
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\InscripcionCol.exe
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\InscripcionCol.pdb
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\CircularProgressBar.dll
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.dll
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\WinFormAnimation.dll
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\CircularProgressBar.xml
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.xml
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.AssemblyReference.cache
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.dtp.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmcomprobante.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmcupo.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmdocente.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frminforme.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmInicioSesion.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmcarga.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmestudiante.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmRegistrarEst.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Vista.frmreporte.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmusuario.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.frmmenu.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.Properties.Resources.resources
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.GenerateResource.cache
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.CoreCompileInputs.cache
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.csproj.CopyComplete
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.exe
+C:\Users\gabel\Desktop\proyecto segunda prueba\Inscripcion_Colegio\InscripcionCol\obj\Debug\InscripcionCol.pdb
