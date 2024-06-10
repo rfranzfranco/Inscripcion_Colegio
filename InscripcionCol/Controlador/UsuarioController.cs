@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,13 +60,15 @@ namespace InscripcionCol.Controlador
                     transaction.Commit();
                     return true;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw;
+                    MessageBox.Show($"Error al registrar el usuario: {ex.Message}");
+                    return false;
                 }
             }
         }
+
         public List<UsuarioViewModel> Buscar(string param)
         {
             if (string.IsNullOrWhiteSpace(param))
@@ -87,6 +88,7 @@ namespace InscripcionCol.Controlador
                 }
             }
         }
+
         public bool EliminarUsuario(int ci)
         {
             using (var transaction = _db.Database.BeginTransaction())
@@ -123,28 +125,49 @@ namespace InscripcionCol.Controlador
                 }
             }
         }
+
         public async Task<bool> ModificarUsuarioAsync(TRegistro registro, TUsuario usuario)
         {
-            using (var transaction = _db.Database.BeginTransaction())
+            try
             {
-                try
+                // Buscar el registro existente por CI
+                var registroExistente = await _db.TRegistro.FirstOrDefaultAsync(r => r.ci == registro.ci);
+                if (registroExistente == null)
                 {
-                    // Actualizar el registro en TRegistro
-                    _db.Entry(registro).State = EntityState.Modified;
-                    await _db.SaveChangesAsync();
-
-                    // Actualizar el usuario en TUsuario
-                    _db.Entry(usuario).State = EntityState.Modified;
-                    await _db.SaveChangesAsync();
-
-                    transaction.Commit();
-                    return true;
+                    return false; // No se encontró el registro
                 }
-                catch (Exception)
+
+                // Actualizar los campos del registro
+                registroExistente.nombre = registro.nombre;
+                registroExistente.ci = registro.ci;
+                registroExistente.ap_paterno = registro.ap_paterno;
+                registroExistente.ap_materno = registro.ap_materno;
+                registroExistente.direccion = registro.direccion;
+                registroExistente.celular = registro.celular;
+                registroExistente.sexo = registro.sexo;
+                registroExistente.fecha_nac = registro.fecha_nac;
+
+                // Buscar el usuario existente por id_registro
+                var usuarioExistente = await _db.TUsuario.FirstOrDefaultAsync(u => u.id_registro == registroExistente.id_registro);
+                if (usuarioExistente == null)
                 {
-                    transaction.Rollback();
-                    throw;
+                    return false; // No se encontró el usuario
                 }
+
+                // Actualizar los campos del usuario
+                usuarioExistente.usuario = usuario.usuario;
+                usuarioExistente.contraseña = usuario.contraseña;
+                usuarioExistente.rol = usuario.rol;
+
+                // Guardar los cambios en la base de datos
+                await _db.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que ocurra
+                Console.WriteLine($"Error al modificar el usuario: {ex.Message}");
+                return false;
             }
         }
     }
