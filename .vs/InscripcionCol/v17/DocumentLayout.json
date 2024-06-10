@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PROYECTO\\Inscripcion_Colegio\\",
+  "WorkspaceRootPath": "D:\\ultimo con reporte\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\PROYECTO\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\ultimo con reporte\\inscripcion_colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\PROYECTO\\Inscripcion_Colegio\\inscripcioncol\\vista\\reportecursos.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\ultimo con reporte\\Inscripcion_Colegio\\inscripcioncol\\vista\\reportecursos.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\reportecursos.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\PROYECTO\\Inscripcion_Colegio\\inscripcioncol\\controlador\\reportedatosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\ultimo con reporte\\Inscripcion_Colegio\\inscripcioncol\\controlador\\reportedatosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\reportedatosview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\PROYECTO\\Inscripcion_Colegio\\inscripcioncol\\controlador\\reportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\ultimo con reporte\\Inscripcion_Colegio\\inscripcioncol\\controlador\\reportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\reportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\PROYECTO\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\ultimo con reporte\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,11 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -48,22 +52,21 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ReporteDatosView.cs",
-              "DocumentMoniker": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteDatosView.cs",
+              "DocumentMoniker": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteDatosView.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\ReporteDatosView.cs",
-              "ToolTip": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteDatosView.cs",
+              "ToolTip": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteDatosView.cs",
               "RelativeToolTip": "InscripcionCol\\Controlador\\ReporteDatosView.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T06:53:29.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T06:53:29.067Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ReporteController.cs",
-              "DocumentMoniker": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteController.cs",
+              "DocumentMoniker": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteController.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\ReporteController.cs",
-              "ToolTip": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteController.cs",
+              "ToolTip": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\ReporteController.cs",
               "RelativeToolTip": "InscripcionCol\\Controlador\\ReporteController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -73,9 +76,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "frmreporte.cs",
-              "DocumentMoniker": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
+              "DocumentMoniker": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmreporte.cs",
-              "ToolTip": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
+              "ToolTip": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmreporte.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAQwBUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -86,9 +89,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmreporte.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
+              "DocumentMoniker": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmreporte.cs",
-              "ToolTip": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs [Dise\u00F1o]",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmreporte.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T06:52:23.214Z",
@@ -98,13 +101,12 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Reportecursos.rdlc [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\Reportecursos.rdlc",
+              "DocumentMoniker": "D:\\ultimo con reporte\\Inscripcion_Colegio\\InscripcionCol\\Vista\\Reportecursos.rdlc",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\Reportecursos.rdlc",
               "ToolTip": "D:\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\Reportecursos.rdlc [Dise\u00F1o]",
-              "RelativeToolTip": "InscripcionCol\\Vista\\Reportecursos.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\PROYECTO\\Inscripcion_Colegio\\InscripcionCol\\Vista\\Reportecursos.rdlc [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-06-09T06:26:54.431Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-06-09T06:26:54.431Z"
             }
           ]
         }
