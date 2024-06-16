@@ -104,5 +104,13 @@ namespace InscripcionCol
         {
             CerrarSesion();
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmmenuIni frmmenuIni = new frmmenuIni();
+            frmmenuIni.MdiParent = this;
+            frmmenuIni.WindowState = FormWindowState.Maximized;
+            frmmenuIni.Show();
+        }
     }
 }
