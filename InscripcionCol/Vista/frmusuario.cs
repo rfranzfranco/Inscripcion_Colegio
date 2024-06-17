@@ -110,7 +110,6 @@ namespace InscripcionCol
 
         private bool CamposVacios()
         {
-            //se modifica para el bton modificar
             return string.IsNullOrWhiteSpace(txtci.Text) ||
                    string.IsNullOrWhiteSpace(txtNombre.Text) ||
                    string.IsNullOrWhiteSpace(txtApPaterno.Text) ||
@@ -122,20 +121,19 @@ namespace InscripcionCol
                    string.IsNullOrWhiteSpace(txtNomusuario.Text) ||
                    string.IsNullOrWhiteSpace(txtContrasena.Text) ||
                    string.IsNullOrWhiteSpace(txtrepetirContra.Text) ||
-                   //  string.IsNullOrWhiteSpace(cmbRol.Text);
                    cmbRol.SelectedIndex == -1;
         }
+
         private void CargarUsuarios()
         {
             dgvUsuario.DataSource = usuarioController.Listar();
-            dgvUsuario.Columns["id_registro"].Visible = false;
             dgvUsuario.Columns["usuario"].Visible = false;
             dgvUsuario.Columns["contraseña"].Visible = false;
         }
 
         private void HabilitarCampos()
         {
-            txtci.Enabled = true;
+            txtci.Enabled = true;  // Asegúrate de habilitar el campo CI
             txtNombre.Enabled = true;
             txtApPaterno.Enabled = true;
             txtApMaterno.Enabled = true;
@@ -152,7 +150,7 @@ namespace InscripcionCol
 
         private void DeshabilitarCampos()
         {
-            txtci.Enabled = false;
+            txtci.Enabled = false;  // Aquí deshabilitas el campo CI
             txtNombre.Enabled = false;
             txtApPaterno.Enabled = false;
             txtApMaterno.Enabled = false;
@@ -181,7 +179,7 @@ namespace InscripcionCol
             txtNomusuario.Clear();
             txtContrasena.Clear();
             txtrepetirContra.Clear();
-            cmbRol.SelectedIndex = -1;  // Restablece la selección
+            cmbRol.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -194,7 +192,6 @@ namespace InscripcionCol
         {
             string parametroBusqueda = txtBuscar.Text.Trim();
 
-            // Realizar la búsqueda y actualizar el DataGridView
             var usuariosEncontrados = usuarioController.Buscar(parametroBusqueda);
 
             if (usuariosEncontrados.Any())
@@ -216,7 +213,7 @@ namespace InscripcionCol
                 if (usuarioController.EliminarUsuario(ci))
                 {
                     MessageBox.Show("Usuario eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarUsuarios(); // Recargar los datos en el DataGridView
+                    CargarUsuarios();
                     LimpiarCampos();
                 }
                 else
@@ -227,9 +224,9 @@ namespace InscripcionCol
             else
             {
                 MessageBox.Show("Seleccione un usuario para eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
             }
         }
+
         private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -258,12 +255,12 @@ namespace InscripcionCol
                 HabilitarCampos();
                 btnGuardar.Enabled = true;
                 btnmodificar.Enabled = true;
+                txtci.Enabled = true;  // Aquí deshabilitas el campo CI para evitar que se modifique accidentalmente
             }
         }
 
         private async void btnModificar_Click(object sender, EventArgs e)
         {
-            // Aquí iría la lógica para modificar un usuario
             try
             {
                 string confirmarContraseña = txtrepetirContra.Text;
@@ -279,40 +276,55 @@ namespace InscripcionCol
                     return;
                 }
 
-                TRegistro registro = new TRegistro
+                if (dgvUsuario.SelectedRows.Count > 0)
                 {
-                    ci = int.Parse(txtci.Text),
-                    nombre = txtNombre.Text,
-                    ap_paterno = txtApPaterno.Text,
-                    ap_materno = txtApMaterno.Text,
-                    direccion = txtdireccion.Text,
-                    celular = int.Parse(txtcelular.Text),
-                    sexo = (rbtmasculino.Checked == true) ? "M" : "F",
-                    fecha_nac = DateTime.Parse(datefNac.Text)
-                };
+                    int ci = int.Parse(txtci.Text);
+                    string nombre = txtNombre.Text;
+                    string apPaterno = txtApPaterno.Text;
+                    string apMaterno = txtApMaterno.Text;
+                    string direccion = txtdireccion.Text;
+                    int celular = int.Parse(txtcelular.Text);
+                    string sexo = (rbtmasculino.Checked == true) ? "M" : "F";
+                    DateTime fechaNac = DateTime.Parse(datefNac.Text);
 
-                TUsuario usuario = new TUsuario
-                {
-                    id_registro = (int)dgvUsuario.SelectedRows[0].Cells["id_registro"].Value,
-                    usuario = txtNomusuario.Text,
-                    contraseña = txtContrasena.Text,
-                    rol = cmbRol.Text
-                };
+                    TRegistro registro = new TRegistro
+                    {
+                        ci = ci,
+                        nombre = nombre,
+                        ap_paterno = apPaterno,
+                        ap_materno = apMaterno,
+                        direccion = direccion,
+                        celular = celular,
+                        sexo = sexo,
+                        fecha_nac = fechaNac
+                    };
 
-                bool modificado = await usuarioController.ModificarUsuarioAsync(registro, usuario);
+                    TUsuario usuario = new TUsuario
+                    {
+                        usuario = txtNomusuario.Text,
+                        contraseña = txtContrasena.Text,
+                        rol = cmbRol.Text
+                    };
 
-                if (modificado)
-                {
-                    MessageBox.Show("Usuario modificado con éxito.");
-                    CargarUsuarios();
-                    LimpiarCampos();
-                    DeshabilitarCampos();
-                    btnGuardar.Enabled = true;
-                    btnmodificar.Enabled = false;
+                    bool modificado = await usuarioController.ModificarUsuarioAsync(registro, usuario);
+
+                    if (modificado)
+                    {
+                        MessageBox.Show("Usuario modificado con éxito.");
+                        CargarUsuarios();
+                        LimpiarCampos();
+                        DeshabilitarCampos();
+                        btnGuardar.Enabled = true;
+                        btnmodificar.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al modificar el usuario.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al modificar el usuario.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Seleccione un usuario para modificar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -320,7 +332,5 @@ namespace InscripcionCol
                 MessageBox.Show($"Ha ocurrido un error al modificar el usuario: {ex.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
-
