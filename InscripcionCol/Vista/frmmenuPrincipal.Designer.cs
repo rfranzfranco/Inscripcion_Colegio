@@ -42,6 +42,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btncerrarSesion = new System.Windows.Forms.Button();
+            this.btn_salirNuevo = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.reportesEInformesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(1507, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -161,7 +162,7 @@
             this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(1397, 1);
+            this.btnsalir.Location = new System.Drawing.Point(1534, 1);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(178, 32);
             this.btnsalir.TabIndex = 2;
@@ -177,7 +178,7 @@
             this.btncerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncerrarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btncerrarSesion.Location = new System.Drawing.Point(1165, 0);
+            this.btncerrarSesion.Location = new System.Drawing.Point(1177, 1);
             this.btncerrarSesion.Name = "btncerrarSesion";
             this.btncerrarSesion.Size = new System.Drawing.Size(126, 32);
             this.btncerrarSesion.TabIndex = 4;
@@ -185,12 +186,29 @@
             this.btncerrarSesion.UseVisualStyleBackColor = false;
             this.btncerrarSesion.Click += new System.EventHandler(this.btncerrarSesion_Click);
             // 
+            // btn_salirNuevo
+            // 
+            this.btn_salirNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_salirNuevo.BackColor = System.Drawing.Color.Red;
+            this.btn_salirNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salirNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salirNuevo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salirNuevo.ForeColor = System.Drawing.Color.Black;
+            this.btn_salirNuevo.Location = new System.Drawing.Point(1328, 0);
+            this.btn_salirNuevo.Name = "btn_salirNuevo";
+            this.btn_salirNuevo.Size = new System.Drawing.Size(177, 32);
+            this.btn_salirNuevo.TabIndex = 6;
+            this.btn_salirNuevo.Text = "Salir del programa";
+            this.btn_salirNuevo.UseVisualStyleBackColor = false;
+            this.btn_salirNuevo.Click += new System.EventHandler(this.btn_salirNuevo_Click);
+            // 
             // frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 610);
+            this.ClientSize = new System.Drawing.Size(1507, 610);
+            this.Controls.Add(this.btn_salirNuevo);
             this.Controls.Add(this.btncerrarSesion);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.menuStrip1);
@@ -224,5 +242,6 @@
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btncerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.Button btn_salirNuevo;
     }
 }

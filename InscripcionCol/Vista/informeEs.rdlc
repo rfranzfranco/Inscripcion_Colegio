@@ -425,7 +425,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -482,7 +482,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>´´DONATO VASQUES´´</Value>
+                  <Value>´´DONATO VASQUEZ´´</Value>
                   <Style />
                 </TextRun>
               </TextRuns>

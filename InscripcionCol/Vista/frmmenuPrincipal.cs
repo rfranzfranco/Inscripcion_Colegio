@@ -43,6 +43,10 @@ namespace InscripcionCol
         private void frmmenu_Load(object sender, EventArgs e)
         {
             VerificarRolUsuarioActual();
+            frmmenuIni frmmenuIni = new frmmenuIni();
+            frmmenuIni.MdiParent = this;
+            frmmenuIni.WindowState = FormWindowState.Maximized;
+            frmmenuIni.Show();
         }
         private void VerificarRolUsuarioActual()
         {
@@ -140,6 +144,11 @@ namespace InscripcionCol
             frminmes.MdiParent = this;
             frminmes.WindowState = FormWindowState.Maximized;
             frminmes.Show();
+        }
+
+        private void btn_salirNuevo_Click(object sender, EventArgs e)
+        {
+            salir();
         }
     }
 }
