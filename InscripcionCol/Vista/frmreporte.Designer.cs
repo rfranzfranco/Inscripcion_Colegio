@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cursoDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reporteDatosViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -57,12 +57,12 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.cursoDetallesBindingSource;
-            reportDataSource4.Name = "DataSet2";
-            reportDataSource4.Value = this.reporteDatosViewBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.cursoDetallesBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.reporteDatosViewBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InscripcionCol.Vista.Reportecursos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(237, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -121,7 +121,7 @@
             // 
             this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_inicio.Location = new System.Drawing.Point(12, 195);
-            this.dtp_inicio.MaxDate = new System.DateTime(2024, 5, 17, 0, 0, 0, 0);
+            this.dtp_inicio.MaxDate = new System.DateTime(2024, 6, 17, 0, 0, 0, 0);
             this.dtp_inicio.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(200, 26);

@@ -15,11 +15,11 @@ namespace InscripcionCol
     public partial class frmestudiante : Form
     {
         EstudianteController estudianteController = new EstudianteController();
-
+        
         public frmestudiante()
         {
             InitializeComponent();            
-        }        
+        }
         private void btnestudiante_Click(object sender, EventArgs e)
         {
             MostrarFormularioRegistrarEstudiante();
@@ -142,14 +142,18 @@ namespace InscripcionCol
             if (dgvEstudiante.SelectedRows.Count > 0)
             {
                 int idEstudiante = Convert.ToInt32(dgvEstudiante.SelectedRows[0].Cells["Id_Estudiante"].Value);
-                if (estudianteController.EliminarEstudiante(idEstudiante))
+                var confirmResult = MessageBox.Show("¿Está seguro de que eliminar al estudiante?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Estudiante eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cargar(); // Recargar los datos en el DataGridView
-                }
-                else
-                {
-                    MessageBox.Show("Error al eliminar el estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (estudianteController.EliminarEstudiante(idEstudiante))
+                    {
+                        MessageBox.Show("Estudiante eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargar(); // Recargar los datos en el DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar el estudiante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else

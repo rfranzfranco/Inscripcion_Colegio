@@ -297,6 +297,7 @@
       <DependentUpon>ModeloBdD.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\InscripcionCol.Controlador.cursoDetalles.datasource" />
     <None Include="Properties\DataSources\InscripcionCol.Controlador.detalleEstudiante.datasource" />
     <None Include="Properties\DataSources\InscripcionCol.Controlador.InformeDatosView.datasource" />
     <None Include="Properties\Settings.settings">

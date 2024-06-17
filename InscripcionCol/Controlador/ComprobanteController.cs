@@ -42,23 +42,24 @@ namespace InscripcionCol.Controlador
             {
                 posX = 250;
                 posY = 10;
-                e.Graphics.DrawImage(Logotipo,10, 20, 100, 100);
+                e.Graphics.DrawImage(Logotipo,40, 40, 100, 100);
                 // Imprimir fecha y hora en la parte superior derecha
                 string fecha = DateTime.Now.ToString("dd/MM/yyyy");
                 string hora = DateTime.Now.ToString("HH:mm");
                 e.Graphics.DrawString("Fecha: " + fecha, fuenteContenido, Brushes.Black, e.PageBounds.Width - 200, 30);
                 e.Graphics.DrawString("Hora: " + hora, fuenteContenido, Brushes.Black, e.PageBounds.Width - 200, 50);
 
-                posY += 110;
-                e.Graphics.DrawString(Colegio, fuenteControl, Brushes.Black, 10, posY);
+                posY += 150;
+                e.Graphics.DrawString(Colegio, fuenteControl, Brushes.Black, 40, posY);
                 posY += 20;
-                e.Graphics.DrawString(Direccion, fuenteControl, Brushes.Black, 10, posY);
+                e.Graphics.DrawString(Direccion, fuenteControl, Brushes.Black, 40, posY);
                 posY += 20;
-                e.Graphics.DrawString(Telefono, fuenteControl, Brushes.Black, 10, posY);
+                e.Graphics.DrawString(Telefono, fuenteControl, Brushes.Black, 40, posY);
+                e.Graphics.DrawString("______________________________________________________________________________________________________", fuenteContenido, Brushes.Black, 0, posY);
                 posY += 50;
                 e.Graphics.DrawString("COMPROBANTE DE INSCRIPCION", fuenteTitulo, Brushes.Black, e.PageBounds.Width / 2, posY, formatoCentro);
                 posY += 60;
-
+                
                 foreach (var estudiante in ListarCompEst)
                 {
                     e.Graphics.DrawString("CI: ", fuenteTitulo, Brushes.Black, posX, posY);

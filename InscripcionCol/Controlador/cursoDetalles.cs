@@ -11,5 +11,6 @@ namespace InscripcionCol.Controlador
         public int grado { get; set; }
         public string paralelo { get; set; }
         public int totalEst { get; set; }
+        //public static int TotalEstudiantes { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace InscripcionCol.Vista
         {
             CargarDocentes();
             DeshabilitarCampos();
+            btnmodificar.Visible = false;
         }
 
         private void btnAgregarProfesor_Click(object sender, EventArgs e)

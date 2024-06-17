@@ -281,16 +281,19 @@ namespace InscripcionCol
             if (dgvUsuario.SelectedRows.Count > 0)
             {
                 int ci = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["ci"].Value);
-
-                if (usuarioController.EliminarUsuario(ci))
+                var confirmResult = MessageBox.Show("¿Está seguro de que desea eliminar al usuario?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Usuario eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarUsuarios();
-                    LimpiarCampos();
-                }
-                else
-                {
-                    MessageBox.Show("Error al eliminar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (usuarioController.EliminarUsuario(ci))
+                    {
+                        MessageBox.Show("Usuario eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarUsuarios();
+                        LimpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else

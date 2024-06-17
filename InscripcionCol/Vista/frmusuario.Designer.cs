@@ -131,7 +131,7 @@
             this.datefNac.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.datefNac.Name = "datefNac";
             this.datefNac.Size = new System.Drawing.Size(286, 26);
-            this.datefNac.TabIndex = 37;
+            this.datefNac.TabIndex = 13;
             this.datefNac.Value = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
             // 
             // label14
@@ -152,7 +152,7 @@
             this.rbtfemenino.Margin = new System.Windows.Forms.Padding(4);
             this.rbtfemenino.Name = "rbtfemenino";
             this.rbtfemenino.Size = new System.Drawing.Size(36, 22);
-            this.rbtfemenino.TabIndex = 35;
+            this.rbtfemenino.TabIndex = 4;
             this.rbtfemenino.TabStop = true;
             this.rbtfemenino.Text = "F";
             this.rbtfemenino.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.rbtmasculino.Margin = new System.Windows.Forms.Padding(4);
             this.rbtmasculino.Name = "rbtmasculino";
             this.rbtmasculino.Size = new System.Drawing.Size(39, 22);
-            this.rbtmasculino.TabIndex = 34;
+            this.rbtmasculino.TabIndex = 3;
             this.rbtmasculino.TabStop = true;
             this.rbtmasculino.Text = "M";
             this.rbtmasculino.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             this.txtrepetirContra.Margin = new System.Windows.Forms.Padding(4);
             this.txtrepetirContra.Name = "txtrepetirContra";
             this.txtrepetirContra.Size = new System.Drawing.Size(257, 26);
-            this.txtrepetirContra.TabIndex = 17;
+            this.txtrepetirContra.TabIndex = 10;
             // 
             // label10
             // 
@@ -196,7 +196,7 @@
             this.txtcelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(82, 26);
-            this.txtcelular.TabIndex = 22;
+            this.txtcelular.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -217,7 +217,7 @@
             this.txtdireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(417, 26);
-            this.txtdireccion.TabIndex = 21;
+            this.txtdireccion.TabIndex = 12;
             // 
             // btnGuardar
             // 
@@ -253,7 +253,7 @@
             this.cmbRol.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(184, 26);
-            this.cmbRol.TabIndex = 13;
+            this.cmbRol.TabIndex = 11;
             // 
             // txtContrasena
             // 
@@ -262,7 +262,7 @@
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(257, 26);
-            this.txtContrasena.TabIndex = 12;
+            this.txtContrasena.TabIndex = 9;
             // 
             // label12
             // 
@@ -282,7 +282,7 @@
             this.txtNomusuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomusuario.Name = "txtNomusuario";
             this.txtNomusuario.Size = new System.Drawing.Size(257, 26);
-            this.txtNomusuario.TabIndex = 11;
+            this.txtNomusuario.TabIndex = 8;
             // 
             // txtNombre
             // 
@@ -291,7 +291,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(257, 26);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 7;
             // 
             // txtsexo
             // 
@@ -311,7 +311,7 @@
             this.txtApMaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(257, 26);
-            this.txtApMaterno.TabIndex = 9;
+            this.txtApMaterno.TabIndex = 6;
             // 
             // txtApPaterno
             // 
@@ -320,7 +320,7 @@
             this.txtApPaterno.Margin = new System.Windows.Forms.Padding(4);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(257, 26);
-            this.txtApPaterno.TabIndex = 8;
+            this.txtApPaterno.TabIndex = 5;
             // 
             // label7
             // 
@@ -406,7 +406,7 @@
             this.txtci.Margin = new System.Windows.Forms.Padding(4);
             this.txtci.Name = "txtci";
             this.txtci.Size = new System.Drawing.Size(98, 26);
-            this.txtci.TabIndex = 0;
+            this.txtci.TabIndex = 1;
             // 
             // label8
             // 
@@ -428,7 +428,7 @@
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(98, 26);
-            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TabIndex = 18;
             // 
             // btnBuscar
             // 
@@ -438,7 +438,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(104, 43);
-            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.TabIndex = 19;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -474,7 +474,7 @@
             this.btnmodificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(104, 43);
-            this.btnmodificar.TabIndex = 18;
+            this.btnmodificar.TabIndex = 16;
             this.btnmodificar.Text = "MODIFICAR";
             this.btnmodificar.UseVisualStyleBackColor = true;
             // 
@@ -485,7 +485,7 @@
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(104, 43);
-            this.btneliminar.TabIndex = 19;
+            this.btneliminar.TabIndex = 17;
             this.btneliminar.Text = "ELIMNINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);

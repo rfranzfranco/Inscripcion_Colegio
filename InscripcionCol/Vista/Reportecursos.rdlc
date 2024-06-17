@@ -80,7 +80,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>CANTIDAD DE ESTUDIANTES POR CURSO</Value>
+                    <Value>CANTIDAD DE ESTUDIANTES INSCRITOS POR CURSO</Value>
                     <Style>
                       <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -820,7 +820,7 @@
               <Top>0.7021cm</Top>
               <Left>16.51077cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.02451cm</Width>
+              <Width>3.73888cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1082,29 +1082,62 @@
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox14">
+            <Textbox Name="Textbox15">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!fechaReporte.Value, "DataSet2")</Value>
+                      <Value>=Sum(Fields!totalEst.Value, "DataSet1")</Value>
                       <Style>
-                        <Format>f</Format>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox14</rd:DefaultName>
-              <Top>0.91995cm</Top>
-              <Left>8.23814cm</Left>
+              <rd:DefaultName>Textbox15</rd:DefaultName>
+              <Top>0.93731cm</Top>
+              <Left>18.02306cm</Left>
               <Height>0.6cm</Height>
-              <Width>11.29714cm</Width>
+              <Width>1.47694cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox16">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Total de estudiantes inscritos: </Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox16</rd:DefaultName>
+              <Top>0.93731cm</Top>
+              <Left>11.73937cm</Left>
+              <Height>0.6cm</Height>
+              <Width>6.28368cm</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

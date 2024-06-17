@@ -45,7 +45,135 @@ namespace InscripcionCol
                 {
                     Nombre = "Bolivia",
                     SubUbicaciones = new List<Ubicacion>
-                    {                        
+                    {
+                        new Ubicacion
+                        {
+                            Nombre = "Oruro",
+                            SubUbicaciones = new List<Ubicacion>
+                            {
+                                new Ubicacion
+                                {
+                                    Nombre = "Cercado",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Oruro"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Atahuallpa",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Challapata"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Carangas",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Corque"}
+                                    }
+                                },
+                                
+                                new Ubicacion
+                                {
+                                    Nombre = "Eduardo Avaroa",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Challapata"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Ladislao Cabrera",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Salinas de Garci Mendoza"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Litoral",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Huachacalla"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Nor Carangas",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Huayllamarca"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Pantaleón Dalence",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Huanuni"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Poopó",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Poopó"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Sajama",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Curahuara de Carangas"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "San Pedro de Totora",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Totora"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Saucarí",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Toledo"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Sebastián Pagador",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Santiago de Huari"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Sud Carangas",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Andamarca"}
+                                    }
+                                },
+                                new Ubicacion
+                                {
+                                    Nombre = "Tomás Barrón",
+                                    SubUbicaciones=new List<Ubicacion>
+                                    {
+                                        new Ubicacion{Nombre="Eucaliptus"}
+                                    }
+                                }
+                            }
+                        },
                         new Ubicacion
                         {
                             Nombre = "La Paz",
@@ -223,133 +351,7 @@ namespace InscripcionCol
                                 }
                             }
                         },
-                        new Ubicacion
-                        {
-                            Nombre = "Oruro",
-                            SubUbicaciones = new List<Ubicacion>
-                            {
-                                new Ubicacion
-                                {
-                                    Nombre = "Atahuallpa",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Challapata"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Carangas",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Corque"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Cercado",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Oruro"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Eduardo Avaroa",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Challapata"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Ladislao Cabrera",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Salinas de Garci Mendoza"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Litoral",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Huachacalla"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Nor Carangas",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Huayllamarca"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Pantaleón Dalence",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Huanuni"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Poopó",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Poopó"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Sajama",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Curahuara de Carangas"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "San Pedro de Totora",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Totora"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Saucarí",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Toledo"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Sebastián Pagador",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Santiago de Huari"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Sud Carangas",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Andamarca"}
-                                    }
-                                },
-                                new Ubicacion
-                                {
-                                    Nombre = "Tomás Barrón",
-                                    SubUbicaciones=new List<Ubicacion>
-                                    {
-                                        new Ubicacion{Nombre="Eucaliptus"}
-                                    }
-                                }
-                            }
-                        },
+                        
                         new Ubicacion
                         {
                             Nombre = "Cochabamba",
@@ -5631,6 +5633,21 @@ namespace InscripcionCol
                     {
                         new UbicacionDptos
                         {
+                            NombreD = "Cercado",
+                            SubUbicaciones = new List<UbicacionDptos>
+                            {
+                                new UbicacionDptos
+                                {
+                                    NombreD = "Oruro",
+                                    SubUbicaciones = new List<UbicacionDptos>
+                                    {
+                                        new UbicacionDptos { NombreD = "Oruro" }
+                                    }
+                                }
+                            }
+                        },
+                        new UbicacionDptos
+                        {
                             NombreD = "Atahuallpa",
                             SubUbicaciones = new List<UbicacionDptos>
                             {
@@ -5667,21 +5684,7 @@ namespace InscripcionCol
                                 }
                             }
                         },
-                        new UbicacionDptos
-                        {
-                            NombreD = "Cercado",
-                            SubUbicaciones = new List<UbicacionDptos>
-                            {
-                                new UbicacionDptos
-                                {
-                                    NombreD = "Oruro",
-                                    SubUbicaciones = new List<UbicacionDptos>
-                                    {
-                                        new UbicacionDptos { NombreD = "Oruro" }
-                                    }
-                                }
-                            }
-                        },
+                        
                         new UbicacionDptos
                         {
                             NombreD = "Eduardo Avaroa",
@@ -6857,27 +6860,75 @@ namespace InscripcionCol
             public string NombreD { get; set; }
             public List<UbicacionDptos> SubUbicaciones { get; set; }
         }
+        private bool ContieneNumerosOCaracteres(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (char.IsDigit(c) || !char.IsLetter(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void DesactivarModificacion()
+        {
+            btnModificar.Enabled = false;
+        }
         private async void btn_guardar_Click(object sender, EventArgs e)
         {
-            if(txt_appaterno.Text==""||txt_apmaterno.Text==""||txt_nombre.Text==""||txt_ci.Text==""||txt_rude.Text==""||
-                txt_exp.Text==""||txt_compl.Text==""||cbx_escol.Text==""||cbx_paisNac.Text==""||cbx_dptoNac.Text==""||
-                cbx_provNac.Text==""||cbx_locNac.Text==""||cbx_dptoAct.Text==""||cbx_provAct.Text==""||
-                cbx_munAct.Text==""||cbx_locAct.Text==""||txt_zonaAct.Text==""||txt_avenAct.Text==""||
-                txt_num.Text==""||txt_telefono.Text==""||txt_cel.Text==""||txt_ciTutor.Text==""||txt_appaternoTutor.Text==""||
-                txt_apmaternoTutor.Text==""||txt_nombreTutor.Text==""||txt_complTutor.Text==""||txt_expTutor.Text==""||
-                txt_dptoComprob.Text=="")
-            { 
-                MessageBox.Show("Existen campos vacios","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
             try
-            {                
+            {
+                if(txt_appaterno.Text==""||txt_apmaterno.Text==""||txt_nombre.Text==""||txt_ci.Text==""||txt_rude.Text==""||
+                    txt_exp.Text==""||txt_compl.Text==""||cbx_escol.Text==""||cbx_paisNac.Text==""||cbx_dptoNac.Text==""||
+                    cbx_provNac.Text==""||cbx_locNac.Text==""||cbx_dptoAct.Text==""||cbx_provAct.Text==""||
+                    cbx_munAct.Text==""||cbx_locAct.Text==""||txt_zonaAct.Text==""||txt_avenAct.Text==""||
+                    txt_num.Text==""||txt_telefono.Text==""||txt_cel.Text==""||txt_ciTutor.Text==""||txt_appaternoTutor.Text==""||
+                    txt_apmaternoTutor.Text==""||txt_nombreTutor.Text==""||txt_complTutor.Text==""||txt_expTutor.Text==""||
+                    txt_dptoComprob.Text=="")
+                { 
+                    MessageBox.Show("Existen campos vacios","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                } 
+                if (ContieneNumerosOCaracteres(txt_appaterno.Text) || ContieneNumerosOCaracteres(txt_apmaterno.Text) || ContieneNumerosOCaracteres(txt_nombre.Text)
+                    || ContieneNumerosOCaracteres(txt_exp.Text) || ContieneNumerosOCaracteres(txt_expTutor.Text) || ContieneNumerosOCaracteres(txt_appaternoTutor.Text)
+                    || ContieneNumerosOCaracteres(txt_apmaternoTutor.Text) || ContieneNumerosOCaracteres(txt_nombreTutor.Text))
+                {
+                    MessageBox.Show("Los campos de nombre y apellidos no deben contener números ni caracteres especiales.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!int.TryParse(txtci.Text, out int ci))
+                {
+                    MessageBox.Show("El CI debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                //if (!int.TryParse(txtrude.Text, out int rude))
+                //{
+                //    MessageBox.Show("El código RUDE debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
+                
+                if (!int.TryParse(txt_telefono.Text, out int telefono))
+                {
+                    MessageBox.Show("El número de telefono debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!int.TryParse(txt_cel.Text, out int celular))
+                {
+                    MessageBox.Show("El número de celular debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!int.TryParse(txt_ciTutor.Text, out int ciTutor))
+                {
+                    MessageBox.Show("El CI debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 testudiante.ap_paterno = txt_appaterno.Text;
                 testudiante.ap_materno = txt_apmaterno.Text;
                 testudiante.nombre = txt_nombre.Text;
-                testudiante.ci = Convert.ToInt32(txt_ci.Text);
+                testudiante.ci = ci;
                 testudiante.complemento = txt_compl.Text;
                 testudiante.expedido = txt_exp.Text;
-                testudiante.codigo_rude = Convert.ToInt64(txt_rude.Text);
+                testudiante.codigo_rude = Convert.ToInt64(txtrude.Text);
                 string genero;
                 if (rbtmasculino.Checked == true)
                 {
@@ -6915,11 +6966,11 @@ namespace InscripcionCol
                     await estudianteController.RegistrarDir_EstAsync(dir_Est);
 
                     contacto.id_direccion=direccion.id_direccion;
-                    contacto.telefono_fijo = Convert.ToInt32(txt_telefono.Text);
-                    contacto.celular = Convert.ToInt32(txt_cel.Text);
+                    contacto.telefono_fijo = telefono;
+                    contacto.celular = celular;
                     await estudianteController.RegistrarContactoAsync(contacto);
 
-                    tutor.ci = Convert.ToInt32(txt_ciTutor.Text);
+                    tutor.ci = ciTutor;
                     tutor.complemento = txt_complTutor.Text;
                     tutor.expedido = txt_expTutor.Text;
                     tutor.ap_paterno = txt_appaternoTutor.Text;
@@ -6940,6 +6991,8 @@ namespace InscripcionCol
 
                     MessageBox.Show("Se ha registrado el estudiante con exito","INFORMACIÓN",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     _frmestudiante.cargar();
+                    LimpiarCampos();
+                    this.Close();
                 }
                 else
                 {
@@ -7092,6 +7145,10 @@ namespace InscripcionCol
 
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
+            LimpiarCampos();
+        }
+        private void LimpiarCampos()
+        {
             txt_appaterno.Text = "";
             txt_apmaterno.Text = "";
             txt_nombre.Text = "";
@@ -7117,7 +7174,7 @@ namespace InscripcionCol
             txt_nombreTutor.Text = "";
             txt_complTutor.Text = "";
             txt_expTutor.Text = "";
-            date_regComprob.Value= DateTime.Now;
+            date_regComprob.Value = DateTime.Now;
         }
     }
 }

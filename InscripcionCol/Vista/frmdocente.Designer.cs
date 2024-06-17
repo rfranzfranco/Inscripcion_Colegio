@@ -37,6 +37,10 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.gbDatosProfesor = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.cmbGradoAcademico = new System.Windows.Forms.ComboBox();
+            this.cmbNivelEducativo = new System.Windows.Forms.ComboBox();
             this.dateContratacion = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.datefNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -62,10 +66,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtci = new System.Windows.Forms.TextBox();
-            this.cmbNivelEducativo = new System.Windows.Forms.ComboBox();
-            this.cmbGradoAcademico = new System.Windows.Forms.ComboBox();
-            this.cmbCurso = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).BeginInit();
             this.gbDatosProfesor.SuspendLayout();
             this.SuspendLayout();
@@ -110,7 +110,7 @@
             this.btnBuscarProfesor.Location = new System.Drawing.Point(1005, 58);
             this.btnBuscarProfesor.Name = "btnBuscarProfesor";
             this.btnBuscarProfesor.Size = new System.Drawing.Size(104, 43);
-            this.btnBuscarProfesor.TabIndex = 23;
+            this.btnBuscarProfesor.TabIndex = 30;
             this.btnBuscarProfesor.Text = "BUSCAR";
             this.btnBuscarProfesor.UseVisualStyleBackColor = true;
             this.btnBuscarProfesor.Click += new System.EventHandler(this.btnBuscarProfesor_Click);
@@ -122,7 +122,7 @@
             this.txtBuscarProfesor.Location = new System.Drawing.Point(887, 67);
             this.txtBuscarProfesor.Name = "txtBuscarProfesor";
             this.txtBuscarProfesor.Size = new System.Drawing.Size(98, 26);
-            this.txtBuscarProfesor.TabIndex = 22;
+            this.txtBuscarProfesor.TabIndex = 29;
             // 
             // btnAgregarProfesor
             // 
@@ -199,6 +199,55 @@
             this.gbDatosProfesor.TabStop = false;
             this.gbDatosProfesor.Text = "Datos del usuario";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(348, 373);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 18);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "Curso:";
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbCurso.Location = new System.Drawing.Point(351, 394);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(61, 26);
+            this.cmbCurso.TabIndex = 14;
+            // 
+            // cmbGradoAcademico
+            // 
+            this.cmbGradoAcademico.FormattingEnabled = true;
+            this.cmbGradoAcademico.Items.AddRange(new object[] {
+            "Licenciatura",
+            "Maestria",
+            "Doctorado",
+            "PostDoctorado"});
+            this.cmbGradoAcademico.Location = new System.Drawing.Point(155, 284);
+            this.cmbGradoAcademico.Name = "cmbGradoAcademico";
+            this.cmbGradoAcademico.Size = new System.Drawing.Size(257, 26);
+            this.cmbGradoAcademico.TabIndex = 10;
+            // 
+            // cmbNivelEducativo
+            // 
+            this.cmbNivelEducativo.FormattingEnabled = true;
+            this.cmbNivelEducativo.Items.AddRange(new object[] {
+            "Primario",
+            "Secundario"});
+            this.cmbNivelEducativo.Location = new System.Drawing.Point(156, 241);
+            this.cmbNivelEducativo.Name = "cmbNivelEducativo";
+            this.cmbNivelEducativo.Size = new System.Drawing.Size(256, 26);
+            this.cmbNivelEducativo.TabIndex = 9;
+            // 
             // dateContratacion
             // 
             this.dateContratacion.Location = new System.Drawing.Point(24, 394);
@@ -206,7 +255,7 @@
             this.dateContratacion.MinDate = new System.DateTime(1956, 1, 1, 0, 0, 0, 0);
             this.dateContratacion.Name = "dateContratacion";
             this.dateContratacion.Size = new System.Drawing.Size(286, 26);
-            this.dateContratacion.TabIndex = 39;
+            this.dateContratacion.TabIndex = 12;
             this.dateContratacion.Value = new System.DateTime(2024, 5, 28, 0, 0, 0, 0);
             // 
             // label7
@@ -226,7 +275,7 @@
             this.datefNacimiento.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.datefNacimiento.Name = "datefNacimiento";
             this.datefNacimiento.Size = new System.Drawing.Size(286, 26);
-            this.datefNacimiento.TabIndex = 37;
+            this.datefNacimiento.TabIndex = 13;
             this.datefNacimiento.Value = new System.DateTime(2006, 1, 1, 0, 0, 0, 0);
             // 
             // label14
@@ -245,7 +294,7 @@
             this.rbtfemenino.Location = new System.Drawing.Point(373, 44);
             this.rbtfemenino.Name = "rbtfemenino";
             this.rbtfemenino.Size = new System.Drawing.Size(36, 22);
-            this.rbtfemenino.TabIndex = 35;
+            this.rbtfemenino.TabIndex = 4;
             this.rbtfemenino.TabStop = true;
             this.rbtfemenino.Text = "F";
             this.rbtfemenino.UseVisualStyleBackColor = true;
@@ -256,7 +305,7 @@
             this.rbtmasculino.Location = new System.Drawing.Point(373, 23);
             this.rbtmasculino.Name = "rbtmasculino";
             this.rbtmasculino.Size = new System.Drawing.Size(39, 22);
-            this.rbtmasculino.TabIndex = 34;
+            this.rbtmasculino.TabIndex = 3;
             this.rbtmasculino.TabStop = true;
             this.rbtmasculino.Text = "M";
             this.rbtmasculino.UseVisualStyleBackColor = true;
@@ -277,7 +326,7 @@
             this.txtcelular.Location = new System.Drawing.Point(228, 27);
             this.txtcelular.Name = "txtcelular";
             this.txtcelular.Size = new System.Drawing.Size(82, 26);
-            this.txtcelular.TabIndex = 22;
+            this.txtcelular.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -285,7 +334,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(263, 496);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 43);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -296,7 +345,7 @@
             this.txtdireccion.Location = new System.Drawing.Point(6, 335);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(406, 26);
-            this.txtdireccion.TabIndex = 21;
+            this.txtdireccion.TabIndex = 11;
             // 
             // btnGuardar
             // 
@@ -304,7 +353,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(77, 496);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 43);
-            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -335,7 +384,7 @@
             this.txtespecialidad.Location = new System.Drawing.Point(155, 199);
             this.txtespecialidad.Name = "txtespecialidad";
             this.txtespecialidad.Size = new System.Drawing.Size(257, 26);
-            this.txtespecialidad.TabIndex = 11;
+            this.txtespecialidad.TabIndex = 8;
             // 
             // txtNombre
             // 
@@ -343,7 +392,7 @@
             this.txtNombre.Location = new System.Drawing.Point(155, 156);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(257, 26);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 7;
             // 
             // label13
             // 
@@ -361,7 +410,7 @@
             this.txtApMaterno.Location = new System.Drawing.Point(155, 113);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(257, 26);
-            this.txtApMaterno.TabIndex = 9;
+            this.txtApMaterno.TabIndex = 6;
             // 
             // txtApPaterno
             // 
@@ -369,7 +418,7 @@
             this.txtApPaterno.Location = new System.Drawing.Point(155, 70);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(257, 26);
-            this.txtApPaterno.TabIndex = 8;
+            this.txtApPaterno.TabIndex = 5;
             // 
             // label6
             // 
@@ -437,56 +486,7 @@
             this.txtci.Location = new System.Drawing.Point(54, 27);
             this.txtci.Name = "txtci";
             this.txtci.Size = new System.Drawing.Size(98, 26);
-            this.txtci.TabIndex = 0;
-            // 
-            // cmbNivelEducativo
-            // 
-            this.cmbNivelEducativo.FormattingEnabled = true;
-            this.cmbNivelEducativo.Items.AddRange(new object[] {
-            "Primario",
-            "Secundario"});
-            this.cmbNivelEducativo.Location = new System.Drawing.Point(156, 241);
-            this.cmbNivelEducativo.Name = "cmbNivelEducativo";
-            this.cmbNivelEducativo.Size = new System.Drawing.Size(256, 26);
-            this.cmbNivelEducativo.TabIndex = 40;
-            // 
-            // cmbGradoAcademico
-            // 
-            this.cmbGradoAcademico.FormattingEnabled = true;
-            this.cmbGradoAcademico.Items.AddRange(new object[] {
-            "Licenciatura",
-            "Maestria",
-            "Doctorado",
-            "PostDoctorado"});
-            this.cmbGradoAcademico.Location = new System.Drawing.Point(155, 284);
-            this.cmbGradoAcademico.Name = "cmbGradoAcademico";
-            this.cmbGradoAcademico.Size = new System.Drawing.Size(257, 26);
-            this.cmbGradoAcademico.TabIndex = 41;
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cmbCurso.Location = new System.Drawing.Point(351, 394);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(61, 26);
-            this.cmbCurso.TabIndex = 42;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(348, 373);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 18);
-            this.label15.TabIndex = 43;
-            this.label15.Text = "Curso:";
+            this.txtci.TabIndex = 1;
             // 
             // frmdocente
             // 

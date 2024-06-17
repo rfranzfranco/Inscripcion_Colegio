@@ -11,6 +11,7 @@ namespace InscripcionCol.Controlador
         public DateTime fechaReporte { get; set; }
         public DateTime fecha_inicio { get; set; }
         public DateTime fecha_fin { get; set; }
+        public int TotalEstudiantes { get; set; }
         public List<cursoDetalles> CursoDetalles { get; set; }
         public void crearReporteCurso(DateTime fechaInicio, DateTime fechaFin)
         {
@@ -22,6 +23,7 @@ namespace InscripcionCol.Controlador
             var result = reporteCont.ReporteEstFechas(fechaInicio, fechaFin); // Usa fechaInicio y fechaFin en lugar de fechaReporte
 
             CursoDetalles = new List<cursoDetalles>();
+            TotalEstudiantes = 0;
             foreach (System.Data.DataRow row in result.Rows)
             {
                 var c = new cursoDetalles
@@ -31,6 +33,7 @@ namespace InscripcionCol.Controlador
                     totalEst = Convert.ToInt32(row["cantidad_estudiantes"])
                 };
                 CursoDetalles.Add(c);
+                TotalEstudiantes += c.totalEst;
             }
         }
     }
