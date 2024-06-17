@@ -170,6 +170,13 @@ namespace InscripcionCol.Controlador
                 return false;
             }
         }
+        // Complemento: Método para verificar si un CI ya existe en la base de datos
+        public async Task<bool> CiExisteAsync(int ci)
+        {
+            // Verificar si existe algún registro con el CI proporcionado
+            var usuarioExistente = await _db.TRegistro.AnyAsync(r => r.ci == ci);
+            return usuarioExistente;
+        }
     }
 }
 

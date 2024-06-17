@@ -43,7 +43,7 @@
             // 
             this.lbl_hora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_hora.Font = new System.Drawing.Font("Arial", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.Location = new System.Drawing.Point(343, 249);
+            this.lbl_hora.Location = new System.Drawing.Point(344, 210);
             this.lbl_hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(417, 107);
@@ -56,7 +56,7 @@
             this.lbl_fecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_fecha.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lbl_fecha.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(100, 398);
+            this.lbl_fecha.Location = new System.Drawing.Point(96, 343);
             this.lbl_fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(884, 72);
@@ -73,9 +73,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(392, 405);
+            this.pictureBox1.Location = new System.Drawing.Point(448, 436);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(312, 364);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 262);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -86,7 +86,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1137, 781);
+            this.pictureBox2.Size = new System.Drawing.Size(1137, 749);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -96,14 +96,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(1137, 781);
+            this.ClientSize = new System.Drawing.Size(1137, 749);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmmenuIni";
             this.Text = "Inicio del menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

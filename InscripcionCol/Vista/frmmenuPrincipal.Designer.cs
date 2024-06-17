@@ -143,14 +143,14 @@
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
             this.informesToolStripMenuItem.Text = "Informes";
             this.informesToolStripMenuItem.Click += new System.EventHandler(this.informesToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
@@ -177,9 +177,9 @@
             this.btncerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncerrarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btncerrarSesion.Location = new System.Drawing.Point(1235, 1);
+            this.btncerrarSesion.Location = new System.Drawing.Point(1165, 0);
             this.btncerrarSesion.Name = "btncerrarSesion";
-            this.btncerrarSesion.Size = new System.Drawing.Size(128, 32);
+            this.btncerrarSesion.Size = new System.Drawing.Size(126, 32);
             this.btncerrarSesion.TabIndex = 4;
             this.btncerrarSesion.Text = "Cerrar Sesión";
             this.btncerrarSesion.UseVisualStyleBackColor = false;

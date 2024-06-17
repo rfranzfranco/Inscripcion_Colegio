@@ -29,22 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_GenerarInforme = new System.Windows.Forms.Button();
-            this.dt_inicio = new System.Windows.Forms.DateTimePicker();
-            this.dt_fin = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.detalleEstudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.informeDatosViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dt_fin = new System.Windows.Forms.DateTimePicker();
+            this.dt_inicio = new System.Windows.Forms.DateTimePicker();
+            this.btn_GenerarInforme = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.detalleEstudianteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.informeDatosViewBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // detalleEstudianteBindingSource
+            // 
+            this.detalleEstudianteBindingSource.DataSource = typeof(InscripcionCol.Controlador.detalleEstudiante);
+            // 
+            // informeDatosViewBindingSource
+            // 
+            this.informeDatosViewBindingSource.DataSource = typeof(InscripcionCol.Controlador.InformeDatosView);
             // 
             // panel1
             // 
@@ -60,29 +68,14 @@
             this.panel1.Size = new System.Drawing.Size(1197, 165);
             this.panel1.TabIndex = 1;
             // 
-            // btn_GenerarInforme
+            // label2
             // 
-            this.btn_GenerarInforme.Location = new System.Drawing.Point(816, 80);
-            this.btn_GenerarInforme.Name = "btn_GenerarInforme";
-            this.btn_GenerarInforme.Size = new System.Drawing.Size(113, 53);
-            this.btn_GenerarInforme.TabIndex = 0;
-            this.btn_GenerarInforme.Text = "GENERAR INFORME";
-            this.btn_GenerarInforme.UseVisualStyleBackColor = true;
-            this.btn_GenerarInforme.Click += new System.EventHandler(this.btn_GenerarInforme_Click);
-            // 
-            // dt_inicio
-            // 
-            this.dt_inicio.Location = new System.Drawing.Point(272, 91);
-            this.dt_inicio.Name = "dt_inicio";
-            this.dt_inicio.Size = new System.Drawing.Size(200, 26);
-            this.dt_inicio.TabIndex = 1;
-            // 
-            // dt_fin
-            // 
-            this.dt_fin.Location = new System.Drawing.Point(535, 91);
-            this.dt_fin.Name = "dt_fin";
-            this.dt_fin.Size = new System.Drawing.Size(200, 26);
-            this.dt_fin.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(561, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Fecha Finalizacion";
             // 
             // label1
             // 
@@ -93,14 +86,44 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Fecha Inicio";
             // 
-            // label2
+            // dt_fin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(561, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Fecha Finalizacion";
+            this.dt_fin.Location = new System.Drawing.Point(535, 91);
+            this.dt_fin.Name = "dt_fin";
+            this.dt_fin.Size = new System.Drawing.Size(200, 26);
+            this.dt_fin.TabIndex = 2;
+            // 
+            // dt_inicio
+            // 
+            this.dt_inicio.Location = new System.Drawing.Point(272, 91);
+            this.dt_inicio.Name = "dt_inicio";
+            this.dt_inicio.Size = new System.Drawing.Size(200, 26);
+            this.dt_inicio.TabIndex = 1;
+            // 
+            // btn_GenerarInforme
+            // 
+            this.btn_GenerarInforme.Location = new System.Drawing.Point(816, 80);
+            this.btn_GenerarInforme.Name = "btn_GenerarInforme";
+            this.btn_GenerarInforme.Size = new System.Drawing.Size(113, 53);
+            this.btn_GenerarInforme.TabIndex = 0;
+            this.btn_GenerarInforme.Text = "GENERAR INFORME";
+            this.btn_GenerarInforme.UseVisualStyleBackColor = true;
+            this.btn_GenerarInforme.Click += new System.EventHandler(this.btn_GenerarInforme_Click);
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.detalleEstudianteBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.informeDatosViewBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "InscripcionCol.Vista.informeEs.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(1, 173);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1197, 482);
+            this.reportViewer1.TabIndex = 1;
             // 
             // label3
             // 
@@ -111,29 +134,6 @@
             this.label3.Size = new System.Drawing.Size(149, 34);
             this.label3.TabIndex = 5;
             this.label3.Text = "INFORME";
-            // 
-            // reportViewer1
-            // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.detalleEstudianteBindingSource;
-            reportDataSource4.Name = "DataSet2";
-            reportDataSource4.Value = this.informeDatosViewBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "InscripcionCol.Vista.informeEs.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(1, 173);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1197, 482);
-            this.reportViewer1.TabIndex = 1;
-            // 
-            // detalleEstudianteBindingSource
-            // 
-            this.detalleEstudianteBindingSource.DataSource = typeof(InscripcionCol.Controlador.detalleEstudiante);
-            // 
-            // informeDatosViewBindingSource
-            // 
-            this.informeDatosViewBindingSource.DataSource = typeof(InscripcionCol.Controlador.InformeDatosView);
             // 
             // frminforme
             // 
@@ -147,10 +147,10 @@
             this.Name = "frminforme";
             this.Text = "frminforme";
             this.Load += new System.EventHandler(this.frminforme_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleEstudianteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.informeDatosViewBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -161,11 +161,11 @@
         private System.Windows.Forms.DateTimePicker dt_fin;
         private System.Windows.Forms.DateTimePicker dt_inicio;
         private System.Windows.Forms.Button btn_GenerarInforme;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource detalleEstudianteBindingSource;
         private System.Windows.Forms.BindingSource informeDatosViewBindingSource;
+        private System.Windows.Forms.Label label3;
     }
 }

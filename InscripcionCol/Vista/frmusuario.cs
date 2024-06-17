@@ -26,10 +26,10 @@ namespace InscripcionCol
         {
             CargarUsuarios();
             DeshabilitarCampos();
-            VerificarRolUsuarioActual();
+           // VerificarRolUsuarioActual();
         }
 
-        private void VerificarRolUsuarioActual()
+       /* private void VerificarRolUsuarioActual()
         {
             string rolUsuarioActual = ObtenerRolUsuarioActual();
             if (rolUsuarioActual == "Secretaria/o")
@@ -45,7 +45,7 @@ namespace InscripcionCol
         private string ObtenerRolUsuarioActual()
         {
             return Sesion.ObtenerRol();
-        }
+        }*/
 
         private void btnAgregarUsuario_Click_1(object sender, EventArgs e)
         {
@@ -56,12 +56,21 @@ namespace InscripcionCol
         {
             try
             {
+                // Validar campos vacíos y mostrar advertencia específica
                 if (CamposVacios())
                 {
                     MessageBox.Show("Faltan datos por llenar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
+                // Validar que la contraseña tenga más de 8 caracteres
+                if (txtContrasena.Text.Length < 8)
+                {
+                    MessageBox.Show("La contraseña debe tener más de 8 caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar que las contraseñas coincidan
                 string ConfirmarContraseña = txtrepetirContra.Text;
                 if (txtContrasena.Text != ConfirmarContraseña)
                 {
@@ -69,26 +78,64 @@ namespace InscripcionCol
                     return;
                 }
 
+                // Validar que el CI solo contenga números
+                if (!int.TryParse(txtci.Text, out int ci))
+                {
+                    MessageBox.Show("El CI debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar que el celular solo contenga números
+                if (!int.TryParse(txtcelular.Text, out int celular))
+                {
+                    MessageBox.Show("El número de celular debe contener solo números.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar que los campos de texto no contengan números o caracteres no permitidos
+                if (ContieneNumerosOCaracteres(txtNombre.Text) || ContieneNumerosOCaracteres(txtApPaterno.Text) || ContieneNumerosOCaracteres(txtApMaterno.Text))
+                {
+                    MessageBox.Show("Los campos de nombre y apellidos no deben contener números ni caracteres especiales.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // Validar que el rol seleccionado es válido
+                if (!RolValido(cmbRol.Text))
+                {
+                    MessageBox.Show("El rol seleccionado no es válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // Verificar si el CI ya existe
+                if (await usuarioController.CiExisteAsync(ci))
+                {
+                    MessageBox.Show("El CI ya existe en el sistema.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Crear objeto de registro con datos validados
                 TRegistro registro = new TRegistro
                 {
-                    ci = int.Parse(txtci.Text),
+                    ci = ci,
                     nombre = txtNombre.Text,
                     ap_paterno = txtApPaterno.Text,
                     ap_materno = txtApMaterno.Text,
                     direccion = txtdireccion.Text,
-                    celular = int.Parse(txtcelular.Text),
+                    celular = celular,
                     sexo = (rbtmasculino.Checked == true) ? "M" : "F",
                     fecha_nac = DateTime.Parse(datefNac.Text),
                 };
 
+                // Crear objeto de usuario con datos validados
                 TUsuario usuario = new TUsuario
                 {
                     usuario = txtNomusuario.Text,
                     contraseña = txtContrasena.Text,
                     rol = cmbRol.Text
                 };
+
+                // Intentar registrar usuario de manera asíncrona
                 bool registrado = await usuarioController.RegistrarUsuarioAsync(registro, usuario);
 
+                // Verificar resultado del registro y mostrar mensaje adecuado
                 if (registrado)
                 {
                     MessageBox.Show("Usuario guardado con éxito.");
@@ -103,8 +150,34 @@ namespace InscripcionCol
             }
             catch (Exception ex)
             {
+                // Manejo de excepciones y mostrar mensaje de error
                 MessageBox.Show($"Ha ocurrido un error al guardar el usuario: {ex.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Función para validar si un campo contiene números o caracteres no permitidos
+        private bool ContieneNumerosOCaracteres(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (char.IsDigit(c) || !char.IsLetter(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        // Función para verificar si el rol seleccionado es válido
+        private bool RolValido(string rol)
+        {
+            foreach (var item in cmbRol.Items)
+            {
+                if (item.ToString() == rol)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private bool CamposVacios()

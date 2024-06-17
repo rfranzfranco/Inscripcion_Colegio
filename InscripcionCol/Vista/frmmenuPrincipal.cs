@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static InscripcionCol.frmInicioSesion;
 
 namespace InscripcionCol
 {
@@ -41,7 +42,19 @@ namespace InscripcionCol
 
         private void frmmenu_Load(object sender, EventArgs e)
         {
-            
+            VerificarRolUsuarioActual();
+        }
+        private void VerificarRolUsuarioActual()
+        {
+            string rolUsuarioActual = ObtenerRolUsuarioActual();
+            if (rolUsuarioActual == "Secretaria/o")
+            {
+                gestionarUsuarioToolStripMenuItem.Enabled = false;
+            }
+        }
+        private string ObtenerRolUsuarioActual()
+        {
+            return Sesion.ObtenerRol();
         }
         protected override CreateParams CreateParams
         {

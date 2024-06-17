@@ -9,9 +9,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>LISTA DE ESTUDIANTES</Value>
+                <Value>REGISTRO DE ESTUDIANTES</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -22,7 +22,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.43146cm</Top>
+        <Top>0.74896cm</Top>
         <Left>4.73287cm</Left>
         <Height>0.83812cm</Height>
         <Width>8.18854cm</Width>
@@ -431,7 +431,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>3.77183cm</Height>
+      <Height>4.22162cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -471,7 +471,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>UNIDAD EDUCTIVA </Value>
+                  <Value>UNIDAD EDUCATIVA </Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -482,7 +482,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>DONATO VASQUES</Value>
+                  <Value>´´DONATO VASQUES´´</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -493,9 +493,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.97578cm</Top>
-          <Left>7.00828cm</Left>
+          <Left>6.69078cm</Left>
           <Height>0.9175cm</Height>
-          <Width>3.55833cm</Width>
+          <Width>4.00812cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -527,8 +527,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.96384cm</Top>
-          <Left>5.10266cm</Left>
+          <Top>2.18377cm</Top>
+          <Left>4.78516cm</Left>
           <Height>0.81167cm</Height>
           <Width>7.13021cm</Width>
           <ZIndex>3</ZIndex>
@@ -550,7 +550,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>="Desde "+First(Fields!FechaInicio.Value, "DataSet2")+" hasta "+First(Fields!FechaFin.Value, "DataSet2")</Value>
-                  <Style />
+                  <Style>
+                    <Format>d</Format>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -595,7 +597,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=First(Fields!FechaInforme.Value, "DataSet2")</Value>
-                  <Style />
+                  <Style>
+                    <Format>d</Format>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -604,10 +608,44 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.17229cm</Top>
-          <Left>7.00828cm</Left>
+          <Top>0.61667cm</Top>
+          <Left>10.81891cm</Left>
           <Height>0.6cm</Height>
-          <Width>8.16208cm</Width>
+          <Width>4.53729cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!FechaInforme.Value, "DataSet2")</Value>
+                  <Style>
+                    <Format>H:mm</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>1.35778cm</Top>
+          <Left>10.81891cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.53729cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
