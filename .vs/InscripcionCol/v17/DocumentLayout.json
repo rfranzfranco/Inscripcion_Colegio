@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\inscripcioncol\\vista\\informees.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\vista\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\vista\\informees.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\informees.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmreporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "frmmenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmmenuPrincipal.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmmenuPrincipal.cs",
+              "ToolTip": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmmenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "InscripcionCol\\Vista\\frmmenuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:24:07.872Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Reportecursos.rdlc [Dise\u00F1o]",
               "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\Reportecursos.rdlc",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\Reportecursos.rdlc",
@@ -49,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "informeEs.rdlc [Dise\u00F1o]",
               "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\informeEs.rdlc",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\informeEs.rdlc",
@@ -61,15 +77,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmreporte.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs",
               "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmreporte.cs",
               "ToolTip": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmreporte.cs [Dise\u00F1o]",
               "RelativeToolTip": "InscripcionCol\\Vista\\frmreporte.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T01:19:56.107Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-06-17T01:19:56.107Z"
             }
           ]
         }

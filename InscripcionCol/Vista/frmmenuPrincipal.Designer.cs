@@ -178,7 +178,7 @@
             this.btncerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncerrarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btncerrarSesion.Location = new System.Drawing.Point(1177, 1);
+            this.btncerrarSesion.Location = new System.Drawing.Point(1269, 1);
             this.btncerrarSesion.Name = "btncerrarSesion";
             this.btncerrarSesion.Size = new System.Drawing.Size(126, 32);
             this.btncerrarSesion.TabIndex = 4;
@@ -194,11 +194,11 @@
             this.btn_salirNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salirNuevo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salirNuevo.ForeColor = System.Drawing.Color.Black;
-            this.btn_salirNuevo.Location = new System.Drawing.Point(1328, 0);
+            this.btn_salirNuevo.Location = new System.Drawing.Point(1411, 1);
             this.btn_salirNuevo.Name = "btn_salirNuevo";
-            this.btn_salirNuevo.Size = new System.Drawing.Size(177, 32);
+            this.btn_salirNuevo.Size = new System.Drawing.Size(94, 32);
             this.btn_salirNuevo.TabIndex = 6;
-            this.btn_salirNuevo.Text = "Salir del programa";
+            this.btn_salirNuevo.Text = "Salir";
             this.btn_salirNuevo.UseVisualStyleBackColor = false;
             this.btn_salirNuevo.Click += new System.EventHandler(this.btn_salirNuevo_Click);
             // 
