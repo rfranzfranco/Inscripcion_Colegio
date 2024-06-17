@@ -113,6 +113,9 @@ namespace InscripcionCol.Vista
         private void CargarDocentes()
         {
             dgvProfesor.DataSource = docenteController.Listar();
+            dgvProfesor.Columns["id_docente"].Visible = false;
+            dgvProfesor.Columns["id_curso"].Visible = false;
+            dgvProfesor.Columns["id_registro"].Visible = false;
         }
 
         private void HabilitarCampos()

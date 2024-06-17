@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\controlador\\docenteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\docenteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\controlador\\docentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\controlador\\docentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|d:\\sem 1-2024\\ultima modificacion del software\\nueva carpeta\\inscripcion_colegio\\inscripcioncol\\vista\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{074B3A03-32BC-4CDF-BCBA-DA329CB19DF6}|InscripcionCol\\InscripcionCol.csproj|solutionrelative:inscripcioncol\\vista\\frmdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +35,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocenteViewModel.cs",
+              "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\DocenteViewModel.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\DocenteViewModel.cs",
+              "ToolTip": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\DocenteViewModel.cs",
+              "RelativeToolTip": "InscripcionCol\\Controlador\\DocenteViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:57:31.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmdocente.cs",
+              "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmdocente.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Vista\\frmdocente.cs",
+              "ToolTip": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Vista\\frmdocente.cs",
+              "RelativeToolTip": "InscripcionCol\\Vista\\frmdocente.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAcwHUAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:54:50.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DocenteController.cs",
+              "DocumentMoniker": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\DocenteController.cs",
+              "RelativeDocumentMoniker": "InscripcionCol\\Controlador\\DocenteController.cs",
+              "ToolTip": "D:\\SEM 1-2024\\ULTIMA MODIFICACION DEL SOFTWARE\\Nueva carpeta\\Inscripcion_Colegio\\InscripcionCol\\Controlador\\DocenteController.cs",
+              "RelativeToolTip": "InscripcionCol\\Controlador\\DocenteController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwCUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T14:51:15.562Z",
+              "EditorCaption": ""
             }
           ]
         }
