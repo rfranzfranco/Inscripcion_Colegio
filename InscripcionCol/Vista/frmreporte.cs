@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InscripcionCol.Controlador;
 
 namespace InscripcionCol.Vista
 {
@@ -15,6 +16,27 @@ namespace InscripcionCol.Vista
         public frmreporte()
         {
             InitializeComponent();
+        }
+
+        private void frmreporte_Load(object sender, EventArgs e)
+        {
+                     
+        }
+        private void ReporteFechas(DateTime startDate, DateTime endDate)
+        {
+            ReporteDatosView reportModel= new ReporteDatosView();
+            reportModel.crearReporteCurso(startDate, endDate);
+            reporteDatosViewBindingSource.DataSource = reportModel;
+            cursoDetallesBindingSource.DataSource = reportModel.CursoDetalles;
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btn_generarRep_Click(object sender, EventArgs e)
+        {
+            var fechaInicio=dtp_inicio.Value;
+            var fechaFinal=dtp_fin.Value;
+            ReporteFechas(new DateTime(fechaInicio.Year,fechaInicio.Month,fechaInicio.Day,0,0,0), new DateTime(fechaFinal.Year,fechaFinal.Month,fechaFinal.Day,23,59,59));
+
         }
     }
 }
