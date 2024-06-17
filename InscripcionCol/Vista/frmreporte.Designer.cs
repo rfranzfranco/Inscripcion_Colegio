@@ -29,32 +29,40 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.cursoDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reporteDatosViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btn_generarRep = new System.Windows.Forms.Button();
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cursoDetallesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reporteDatosViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cursoDetallesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteDatosViewBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cursoDetallesBindingSource
+            // 
+            this.cursoDetallesBindingSource.DataSource = typeof(InscripcionCol.Controlador.cursoDetalles);
+            // 
+            // reporteDatosViewBindingSource
+            // 
+            this.reporteDatosViewBindingSource.DataSource = typeof(InscripcionCol.Controlador.ReporteDatosView);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.cursoDetallesBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.reporteDatosViewBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.cursoDetallesBindingSource;
+            reportDataSource4.Name = "DataSet2";
+            reportDataSource4.Value = this.reporteDatosViewBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InscripcionCol.Vista.Reportecursos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(237, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -77,6 +85,17 @@
             this.panel1.Size = new System.Drawing.Size(237, 623);
             this.panel1.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 34);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "REPORTE";
+            // 
             // btn_generarRep
             // 
             this.btn_generarRep.Location = new System.Drawing.Point(12, 366);
@@ -96,18 +115,18 @@
             this.dtp_fin.Name = "dtp_fin";
             this.dtp_fin.Size = new System.Drawing.Size(200, 26);
             this.dtp_fin.TabIndex = 3;
-            this.dtp_fin.Value = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
+            this.dtp_fin.Value = new System.DateTime(2024, 6, 17, 0, 0, 0, 0);
             // 
             // dtp_inicio
             // 
             this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_inicio.Location = new System.Drawing.Point(12, 195);
-            this.dtp_inicio.MaxDate = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
+            this.dtp_inicio.MaxDate = new System.DateTime(2024, 5, 17, 0, 0, 0, 0);
             this.dtp_inicio.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(200, 26);
             this.dtp_inicio.TabIndex = 2;
-            this.dtp_inicio.Value = new System.DateTime(2024, 6, 9, 0, 0, 0, 0);
+            this.dtp_inicio.Value = new System.DateTime(2024, 5, 17, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -127,25 +146,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha de inicio:";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 34);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "REPORTE";
-            // 
-            // cursoDetallesBindingSource
-            // 
-            this.cursoDetallesBindingSource.DataSource = typeof(InscripcionCol.Controlador.cursoDetalles);
-            // 
-            // reporteDatosViewBindingSource
-            // 
-            this.reporteDatosViewBindingSource.DataSource = typeof(InscripcionCol.Controlador.ReporteDatosView);
-            // 
             // frmreporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -159,10 +159,10 @@
             this.Name = "frmreporte";
             this.Text = "frmreporte";
             this.Load += new System.EventHandler(this.frmreporte_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cursoDetallesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteDatosViewBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

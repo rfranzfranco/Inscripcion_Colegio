@@ -43,16 +43,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.rbtfemenino = new System.Windows.Forms.RadioButton();
             this.rbtmasculino = new System.Windows.Forms.RadioButton();
-            this.txtrepetirContra = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtcelular = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNomusuario = new System.Windows.Forms.TextBox();
+            this.txtespecialidad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtApMaterno = new System.Windows.Forms.TextBox();
@@ -64,6 +62,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtci = new System.Windows.Forms.TextBox();
+            this.cmbNivelEducativo = new System.Windows.Forms.ComboBox();
+            this.cmbGradoAcademico = new System.Windows.Forms.ComboBox();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesor)).BeginInit();
             this.gbDatosProfesor.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +89,7 @@
             this.dgvProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProfesor.Location = new System.Drawing.Point(452, 118);
             this.dgvProfesor.Name = "dgvProfesor";
-            this.dgvProfesor.Size = new System.Drawing.Size(657, 658);
+            this.dgvProfesor.Size = new System.Drawing.Size(657, 635);
             this.dgvProfesor.TabIndex = 25;
             // 
             // label9
@@ -111,6 +113,7 @@
             this.btnBuscarProfesor.TabIndex = 23;
             this.btnBuscarProfesor.Text = "BUSCAR";
             this.btnBuscarProfesor.UseVisualStyleBackColor = true;
+            this.btnBuscarProfesor.Click += new System.EventHandler(this.btnBuscarProfesor_Click);
             // 
             // txtBuscarProfesor
             // 
@@ -133,6 +136,7 @@
             this.btnAgregarProfesor.TabIndex = 20;
             this.btnAgregarProfesor.Text = "AGREGAR PROFESOR";
             this.btnAgregarProfesor.UseVisualStyleBackColor = false;
+            this.btnAgregarProfesor.Click += new System.EventHandler(this.btnAgregarProfesor_Click);
             // 
             // btneliminar
             // 
@@ -143,6 +147,7 @@
             this.btneliminar.TabIndex = 28;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
@@ -157,22 +162,24 @@
             // gbDatosProfesor
             // 
             this.gbDatosProfesor.BackColor = System.Drawing.SystemColors.Control;
+            this.gbDatosProfesor.Controls.Add(this.label15);
+            this.gbDatosProfesor.Controls.Add(this.cmbCurso);
+            this.gbDatosProfesor.Controls.Add(this.cmbGradoAcademico);
+            this.gbDatosProfesor.Controls.Add(this.cmbNivelEducativo);
             this.gbDatosProfesor.Controls.Add(this.dateContratacion);
             this.gbDatosProfesor.Controls.Add(this.label7);
             this.gbDatosProfesor.Controls.Add(this.datefNacimiento);
             this.gbDatosProfesor.Controls.Add(this.label14);
             this.gbDatosProfesor.Controls.Add(this.rbtfemenino);
             this.gbDatosProfesor.Controls.Add(this.rbtmasculino);
-            this.gbDatosProfesor.Controls.Add(this.txtrepetirContra);
             this.gbDatosProfesor.Controls.Add(this.label10);
             this.gbDatosProfesor.Controls.Add(this.txtcelular);
             this.gbDatosProfesor.Controls.Add(this.btnCancelar);
             this.gbDatosProfesor.Controls.Add(this.txtdireccion);
             this.gbDatosProfesor.Controls.Add(this.btnGuardar);
             this.gbDatosProfesor.Controls.Add(this.label11);
-            this.gbDatosProfesor.Controls.Add(this.txtContrasena);
             this.gbDatosProfesor.Controls.Add(this.label12);
-            this.gbDatosProfesor.Controls.Add(this.txtNomusuario);
+            this.gbDatosProfesor.Controls.Add(this.txtespecialidad);
             this.gbDatosProfesor.Controls.Add(this.txtNombre);
             this.gbDatosProfesor.Controls.Add(this.label13);
             this.gbDatosProfesor.Controls.Add(this.txtApMaterno);
@@ -254,14 +261,6 @@
             this.rbtmasculino.Text = "M";
             this.rbtmasculino.UseVisualStyleBackColor = true;
             // 
-            // txtrepetirContra
-            // 
-            this.txtrepetirContra.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrepetirContra.Location = new System.Drawing.Point(155, 285);
-            this.txtrepetirContra.Name = "txtrepetirContra";
-            this.txtrepetirContra.Size = new System.Drawing.Size(257, 26);
-            this.txtrepetirContra.TabIndex = 17;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -289,13 +288,14 @@
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtdireccion
             // 
             this.txtdireccion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdireccion.Location = new System.Drawing.Point(6, 335);
             this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(417, 26);
+            this.txtdireccion.Size = new System.Drawing.Size(406, 26);
             this.txtdireccion.TabIndex = 21;
             // 
             // btnGuardar
@@ -307,6 +307,7 @@
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label11
             // 
@@ -318,14 +319,6 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Celular:";
             // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(155, 242);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(257, 26);
-            this.txtContrasena.TabIndex = 12;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -336,13 +329,13 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Direccion:";
             // 
-            // txtNomusuario
+            // txtespecialidad
             // 
-            this.txtNomusuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomusuario.Location = new System.Drawing.Point(155, 199);
-            this.txtNomusuario.Name = "txtNomusuario";
-            this.txtNomusuario.Size = new System.Drawing.Size(257, 26);
-            this.txtNomusuario.TabIndex = 11;
+            this.txtespecialidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtespecialidad.Location = new System.Drawing.Point(155, 199);
+            this.txtespecialidad.Name = "txtespecialidad";
+            this.txtespecialidad.Size = new System.Drawing.Size(257, 26);
+            this.txtespecialidad.TabIndex = 11;
             // 
             // txtNombre
             // 
@@ -446,12 +439,61 @@
             this.txtci.Size = new System.Drawing.Size(98, 26);
             this.txtci.TabIndex = 0;
             // 
+            // cmbNivelEducativo
+            // 
+            this.cmbNivelEducativo.FormattingEnabled = true;
+            this.cmbNivelEducativo.Items.AddRange(new object[] {
+            "Primario",
+            "Secundario"});
+            this.cmbNivelEducativo.Location = new System.Drawing.Point(156, 241);
+            this.cmbNivelEducativo.Name = "cmbNivelEducativo";
+            this.cmbNivelEducativo.Size = new System.Drawing.Size(256, 26);
+            this.cmbNivelEducativo.TabIndex = 40;
+            // 
+            // cmbGradoAcademico
+            // 
+            this.cmbGradoAcademico.FormattingEnabled = true;
+            this.cmbGradoAcademico.Items.AddRange(new object[] {
+            "Licenciatura",
+            "Maestria",
+            "Doctorado",
+            "PostDoctorado"});
+            this.cmbGradoAcademico.Location = new System.Drawing.Point(155, 284);
+            this.cmbGradoAcademico.Name = "cmbGradoAcademico";
+            this.cmbGradoAcademico.Size = new System.Drawing.Size(257, 26);
+            this.cmbGradoAcademico.TabIndex = 41;
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbCurso.Location = new System.Drawing.Point(351, 394);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(61, 26);
+            this.cmbCurso.TabIndex = 42;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(348, 373);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 18);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "Curso:";
+            // 
             // frmdocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(235)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1121, 788);
+            this.ClientSize = new System.Drawing.Size(1121, 749);
             this.ControlBox = false;
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmodificar);
@@ -490,16 +532,14 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton rbtfemenino;
         private System.Windows.Forms.RadioButton rbtmasculino;
-        private System.Windows.Forms.TextBox txtrepetirContra;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtcelular;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNomusuario;
+        private System.Windows.Forms.TextBox txtespecialidad;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtApMaterno;
@@ -513,5 +553,9 @@
         private System.Windows.Forms.TextBox txtci;
         private System.Windows.Forms.DateTimePicker dateContratacion;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbGradoAcademico;
+        private System.Windows.Forms.ComboBox cmbNivelEducativo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbCurso;
     }
 }

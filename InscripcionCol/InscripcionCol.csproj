@@ -91,6 +91,8 @@
     <Compile Include="Controlador\CupoViewModel.cs" />
     <Compile Include="Controlador\cursoDetalles.cs" />
     <Compile Include="Controlador\detalleEstudiante.cs" />
+    <Compile Include="Controlador\DocenteController.cs" />
+    <Compile Include="Controlador\DocenteViewModel.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
     <Compile Include="Controlador\InformeController.cs" />
