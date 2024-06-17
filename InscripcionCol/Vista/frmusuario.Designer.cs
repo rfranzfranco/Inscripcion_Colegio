@@ -118,7 +118,7 @@
             this.gbDatosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatosUsuario.Name = "gbDatosUsuario";
             this.gbDatosUsuario.Padding = new System.Windows.Forms.Padding(4);
-            this.gbDatosUsuario.Size = new System.Drawing.Size(448, 595);
+            this.gbDatosUsuario.Size = new System.Drawing.Size(448, 536);
             this.gbDatosUsuario.TabIndex = 1;
             this.gbDatosUsuario.TabStop = false;
             this.gbDatosUsuario.Text = "Datos del usuario";

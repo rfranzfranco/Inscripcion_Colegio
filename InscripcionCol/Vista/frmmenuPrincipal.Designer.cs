@@ -130,13 +130,14 @@
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.informesToolStripMenuItem.Text = "Informes";
+            this.informesToolStripMenuItem.Click += new System.EventHandler(this.informesToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // btnsalir

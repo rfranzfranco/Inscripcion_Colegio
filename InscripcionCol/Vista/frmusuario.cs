@@ -39,6 +39,7 @@ namespace InscripcionCol
                 btnGuardar.Enabled = false;
                 btnCancelar.Enabled = false;
                 btnmodificar.Enabled = false;
+                                
             }
         }
 

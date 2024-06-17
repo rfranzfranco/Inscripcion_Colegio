@@ -92,5 +92,13 @@ namespace InscripcionCol
         {
             salir();
         }
+
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frminforme frminforme = new frminforme();
+            frminforme.MdiParent = this;
+            frminforme.WindowState = FormWindowState.Maximized;
+            frminforme.Show();
+        }
     }
 }
