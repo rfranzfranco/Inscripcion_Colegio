@@ -90,8 +90,11 @@
     <Compile Include="Controlador\ComprobanteViewModel.cs" />
     <Compile Include="Controlador\CupoViewModel.cs" />
     <Compile Include="Controlador\cursoDetalles.cs" />
+    <Compile Include="Controlador\detalleEstudiante.cs" />
     <Compile Include="Controlador\EstudianteController.cs" />
     <Compile Include="Controlador\EstudianteViewModel.cs" />
+    <Compile Include="Controlador\InformeController.cs" />
+    <Compile Include="Controlador\InformeViewModel.cs" />
     <Compile Include="Controlador\ReporteController.cs" />
     <Compile Include="Controlador\ReporteDatosView.cs" />
     <Compile Include="Controlador\UsuarioController.cs" />
@@ -282,6 +285,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\informeEs.rdlc" />
     <EmbeddedResource Include="Vista\Reportecursos.rdlc" />
     <EntityDeploy Include="Modelo\ModeloBdD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -291,6 +295,8 @@
       <DependentUpon>ModeloBdD.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\InscripcionCol.Controlador.detalleEstudiante.datasource" />
+    <None Include="Properties\DataSources\InscripcionCol.Controlador.InformeDatosView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -341,6 +347,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

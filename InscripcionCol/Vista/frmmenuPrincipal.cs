@@ -120,5 +120,13 @@ namespace InscripcionCol
             frmreporte.WindowState = FormWindowState.Maximized;
             frmreporte.Show();
         }
+
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frminforme frminmes = new frminforme();
+            frminmes.MdiParent = this;
+            frminmes.WindowState = FormWindowState.Maximized;
+            frminmes.Show();
+        }
     }
 }
