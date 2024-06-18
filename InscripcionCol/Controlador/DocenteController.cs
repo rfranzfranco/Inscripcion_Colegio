@@ -133,7 +133,38 @@ namespace InscripcionCol.Controlador
                 }
             }
         }
+        public async Task<bool> ModificarDocenteAsync(DocenteViewModel docente)
+        {
+            try
+            {
+                var registro = await _db.TRegistro.SingleOrDefaultAsync(r => r.ci == docente.ci);
+                if (registro == null) return false;
 
+                var tdocente = await _db.TDocente.SingleOrDefaultAsync(d => d.id_registro == registro.id_registro);
+                if (tdocente == null) return false;
 
+                // Actualizar los datos del registro
+                registro.nombre = docente.nombre;
+                registro.ap_paterno = docente.ap_paterno;
+                registro.ap_materno = docente.ap_materno;
+                registro.direccion = docente.direccion;
+                registro.celular = docente.celular;
+                registro.sexo = docente.sexo;
+                registro.fecha_nac = docente.fecha_nac;
+
+                // Actualizar los datos del docente
+                tdocente.especialidad = docente.especialidad;
+                tdocente.nivel_educativo = docente.nivel_educativo;
+                tdocente.grado_acad = docente.grado_acad;
+                tdocente.fec_contratacion = docente.fec_contratacion;
+                tdocente.id_curso = docente.id_curso;
+
+                return await _db.SaveChangesAsync() > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

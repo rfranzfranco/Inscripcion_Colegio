@@ -115,15 +115,15 @@ namespace InscripcionCol.Controlador
             switch (tipo.ToLower())
             {
                 case "académica":
-                    return 3000.00m;
+                    return 300.00m;
                 case "deportiva":
-                    return 2500.00m;
+                    return 250.00m;
                 case "cultural":
-                    return 2000.00m;
+                    return 200.00m;
                 case "socioeconomica":
-                    return 3500.00m;
+                    return 350.00m;
                 case "inclusión":
-                    return 3000.00m;
+                    return 300.00m;
                 default:
                     return 0.00m;
             }

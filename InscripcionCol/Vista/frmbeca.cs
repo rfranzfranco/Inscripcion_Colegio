@@ -117,7 +117,7 @@ namespace InscripcionCol.Vista
                     Monto = Convert.ToDecimal(txt_monto.Text),
                     FechaIni = date_inicio.Value,
                     FechaFin = date_fin.Value,
-                    Id_Estudiante = estudiante.Id_Estudiante
+                    Id_Estudiante = estudiante.Id_Estudiante,
                 };
 
                 bool resultado = await becaController.RegistrarBecaAsync(beca);
@@ -126,6 +126,7 @@ namespace InscripcionCol.Vista
                 {
                     MessageBox.Show("Beca registrada exitosamente.", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnCancelar_Click(sender, e);  // Limpiar campos después de guardar
+                    cargarBeca();
                 }
                 else
                 {

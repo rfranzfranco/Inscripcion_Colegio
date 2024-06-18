@@ -223,7 +223,6 @@
             // 
             // txt_monto
             // 
-            this.txt_monto.Enabled = false;
             this.txt_monto.Location = new System.Drawing.Point(141, 212);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(72, 26);

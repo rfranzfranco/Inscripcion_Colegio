@@ -19,13 +19,14 @@ namespace InscripcionCol.Vista
         {
             InitializeComponent();
             docenteController = new DocenteController();
+            //btnmodificar.Click += async (s, e) => await btnmodificar_Click(s, e); // Registro del evento asincrónico
         }
 
-        private void frmdocente_Load(object sender, EventArgs e)
+        private async void frmdocente_Load(object sender, EventArgs e)
         {
-            CargarDocentes();
+            await CargarDocentesAsync();
             DeshabilitarCampos();
-            btnmodificar.Visible = false;
+            //btnmodificar.Visible = false;
         }
 
         private void btnAgregarProfesor_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace InscripcionCol.Vista
                 // Validación de entradas
                 if (string.IsNullOrEmpty(txtci.Text) || string.IsNullOrEmpty(txtNombre.Text) ||
                     string.IsNullOrEmpty(txtApPaterno.Text) || string.IsNullOrEmpty(txtespecialidad.Text))
-                    
+
                 {
                     MessageBox.Show("Todos los campos son obligatorios.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -65,10 +66,10 @@ namespace InscripcionCol.Vista
                     ap_materno = txtApMaterno.Text,
                     direccion = txtdireccion.Text,
                     celular = Convert.ToInt32(txtcelular.Text),
-                    sexo = (rbtmasculino.Checked) ? "M" : "F",                  
-                    
+                    sexo = (rbtmasculino.Checked) ? "M" : "F",
+
                     fecha_nac = DateTime.Parse(datefNacimiento.Text),
-                    
+
                 };
 
                 TDocente docente = new TDocente
@@ -77,10 +78,10 @@ namespace InscripcionCol.Vista
                     nivel_educativo = cmbNivelEducativo.Text,
                     grado_acad = cmbGradoAcademico.Text,
                     fec_contratacion = DateTime.Parse(dateContratacion.Text),
-                    
 
 
-            };
+
+                };
 
                 bool docenteRegistrado = await docenteController.RegistrarDocenteAsync(registro);
 
@@ -95,7 +96,7 @@ namespace InscripcionCol.Vista
                     await docenteController.RegistrarDocAsync(docente);
 
                     MessageBox.Show("Docente guardado con éxito.");
-                    CargarDocentes();
+                    await CargarDocentesAsync();
                     LimpiarCampos();
                     DeshabilitarCampos();
                 }
@@ -110,9 +111,9 @@ namespace InscripcionCol.Vista
             }
         }
 
-        private void CargarDocentes()
+        private async Task CargarDocentesAsync()
         {
-            dgvProfesor.DataSource = docenteController.Listar();
+            dgvProfesor.DataSource = await Task.Run(() => docenteController.Listar());
             dgvProfesor.Columns["id_docente"].Visible = false;
             dgvProfesor.Columns["id_curso"].Visible = false;
             dgvProfesor.Columns["id_registro"].Visible = false;
@@ -134,7 +135,7 @@ namespace InscripcionCol.Vista
             cmbGradoAcademico.Enabled = true;
             dateContratacion.Enabled = true;
             cmbCurso.Enabled = true;
-            
+
         }
 
         private void DeshabilitarCampos()
@@ -153,7 +154,7 @@ namespace InscripcionCol.Vista
             cmbGradoAcademico.Enabled = false;
             dateContratacion.Enabled = false;
             cmbCurso.Enabled = false;
-            
+
         }
 
         private void LimpiarCampos()
@@ -171,8 +172,8 @@ namespace InscripcionCol.Vista
             cmbNivelEducativo.SelectedIndex = -1;
             cmbGradoAcademico.SelectedIndex = -1;
             dateContratacion.Checked = false;
-            cmbCurso .SelectedIndex = -1;
-            
+            cmbCurso.SelectedIndex = -1;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -200,7 +201,7 @@ namespace InscripcionCol.Vista
                 MessageBox.Show("Por favor, ingrese un CI válido.", "Error de Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void asignarcurso()
         {
             TDocente docente = new TDocente();
@@ -238,10 +239,10 @@ namespace InscripcionCol.Vista
             }
 
             docente.id_curso = rnd.Next(minCurso, maxCurso);
-            
+
         }
 
-        private void btneliminar_Click(object sender, EventArgs e)
+        private async void btneliminar_Click(object sender, EventArgs e)
         {
             if (dgvProfesor.SelectedRows.Count > 0)
             {
@@ -253,7 +254,7 @@ namespace InscripcionCol.Vista
                     if (docenteController.EliminarDocente(ci))
                     {
                         MessageBox.Show("Docente eliminado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CargarDocentes(); // Recargar los datos en el DataGridView
+                        await CargarDocentesAsync(); // Recargar los datos en el DataGridView
                     }
                     else
                     {
@@ -266,8 +267,99 @@ namespace InscripcionCol.Vista
             {
                 MessageBox.Show("Seleccione un docente para eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
+        }
+
+        private async void btnmodificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar si no se ha seleccionado ningún docente
+                if (dgvProfesor.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione un docente para modificar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtci.Text) || string.IsNullOrEmpty(txtNombre.Text) ||
+                    string.IsNullOrEmpty(txtApPaterno.Text) || string.IsNullOrEmpty(txtespecialidad.Text))
+                {
+                    MessageBox.Show("Todos los campos son obligatorios.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string sexo = rbtmasculino.Checked ? "M" : (rbtfemenino.Checked ? "F" : string.Empty);
+                if (string.IsNullOrEmpty(sexo))
+                {
+                    MessageBox.Show("Seleccione el sexo.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var docente = new DocenteViewModel
+                {
+                    ci = Convert.ToInt32(txtci.Text),
+                    nombre = txtNombre.Text,
+                    ap_paterno = txtApPaterno.Text,
+                    ap_materno = txtApMaterno.Text,
+                    direccion = txtdireccion.Text,
+                    celular = Convert.ToInt32(txtcelular.Text),
+                    sexo = sexo,
+                    fecha_nac = datefNacimiento.Value,
+                    especialidad = txtespecialidad.Text,
+                    nivel_educativo = cmbNivelEducativo.Text,
+                    grado_acad = cmbGradoAcademico.Text,
+                    fec_contratacion = dateContratacion.Value,
+                    id_curso = Convert.ToInt32(cmbCurso.Text)
+                };
+
+                bool actualizado = await docenteController.ModificarDocenteAsync(docente);
+                if (actualizado)
+                {
+                    MessageBox.Show("Docente actualizado con éxito.");
+                    await CargarDocentesAsync();
+                    LimpiarCampos();
+                    DeshabilitarCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar el docente.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ha ocurrido un ERROR AL MODIFICAR el docente: {ex.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }  
+        private void dgvProfesor_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvProfesor.Rows[e.RowIndex];
+
+                txtci.Text = row.Cells["ci"].Value.ToString();
+                txtNombre.Text = row.Cells["nombre"].Value.ToString();
+                txtApPaterno.Text = row.Cells["ap_paterno"].Value.ToString();
+                txtApMaterno.Text = row.Cells["ap_materno"].Value.ToString();
+                txtdireccion.Text = row.Cells["direccion"].Value.ToString();
+                txtcelular.Text = row.Cells["celular"].Value.ToString();
+                if (row.Cells["sexo"].Value.ToString() == "M")
+                {
+                    rbtmasculino.Checked = true;
+                }
+                else
+                {
+                    rbtfemenino.Checked = true;
+                }
+                datefNacimiento.Value = DateTime.Parse(row.Cells["fecha_nac"].Value.ToString());
+                txtespecialidad.Text = row.Cells["especialidad"].Value.ToString();
+                cmbNivelEducativo.Text = row.Cells["nivel_educativo"].Value.ToString();
+                cmbGradoAcademico.Text = row.Cells["grado_acad"].Value.ToString();
+                dateContratacion.Value = DateTime.Parse(row.Cells["fec_contratacion"].Value.ToString());
+                cmbCurso.Text = row.Cells["id_curso"].Value.ToString();
+
+                HabilitarCampos();
+            }
         }
     }
-    
+
 }

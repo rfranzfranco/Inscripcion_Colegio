@@ -91,6 +91,7 @@
             this.dgvProfesor.Name = "dgvProfesor";
             this.dgvProfesor.Size = new System.Drawing.Size(657, 635);
             this.dgvProfesor.TabIndex = 25;
+            this.dgvProfesor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProfesor_CellClick_1);
             // 
             // label9
             // 
@@ -158,6 +159,7 @@
             this.btnmodificar.TabIndex = 27;
             this.btnmodificar.Text = "MODIFICAR";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // gbDatosProfesor
             // 

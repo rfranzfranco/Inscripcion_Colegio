@@ -6,7 +6,7 @@
     </Key>
     <Property Name="id_beca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="monto" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="monto" Type="Decimal" Precision="7" Scale="2" Nullable="false" />
     <Property Name="id_estudiante" Type="Int32" Nullable="false" />
     <Property Name="fecha_ini" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="fecha_fin" Type="DateTime" Nullable="false" Precision="3" />

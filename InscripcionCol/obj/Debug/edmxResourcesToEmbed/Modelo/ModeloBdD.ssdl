@@ -16,7 +16,7 @@
     </Key>
     <Property Name="id_beca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="tipo" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="monto" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="monto" Type="decimal" Precision="7" Scale="2" Nullable="false" />
     <Property Name="fecha_ini" Type="datetime" Nullable="false" />
     <Property Name="fecha_fin" Type="datetime" Nullable="false" />
     <Property Name="id_estudiante" Type="int" Nullable="false" />
